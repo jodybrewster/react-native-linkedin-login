@@ -1,0 +1,48 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.linkedin.android.mobilesdksampleapp.DeepLinkActivity">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/deeplink_screen_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Member ID" />
+
+        <EditText
+            android:id="@+id/deeplink_profile_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="" />
+
+        <Button
+            android:id="@+id/deeplink_open_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Open profile"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/myProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="View My Profile" />
+
+    <TextView
+        android:id="@+id/deeplink_error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

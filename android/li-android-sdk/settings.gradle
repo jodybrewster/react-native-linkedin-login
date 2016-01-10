@@ -1,0 +1,7 @@
+include ':linkedin-sdk'
+
+include ':sampleapp'
+project(':sampleapp').projectDir = new File('samples/sampleapp')
+
+include ':eventsapp'
+project(':eventsapp').projectDir = new File('samples/eventsapp')

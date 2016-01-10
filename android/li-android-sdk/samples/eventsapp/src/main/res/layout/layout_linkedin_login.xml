@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_horizontal"
+    android:weightSum="2">
+
+    <Button
+        android:id="@+id/connectWithLinkedInButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/logo"
+        android:text="Connect With LinkedIn"
+        android:gravity="left|center_vertical"
+        style="?android:attr/borderlessButtonStyle"
+        android:drawablePadding="5dp"
+        android:layout_weight="1"/>
+
+    <TextView
+        android:id="@+id/connectWithLinkedIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="Learn about and connect with attendees"
+        android:layout_weight="1"/>
+
+</LinearLayout>

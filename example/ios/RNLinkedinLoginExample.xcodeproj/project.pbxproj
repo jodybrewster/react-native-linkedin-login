@@ -36,9 +36,9 @@
 		C8320F551C3CAE15001A3E98 /* LIALinkedInHttpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = C8320F441C3CAE15001A3E98 /* LIALinkedInHttpClient.m */; };
 		C8320F561C3CAE15001A3E98 /* linkedin-sdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8320F451C3CAE15001A3E98 /* linkedin-sdk.framework */; };
 		C8320F571C3CAE15001A3E98 /* NSString+LIAEncode.m in Sources */ = {isa = PBXBuildFile; fileRef = C8320F471C3CAE15001A3E98 /* NSString+LIAEncode.m */; };
-		C8320F581C3CAE15001A3E98 /* RNLinkedinLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = C8320F491C3CAE15001A3E98 /* RNLinkedinLogin.m */; };
-		C8320F5A1C3D32DC001A3E98 /* ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C8320F591C3D328A001A3E98 /* ionicons.ttf */; };
+		C8320F581C3CAE15001A3E98 /* LinkedinLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = C8320F491C3CAE15001A3E98 /* LinkedinLogin.m */; };
 		C8320F611C3D33EE001A3E98 /* libReactNativeIcons.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C8320F601C3D33DD001A3E98 /* libReactNativeIcons.a */; };
+		C83434751C41DB8E00C8BD26 /* ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C83434741C41DB0000C8BD26 /* ionicons.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -178,10 +178,10 @@
 		C8320F451C3CAE15001A3E98 /* linkedin-sdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = "linkedin-sdk.framework"; sourceTree = "<group>"; };
 		C8320F461C3CAE15001A3E98 /* NSString+LIAEncode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+LIAEncode.h"; sourceTree = "<group>"; };
 		C8320F471C3CAE15001A3E98 /* NSString+LIAEncode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+LIAEncode.m"; sourceTree = "<group>"; };
-		C8320F481C3CAE15001A3E98 /* RNLinkedinLogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNLinkedinLogin.h; sourceTree = "<group>"; };
-		C8320F491C3CAE15001A3E98 /* RNLinkedinLogin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNLinkedinLogin.m; sourceTree = "<group>"; };
-		C8320F591C3D328A001A3E98 /* ionicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = ionicons.ttf; path = "../node_modules/react-native-icons/fonts/ionicons.ttf"; sourceTree = "<group>"; };
+		C8320F481C3CAE15001A3E98 /* LinkedinLogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinkedinLogin.h; sourceTree = "<group>"; };
+		C8320F491C3CAE15001A3E98 /* LinkedinLogin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinkedinLogin.m; sourceTree = "<group>"; };
 		C8320F5B1C3D33DC001A3E98 /* ReactNativeIcons.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReactNativeIcons.xcodeproj; path = "../node_modules/react-native-icons/ios/ReactNativeIcons.xcodeproj"; sourceTree = "<group>"; };
+		C83434741C41DB0000C8BD26 /* ionicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = ionicons.ttf; path = "../node_modules/react-native-icons/fonts/ionicons.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -290,7 +290,7 @@
 		13B07FAE1A68108700A75B9A /* RNLinkedinLoginExample */ = {
 			isa = PBXGroup;
 			children = (
-				C8320F591C3D328A001A3E98 /* ionicons.ttf */,
+				C83434741C41DB0000C8BD26 /* ionicons.ttf */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -379,8 +379,8 @@
 				C8320F451C3CAE15001A3E98 /* linkedin-sdk.framework */,
 				C8320F461C3CAE15001A3E98 /* NSString+LIAEncode.h */,
 				C8320F471C3CAE15001A3E98 /* NSString+LIAEncode.m */,
-				C8320F481C3CAE15001A3E98 /* RNLinkedinLogin.h */,
-				C8320F491C3CAE15001A3E98 /* RNLinkedinLogin.m */,
+				C8320F481C3CAE15001A3E98 /* LinkedinLogin.h */,
+				C8320F491C3CAE15001A3E98 /* LinkedinLogin.m */,
 			);
 			path = RNLinkedinLogin;
 			sourceTree = "<group>";
@@ -630,7 +630,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C8320F5A1C3D32DC001A3E98 /* ionicons.ttf in Resources */,
+				C83434751C41DB8E00C8BD26 /* ionicons.ttf in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
 			);
@@ -671,7 +671,7 @@
 				C8320F571C3CAE15001A3E98 /* NSString+LIAEncode.m in Sources */,
 				C8320F501C3CAE15001A3E98 /* AFURLRequestSerialization.m in Sources */,
 				C8320F4F1C3CAE15001A3E98 /* AFURLConnectionOperation.m in Sources */,
-				C8320F581C3CAE15001A3E98 /* RNLinkedinLogin.m in Sources */,
+				C8320F581C3CAE15001A3E98 /* LinkedinLogin.m in Sources */,
 				C8320F4E1C3CAE15001A3E98 /* AFSecurityPolicy.m in Sources */,
 				C8320F4A1C3CAE15001A3E98 /* AFHTTPRequestOperation.m in Sources */,
 				C8320F521C3CAE15001A3E98 /* AFURLSessionManager.m in Sources */,

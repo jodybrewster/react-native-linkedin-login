@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">SDK for Android Sample App</string>
+    <string name="action_settings">Settings</string>
+    <string name="myProfile">View My Profile</string>
+    <string name="validProdProfile">View Profile using valid PROD ID</string>
+    <string name="validEiProfile">View Profile using valid EI ID</string>
+    <string name="invalidProfile">View Profile using invalid ID</string>
+    <string name="title_activity_deeplink">DeeplinkActivity</string>
+    <string name="title_activity_api">apiActivity</string>
+
+</resources>

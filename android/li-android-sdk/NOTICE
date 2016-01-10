@@ -1,0 +1,16 @@
+LinkedIn's Mobile SDK uses "open source" components. You will find the 
+source code of these open source projects, along with applicable license 
+information at the locations listed below. We are sincerely grateful to these 
+developers for their hard work and contributions towards the open source 
+community.
+
+Android SDK
+Copyright (c) 2014 Google Inc. All Rights Reserved.
+Project: http://source.android.com/
+License: http://source.android.com/source/licenses.html; 
+         see also http://developer.android.com/sdk/terms.html
+
+Volley
+Copyright (c) 2011 The Android Open Source Project
+Project: https://android.googlesource.com/platform/frameworks/volley/
+License: http://www.apache.org/licenses/LICENSE-2.0

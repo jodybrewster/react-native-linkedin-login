@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F15153">
+
+    <TextView
+        android:id="@+id/eventName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+    <TextView
+        android:id="@+id/eventLocationAndDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"/>
+
+    <ImageView
+        android:id="@+id/eventImage"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:scaleType="fitXY"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal">
+
+        <Button android:id="@+id/attendButton"
+            android:layout_width="125dp"
+            android:layout_height="32dp"
+            android:layout_margin="5dp"
+            android:background="#D8D8D8"
+            android:textColor="#F15153"
+            android:text="Attend"/>
+
+        <Button android:id="@+id/declineButton"
+            android:layout_width="125dp"
+            android:layout_height="32dp"
+            android:layout_margin="5dp"
+            android:background="#D8D8D8"
+            android:textColor="#F15153"
+            android:text="Decline"/>
+
+    </LinearLayout>
+
+    <ViewStub android:id="@+id/connectWithLinkedInStub"
+        android:inflatedId="@+id/linkedinLogin"
+        android:layout="@layout/layout_linkedin_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/attendeeCount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:paddingTop="10dp"/>
+
+    <ListView
+        android:id="@+id/attendeesList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

@@ -1,6 +1,6 @@
 {
   "name": "react-native-linkedin-login",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "React Native wrapper for native Linkedin login button and manager",
   "main": "index",
   "scripts": {
@@ -29,5 +29,8 @@
   "homepage": "https://github.com/jodybrewster/react-native-linkedin-login",
   "peerDependencies": {
     "react-native": ">=0.14.2"
+  },
+  "dependencies": {
+    "bluebird": "^3.1.1"
   }
 }
