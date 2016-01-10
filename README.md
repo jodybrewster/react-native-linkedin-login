@@ -1,6 +1,6 @@
 # react-native-linkedin-login
 
-[![npm version](https://badge.fury.io/js/react-native-linkedin-login@2x.png)](http://badge.fury.io/js/react-native-linkedin-login)
+[![npm version](https://badge.fury.io/js/react-native-linkedin-login.png)](http://badge.fury.io/js/react-native-linkedin-login)
 [![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
 
 Let your users sign in with their Linkedin account.
