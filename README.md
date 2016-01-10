@@ -13,7 +13,7 @@ npm install react-native-linkedin-login --save
 
 ## Configuration and usage
 
-See ```android-guide.md``` and ```ios-guide.md```
+See [android-guide.md](https://github.com/jodybrewster/react-native-linkedin-login/blob/master/md/android.guide.md) and [ios-guide.md](https://github.com/jodybrewster/react-native-linkedin-login/blob/master/md/ios.guide.md)
 
 ## Additional scopes
 
