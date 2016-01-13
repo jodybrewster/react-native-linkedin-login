@@ -222,7 +222,7 @@ public class RNLinkedinLoginModule extends ReactContextBaseJavaModule {
                         params.putString("description", error.toString());
 
                         _context.getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class)
-                                .emit("linkedinLoginnError", params);
+                                .emit("linkedinLoginError", params);
                     }
                 }, true);
             }
