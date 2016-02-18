@@ -8,7 +8,7 @@ Let your users sign in with their Linkedin account.
 ## Requirements
 
 Node version 4.3.1
-React Native 0.14.2 or greater
+React Native 0.14.2 to 0.17.0
 
 ## Installation
 
