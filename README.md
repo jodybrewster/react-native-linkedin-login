@@ -5,6 +5,11 @@
 
 Let your users sign in with their Linkedin account.
 
+## Requirements
+
+Node version 4.3.1
+React Native 0.14.2 or greater
+
 ## Installation
 
 ```bash
