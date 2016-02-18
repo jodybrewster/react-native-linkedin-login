@@ -187,6 +187,7 @@ public class RNLinkedinLoginModule extends ReactContextBaseJavaModule {
     @ReactMethod
     public void login(final String clientId, final String redirectUrl, final String clientSecret, final String state, final ReadableArray scopes) {
 
+        Log.d(TAG, "login: " + clientId);
         _activity.runOnUiThread(new Runnable() {
             @Override
             public void run() {
@@ -199,13 +200,15 @@ public class RNLinkedinLoginModule extends ReactContextBaseJavaModule {
                         // Authentication was successful.  You can now do
                         // other calls with the SDK.
 
+                        Log.d(TAG, "onAuthSuccess");
+
 
                         String accessToken = LISessionManager.getInstance(_context).getSession().getAccessToken().getValue();
-                        Log.d(TAG, accessToken);
+                        Log.d(TAG, "onAuthSuccess: " + accessToken);
 
                         WritableMap params = Arguments.createMap();
-                        params.putString("accessToken",  LISessionManager.getInstance(_context).getSession().getAccessToken().getValue());
-                        params.putDouble("expiresOn",  LISessionManager.getInstance(_context).getSession().getAccessToken().getExpiresOn());
+                        params.putString("accessToken", LISessionManager.getInstance(_context).getSession().getAccessToken().getValue());
+                        params.putDouble("expiresOn", LISessionManager.getInstance(_context).getSession().getAccessToken().getExpiresOn());
 
                         _context.getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class)
                                 .emit("linkedinLogin", params);

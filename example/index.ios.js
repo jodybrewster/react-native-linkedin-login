@@ -3,7 +3,7 @@
 var React = require('react-native');
 var Store = require('react-native-simple-store');
 var LinkedinApi = require('./LinkedinMixin');
-var { Icon } = require('react-native-icons');
+var Icon = require('react-native-vector-icons/FontAwesome');
 
 
 var {
@@ -31,10 +31,10 @@ var RNLinkedinLoginExample = React.createClass({
     // initialize LinkedinApi
 
     this.init(
-      'https://www.yourdomain.org',
-      'your_client_id',
-      'your_client_secret',
-      'your_state',
+      'https://www.linkedintest.org',
+      '2krikav6u8j6',
+      'SR1UCLdjBOj1udlB',
+      'DCEEFWF45453sdffef424',
       [
         'r_emailaddress',
         'r_basicprofile'
@@ -42,6 +42,7 @@ var RNLinkedinLoginExample = React.createClass({
     ).then((e) => {
       console.log('Linkedin initialized');
     });
+
 
     // get the user session from the store
     Store.get('user').then((user) => {
@@ -75,19 +76,9 @@ var RNLinkedinLoginExample = React.createClass({
     if (!this.state.user) {
       return (
         <View style={styles.container}>
-          <TouchableHighlight onPress={() => {this._login(); }}>
-            <View style={{backgroundColor: '#0059b3', flexDirection: 'row'}}>
-              <View style={{padding: 12, borderWidth: 1/2, borderColor: 'transparent', borderRightColor: 'white'}}>
-              <Icon
-                name='ion|social-linkedin'
-                size={24}
-                color='white'
-                style={{width: 24, height: 24}}
-              />
-              </View>
-              <Text style={{color: 'white', padding: 12, marginTop: 2, fontWeight: 'bold'}}>Sign in with Linkedin</Text>
-            </View>
-          </TouchableHighlight>
+          <Icon.Button name="linkedin" backgroundColor="#0059b3" onPress={() => {this._login(); }}>
+            Sign in with Linkedin
+          </Icon.Button>
         </View>
       );
     }

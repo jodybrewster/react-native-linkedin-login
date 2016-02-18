@@ -1,14 +1,11 @@
-## Android Guide
-
+# Android Guide
 Includes Linkedin Android SDK v1.1.4
 
-### Linkedin Getting Started Guide
+## Linkedin Getting Started Guide
+- [https://developer.linkedin.com/docs/ios-sdk](https://developer.linkedin.com/docs/ios-sdk)
 
--	[https://developer.linkedin.com/docs/ios-sdk](https://developer.linkedin.com/docs/ios-sdk)
-
-### Setup
-
-* In `android/setting.gradle`
+## Setup
+- In `android/setting.gradle`
 
 ```gradle
 ...
@@ -16,8 +13,7 @@ include ':react-native-linkedin-login', ':app'
 project(':react-native-linkedin-login').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-linkedin-login/android')
 ```
 
-
-* In `android/app/build.gradle`
+- In `android/app/build.gradle`
 
 ```gradle
 ...
@@ -29,11 +25,14 @@ dependencies {
 }
 ```
 
-* Register Module (in MainActivity.java)
+- Register Module (in MainActivity.java)
 
 ```java
 import net.jodybrewster.linkedinlogin.RNLinkedinLoginModule; // <--- import
 import net.jodybrewster.linkedinlogin.RNLinkedinLoginPackage;  // <--- import
+
+import com.linkedin.platform.LISessionManager; // <--- import
+
 
 public class MainActivity extends Activity implements DefaultHardwareBackBtnHandler {
   ......
@@ -70,8 +69,7 @@ public class MainActivity extends Activity implements DefaultHardwareBackBtnHand
 }
 ```
 
-### Usage
-
+## Usage
 Please change the init with your parameters
 
 ```js
@@ -79,15 +77,15 @@ Please change the init with your parameters
 
 
 this.init(
-	'https://www.yourdomain.org',
-	'your_client_id',
-	'your_client_secret',
-	'your_state',
-	[
-		'r_emailaddress',
-		'r_basicprofile'
-	]
+    'https://www.yourdomain.org',
+    'your_client_id',
+    'your_client_secret',
+    'your_state',
+    [
+        'r_emailaddress',
+        'r_basicprofile'
+    ]
 ).then((e) => {
-	console.log('Linkedin initialized');
+    console.log('Linkedin initialized');
 });
 ```
