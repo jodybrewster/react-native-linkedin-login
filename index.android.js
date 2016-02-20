@@ -1,7 +1,5 @@
-var {
-  NativeModules: {
-    LinkedinLogin
-  }
-} = require('react-native');
+'use strict';
+
+const LinkedinLogin = require('./src/LinkedinLogin');
 
 module.exports = LinkedinLogin;

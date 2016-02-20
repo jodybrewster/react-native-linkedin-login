@@ -10,8 +10,8 @@ import java.util.List;
 import net.jodybrewster.linkedinlogin.RNLinkedinLoginModule;        // <------ add here
 import net.jodybrewster.linkedinlogin.RNLinkedinLoginPackage;       // <------ add here
 
-import com.oblador.vectoricons.VectorIconsPackage;
-import com.linkedin.platform.LISessionManager;
+import com.oblador.vectoricons.VectorIconsPackage;  // <------ add here
+import com.linkedin.platform.LISessionManager;  // <------ add here
 
 public class MainActivity extends ReactActivity {
 
@@ -41,10 +41,11 @@ public class MainActivity extends ReactActivity {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
         new MainReactPackage(),
-        new VectorIconsPackage(),
-        new RNLinkedinLoginPackage(this));
+        new VectorIconsPackage(), // <------ add this line to yout MainActivity class
+        new RNLinkedinLoginPackage(this)); // <------ add this line to yout MainActivity class
     }
 
+    // add this method inside your activity class
     @Override
     public void onActivityResult(int requestCode, int resultCode, android.content.Intent data) {
       LISessionManager.getInstance(getApplicationContext()).onActivityResult(this, requestCode, resultCode, data); // <------ add here
@@ -52,5 +53,5 @@ public class MainActivity extends ReactActivity {
       super.onActivityResult(requestCode, resultCode, data);
     }
 
-  
+
 }

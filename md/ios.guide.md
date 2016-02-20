@@ -14,6 +14,13 @@ Includes Linkedin iOS SDK v1.0.4
 [![xcode dialog](https://github.com/jodybrewster/react-native-linkedin-login/raw/master/md/assets/save.png)\]
 
 
+### Vector Icons
+
+The button uses a vector icon to render the linkedin logo. To install the icon font
+please install the FontAwesome font using the instructions on the vector-icon github page.
+
+[https://github.com/oblador/react-native-vector-icons](https://github.com/oblador/react-native-vector-icons)
+
 ### Usage
 
 Please change the init with your parameters
