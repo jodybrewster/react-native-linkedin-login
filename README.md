@@ -2,6 +2,8 @@
 
 [![npm version](https://img.shields.io/npm/v/react-native-linkedin-login.svg?style=flat-square)](https://www.npmjs.com/package/react-native-linkedin-login)
 [![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
+[![Dependency Status](http://localhost:1337/jodybrewster/react-native-linkedin-login.svg)](http://localhost:1337/jodybrewster/react-native-linkedin-login)
+[![Coverage Status](https://coveralls.io/repos/github/jodybrewster/react-native-linkedin-login/badge.svg?branch=master)](https://coveralls.io/github/jodybrewster/react-native-linkedin-login?branch=master)
 
 Let your users sign in with their Linkedin account.
 

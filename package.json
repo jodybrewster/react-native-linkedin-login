@@ -5,7 +5,7 @@
   "main": "index",
   "scripts": {
     "flow": "flow check",
-    "lint": "eslint --ext .js,.jsx ./src",
+    "lint": "eslint --ext .js,.jsx .",
     "test": "echo \"Error: no test specified\" && exit 1",
     "docs": "./node_modules/docker/docker -i ./src -o ./docs",
     "validate": "npm ls"
@@ -40,12 +40,10 @@
   "devDependencies": {
     "babel-eslint": "^5.0.0",
     "docker": "^0.2.14",
-    "eslint": "^2.2.0",
     "eslint-plugin-react": "^4.0.0",
     "pre-commit": "^1.1.2"
   },
   "pre-commit": [
-    "lint",
     "flow",
     "validate",
     "docs"
