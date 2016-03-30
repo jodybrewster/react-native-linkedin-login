@@ -71,10 +71,9 @@ class LinkedinLogin {
         // if ios
         console.log('picstrWithAuth', picstrWithAuth);
 
-        fetch(picstrWithAuth).then((dta) => {
-          console.log('fetched profile image', dta);
-
-          const data = JSON.parse(dta._bodyText);
+        fetch(picstrWithAuth).then(function(response) {
+        	return response.json();
+        }).then((data) => {
 
           if (data.values && data.values.length > 0) {
             resolve(data.values);
@@ -114,8 +113,9 @@ class LinkedinLogin {
       if (Platform.OS === 'android') {
         RNLinkedinLogin.getRequest(profilestr);
       } else {
-        fetch(profilestrWithAuth).then((dta) => {
-          const data = JSON.parse(dta._bodyText);
+        fetch(profilestrWithAuth).then(function(response) {
+        	return response.json();
+        }).then((data) => {
 
           if (data) {
             resolve(data);
