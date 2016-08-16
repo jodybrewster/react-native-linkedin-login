@@ -1,7 +1,7 @@
 iOS Guide
 ---------
 
-Includes Linkedin iOS SDK v1.0.4
+Includes Linkedin iOS SDK v1.0.7
 
 ### Linkedin Getting Started Guide
 
@@ -9,9 +9,25 @@ Includes Linkedin iOS SDK v1.0.4
 
 ### XCode configuration
 
--	Add `RNLinkedinLogin` folder to your XCode project (click on 'Options' button and make sure 'copy items if needed' is ticked and 'create groups' is selected)
+- Install Cocoapods
 
-[![xcode dialog](https://github.com/jodybrewster/react-native-linkedin-login/raw/master/md/assets/save.png)\]
+```
+sudo gem install cocoapods
+
+# Move into project's folder
+cd ios
+
+# Create a Podfile
+touch Podfile 
+```
+
+- Copy the contents of example/ios/Podfile from this repo into your newly created Podfile
+
+- Install the Cocoapods
+
+```
+pod install
+```
 
 
 ### Vector Icons
