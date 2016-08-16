@@ -1,0 +1,30 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+platform :ios, "9.1"
+inhibit_all_warnings!
+
+def available_pods
+    pod 'React', :path => '../node_modules/react-native', :subspecs => [
+    'Core',
+    'RCTActionSheet',
+    'RCTCameraRoll',
+    'RCTGeolocation',
+    'RCTImage',
+    'RCTLinkingIOS',
+    'RCTNetwork',
+    'RCTPushNotification',
+    'RCTSettings',
+    'RCTText',
+    'RCTVibration',
+    'RCTWebSocket',
+  ]
+  pod 'react-native-linkedin-login', :path => '../../'
+end
+
+target 'RNLinkedinLoginExample' do
+  available_pods
+end
+
+target 'RNLinkedinLoginExampleTests' do
+    available_pods
+end

@@ -4,6 +4,7 @@
 [![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
 [![Dependency Status](https://david-dm.org/jodybrewster/react-native-linkedin-login.svg)](https://david-dm.org/jodybrewster/react-native-linkedin-login)
 [![Coverage Status](https://coveralls.io/repos/github/jodybrewster/react-native-linkedin-login/badge.svg?branch=master)](https://coveralls.io/github/jodybrewster/react-native-linkedin-login?branch=master)
+[![Gitter](https://badges.gitter.im/react-native-linkedin-login/Lobby.svg)](https://gitter.im/react-native-linkedin-login/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
 Let your users sign in with their Linkedin account.
 

@@ -179,10 +179,9 @@
         <td class="code highlight"><div class="highlight"><pre>
         <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;picstrWithAuth&#39;</span><span class="p">,</span> <span class="nx">picstrWithAuth</span><span class="p">);</span>
 
-        <span class="nx">fetch</span><span class="p">(</span><span class="nx">picstrWithAuth</span><span class="p">).</span><span class="nx">then</span><span class="p">((</span><span class="nx">dta</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
-          <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;fetched profile image&#39;</span><span class="p">,</span> <span class="nx">dta</span><span class="p">);</span>
-
-          <span class="kr">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">dta</span><span class="p">.</span><span class="nx">_bodyText</span><span class="p">);</span>
+	<span class="nx">fetch</span><span class="p">(</span><span class="nx">picstrWithAuth</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
+	  <span class="k">return</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">();</span>
+	<span class="p">}).</span><span class="nx">then</span><span class="p">((</span><span class="nx">data</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
 
           <span class="k">if</span> <span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">values</span> <span class="o">&amp;&amp;</span> <span class="nx">data</span><span class="p">.</span><span class="nx">values</span><span class="p">.</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
             <span class="nx">resolve</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">values</span><span class="p">);</span>
@@ -243,8 +242,9 @@
       <span class="k">if</span> <span class="p">(</span><span class="nx">Platform</span><span class="p">.</span><span class="nx">OS</span> <span class="o">===</span> <span class="s1">&#39;android&#39;</span><span class="p">)</span> <span class="p">{</span>
         <span class="nx">RNLinkedinLogin</span><span class="p">.</span><span class="nx">getRequest</span><span class="p">(</span><span class="nx">profilestr</span><span class="p">);</span>
       <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-        <span class="nx">fetch</span><span class="p">(</span><span class="nx">profilestrWithAuth</span><span class="p">).</span><span class="nx">then</span><span class="p">((</span><span class="nx">dta</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
-          <span class="kr">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">dta</span><span class="p">.</span><span class="nx">_bodyText</span><span class="p">);</span>
+	<span class="nx">fetch</span><span class="p">(</span><span class="nx">profilestrWithAuth</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
+	  <span class="k">return</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">();</span>
+	<span class="p">}).</span><span class="nx">then</span><span class="p">((</span><span class="nx">data</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
 
           <span class="k">if</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
             <span class="nx">resolve</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>

@@ -1,0 +1,74 @@
+PODS:
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - AFNetworking/UIKit (3.1.0):
+    - AFNetworking/NSURLSession
+  - IOSLinkedInAPIFix (2.0.4):
+    - AFNetworking (>= 2.0.0)
+  - react-native-linkedin-login (1.2.2):
+    - AFNetworking (>= 2.6.3)
+    - IOSLinkedInAPIFix (>= 2.0.3)
+  - React/Core (0.22.2)
+  - React/RCTActionSheet (0.22.2):
+    - React/Core
+  - React/RCTCameraRoll (0.22.2):
+    - React/Core
+  - React/RCTGeolocation (0.22.2):
+    - React/Core
+  - React/RCTImage (0.22.2):
+    - React/Core
+    - React/RCTNetwork
+  - React/RCTLinkingIOS (0.22.2):
+    - React/Core
+  - React/RCTNetwork (0.22.2):
+    - React/Core
+  - React/RCTPushNotification (0.22.2):
+    - React/Core
+  - React/RCTSettings (0.22.2):
+    - React/Core
+  - React/RCTText (0.22.2):
+    - React/Core
+  - React/RCTVibration (0.22.2):
+    - React/Core
+  - React/RCTWebSocket (0.22.2):
+    - React/Core
+
+DEPENDENCIES:
+  - react-native-linkedin-login (from `../../`)
+  - React/Core (from `../node_modules/react-native`)
+  - React/RCTActionSheet (from `../node_modules/react-native`)
+  - React/RCTCameraRoll (from `../node_modules/react-native`)
+  - React/RCTGeolocation (from `../node_modules/react-native`)
+  - React/RCTImage (from `../node_modules/react-native`)
+  - React/RCTLinkingIOS (from `../node_modules/react-native`)
+  - React/RCTNetwork (from `../node_modules/react-native`)
+  - React/RCTPushNotification (from `../node_modules/react-native`)
+  - React/RCTSettings (from `../node_modules/react-native`)
+  - React/RCTText (from `../node_modules/react-native`)
+  - React/RCTVibration (from `../node_modules/react-native`)
+  - React/RCTWebSocket (from `../node_modules/react-native`)
+
+EXTERNAL SOURCES:
+  React:
+    :path: ../node_modules/react-native
+  react-native-linkedin-login:
+    :path: ../../
+
+SPEC CHECKSUMS:
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  IOSLinkedInAPIFix: a520fd805a03dade35f42904c7d89ded2a84c752
+  React: be2dc9f9a325f0b4db1fcd3a0cea29c0e00af9b7
+  react-native-linkedin-login: 1d5f11516d657f05ab088a7e133f0f873dc530ea
+
+COCOAPODS: 0.39.0

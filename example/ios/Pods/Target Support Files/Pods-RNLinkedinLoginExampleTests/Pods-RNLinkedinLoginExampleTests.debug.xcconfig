@@ -1,0 +1,6 @@
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/../../.."
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/AFNetworking" "${PODS_ROOT}/Headers/Public/IOSLinkedInAPIFix" "${PODS_ROOT}/Headers/Public/React" "${PODS_ROOT}/Headers/Public/react-native-linkedin-login"
+OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/AFNetworking" -isystem "${PODS_ROOT}/Headers/Public/IOSLinkedInAPIFix" -isystem "${PODS_ROOT}/Headers/Public/React" -isystem "${PODS_ROOT}/Headers/Public/react-native-linkedin-login"
+OTHER_LDFLAGS = $(inherited) -ObjC -l"AFNetworking" -l"IOSLinkedInAPIFix" -l"React" -l"react-native-linkedin-login" -framework "CoreGraphics" -framework "JavaScriptCore" -framework "MobileCoreServices" -framework "Security" -framework "SystemConfiguration" -framework "linkedin-sdk"
+PODS_ROOT = ${SRCROOT}/Pods
