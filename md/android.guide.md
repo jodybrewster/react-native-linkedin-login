@@ -2,7 +2,7 @@
 Includes Linkedin Android SDK v1.1.4
 
 ## Linkedin Getting Started Guide
-- [https://developer.linkedin.com/docs/ios-sdk](https://developer.linkedin.com/docs/ios-sdk)
+- [https://developer.linkedin.com/docs/android-sdk](https://developer.linkedin.com/docs/android-sdk)
 
 
 ## Setup
