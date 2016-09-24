@@ -1,5 +1,7 @@
 # react-native-linkedin-login
 
+[![Join the chat at https://gitter.im/react-native-linkedin-login/Lobby](https://badges.gitter.im/react-native-linkedin-login/Lobby.svg)](https://gitter.im/react-native-linkedin-login/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 [![npm version](https://img.shields.io/npm/v/react-native-linkedin-login.svg?style=flat-square)](https://www.npmjs.com/package/react-native-linkedin-login)
 [![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
 [![Dependency Status](https://david-dm.org/jodybrewster/react-native-linkedin-login.svg)](https://david-dm.org/jodybrewster/react-native-linkedin-login)
