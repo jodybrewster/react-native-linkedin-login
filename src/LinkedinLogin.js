@@ -38,6 +38,7 @@ class LinkedinLogin {
     this._clientSecret = clientSecret;
     this._state = state;
     this._scopes = scopes;
+    return this;
   }
 
   /**
