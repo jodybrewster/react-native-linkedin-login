@@ -15,15 +15,14 @@ import java.util.List;
 public class RNLinkedinLoginPackage implements ReactPackage {
     private Activity _activity;
 
-    public RNLinkedinLoginPackage(Activity activity) {
+    public RNLinkedinLoginPackage() {
         super();
-        _activity = activity;
     }
 
     @Override
     public List<NativeModule> createNativeModules(ReactApplicationContext reactContext) {
         List<NativeModule> modules = new ArrayList<>();
-        modules.add(new RNLinkedinLoginModule(reactContext, _activity));
+        modules.add(new RNLinkedinLoginModule(reactContext));
         return modules;
     }
 

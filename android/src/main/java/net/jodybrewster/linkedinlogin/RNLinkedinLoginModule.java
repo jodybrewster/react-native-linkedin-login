@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.content.IntentSender;
 import android.util.Log;
 
+import com.facebook.react.bridge.ActivityEventListener;
 import com.facebook.react.bridge.Arguments;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
@@ -34,13 +35,12 @@ import java.util.ArrayList;
  * RNLinkedinLoginModule Class provides core functionality for the linkedin api
  *
  */
-public class RNLinkedinLoginModule extends ReactContextBaseJavaModule {
+public class RNLinkedinLoginModule extends ReactContextBaseJavaModule implements ActivityEventListener {
 
     // TAG!
     public static final String TAG = RNLinkedinLoginModule.class.getCanonicalName();
 
     // Activity
-    private Activity _activity;
 
     // Context
     private static ReactApplicationContext _context;
@@ -53,13 +53,12 @@ public class RNLinkedinLoginModule extends ReactContextBaseJavaModule {
      * Module constructor
      *
      * @param reactContext ReactContext used to access react methods
-     * @param activity Originating Activity
      */
-    public RNLinkedinLoginModule(final ReactApplicationContext reactContext, Activity activity) {
+    public RNLinkedinLoginModule(final ReactApplicationContext reactContext) {
 
         super(reactContext);
-        _activity = activity;
         _context = reactContext;
+        reactContext.addActivityEventListener(this);
 
         _availablePermissions = new ArrayList<Scope.LIPermission>();
         _availablePermissions.add(Scope.R_BASICPROFILE);
@@ -68,6 +67,11 @@ public class RNLinkedinLoginModule extends ReactContextBaseJavaModule {
         _availablePermissions.add(Scope.R_FULLPROFILE);
         _availablePermissions.add(Scope.RW_COMPANY_ADMIN);
         _availablePermissions.add(Scope.W_SHARE);
+    }
+
+    @Override
+    public void onNewIntent(Intent intent) {
+
     }
 
     /**
@@ -89,6 +93,7 @@ public class RNLinkedinLoginModule extends ReactContextBaseJavaModule {
     {
 
         Log.d(TAG, "init");
+        Activity _activity = this.getCurrentActivity();
         _activity.runOnUiThread(new Runnable() {
             @Override
             public void run() {
@@ -131,6 +136,7 @@ public class RNLinkedinLoginModule extends ReactContextBaseJavaModule {
     public void getRequest(final String url) {
 
         Log.d(TAG, "getRequest");
+        Activity _activity = this.getCurrentActivity();
         _activity.runOnUiThread(new Runnable() {
             @Override
             public void run() {
@@ -188,6 +194,8 @@ public class RNLinkedinLoginModule extends ReactContextBaseJavaModule {
     public void login(final String clientId, final String redirectUrl, final String clientSecret, final String state, final ReadableArray scopes) {
 
         Log.d(TAG, "login: " + clientId);
+        final Activity _activity = this.getCurrentActivity();
+
         _activity.runOnUiThread(new Runnable() {
             @Override
             public void run() {
@@ -255,6 +263,7 @@ public class RNLinkedinLoginModule extends ReactContextBaseJavaModule {
      */
     @ReactMethod
     public void logout() {
+        Activity _activity = this.getCurrentActivity();
         _activity.runOnUiThread(new Runnable() {
             @Override
             public void run() {
@@ -274,5 +283,9 @@ public class RNLinkedinLoginModule extends ReactContextBaseJavaModule {
 
     }
 
+    @Override
+    public void onActivityResult(Activity activity, int requestCode, int resultCode, Intent data) {
+
+    }
 
 }
