@@ -24,7 +24,7 @@
 #ifndef LinkedinLogin_h
 #define LinkedinLogin_h
 
-#import "RCTBridgeModule.h"
+#import <React/RCTBridgeModule.h>
 
 
 @interface LinkedinLogin : NSObject<RCTBridgeModule>
