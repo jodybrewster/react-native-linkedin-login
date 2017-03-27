@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios, '7.0'
 
-  s.source = { :git => "https://github.com/jodybrewster/react-native-linkedin-login.git", :tag => "#{s.version}" }
+  s.source = { :git => "https://github.com/techsophy-inc/react-native-linkedin-login.git", :tag => "#{s.version}" }
   s.source_files        = 'RNLinkedinLogin/*'
   s.preserve_paths      = 'linkedin-sdk.framework'
   s.vendored_frameworks = 'linkedin-sdk.framework'
