@@ -39,7 +39,7 @@ please install the FontAwesome font using the instructions on the vector-icon gi
 
 ### Usage
 
-Please change the init with your parameters
+Please change the init with your parameters. To find out more about these parameters, see the [documentation for Oauth2 by LinkedIn](https://developer.linkedin.com/docs/oauth2).
 
 ```js
 ...
