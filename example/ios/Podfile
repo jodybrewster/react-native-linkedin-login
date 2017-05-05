@@ -18,7 +18,12 @@ def available_pods
     'RCTVibration',
     'RCTWebSocket',
   ]
-  pod 'react-native-linkedin-login', :path => '../../'
+  pod "react-native-linkedin-login", :path => "../node_modules/react-native-linkedin-login"
+
+  # yoga is required for RN40 and above versions. If you don't include yoga then you will get
+  # Error =>  Unable to satisfy the following requirements:
+  #          'Yoga (= 0.42.0.React)' required by 'React/Core(0.42)'
+  pod "Yoga", :path => "../node_modules/react-native/ReactCommon/yoga"
 end
 
 target 'RNLinkedinLoginExample' do
@@ -26,5 +31,5 @@ target 'RNLinkedinLoginExample' do
 end
 
 target 'RNLinkedinLoginExampleTests' do
-    available_pods
+   available_pods
 end

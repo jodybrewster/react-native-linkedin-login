@@ -1,5 +1,7 @@
 # react-native-linkedin-login
 
+##  The Forked branch had the support prior to react-native version 0.39. We made the changes to add the support for react-native version .39 and above.
+
 [![npm version](https://img.shields.io/npm/v/react-native-linkedin-login.svg?style=flat-square)](https://www.npmjs.com/package/react-native-linkedin-login)
 [![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
 [![Dependency Status](https://david-dm.org/jodybrewster/react-native-linkedin-login.svg)](https://david-dm.org/jodybrewster/react-native-linkedin-login)
@@ -10,8 +12,8 @@ Let your users sign in with their Linkedin account.
 
 ## Requirements
 
-* node v4
-* React Native v0.14.2 to v0.22.2 (documentation is based on v0.22.2)
+* node v4 to v7.
+* React Native 0.39.
 
 ## Installation
 
