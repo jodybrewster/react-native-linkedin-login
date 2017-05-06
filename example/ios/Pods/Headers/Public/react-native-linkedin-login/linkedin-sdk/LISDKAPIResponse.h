@@ -1,1 +1,1 @@
-../../../../../../../linkedin-sdk.framework/Headers/LISDKAPIResponse.h
+../../../../../../node_modules/react-native-linkedin-login/linkedin-sdk.framework/Headers/LISDKAPIResponse.h

@@ -122,6 +122,7 @@ public class LISessionManager {
         i.setAction(LI_APP_ACTION_AUTHORIZE_APP);
         i.addCategory(LI_APP_CATEGORY);
         try {
+            Log.d(TAG, "starting intent");
             activity.startActivityForResult(i, LI_SDK_AUTH_REQUEST_CODE);
         } catch (ActivityNotFoundException e) {
             Log.d(TAG, e.getMessage());

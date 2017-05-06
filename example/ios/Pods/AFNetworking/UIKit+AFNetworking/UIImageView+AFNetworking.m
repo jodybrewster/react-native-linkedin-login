@@ -75,19 +75,19 @@
 }
 
 - (void)setImageWithURLRequest:(NSURLRequest *)urlRequest
-	      placeholderImage:(UIImage *)placeholderImage
-		       success:(void (^)(NSURLRequest *request, NSHTTPURLResponse * _Nullable response, UIImage *image))success
-		       failure:(void (^)(NSURLRequest *request, NSHTTPURLResponse * _Nullable response, NSError *error))failure
+              placeholderImage:(UIImage *)placeholderImage
+                       success:(void (^)(NSURLRequest *request, NSHTTPURLResponse * _Nullable response, UIImage *image))success
+                       failure:(void (^)(NSURLRequest *request, NSHTTPURLResponse * _Nullable response, NSError *error))failure
 {
 
     if ([urlRequest URL] == nil) {
-	[self cancelImageDownloadTask];
-	self.image = placeholderImage;
-	return;
+        [self cancelImageDownloadTask];
+        self.image = placeholderImage;
+        return;
     }
 
     if ([self isActiveTaskURLEqualToURLRequest:urlRequest]){
-	return;
+        return;
     }
 
     [self cancelImageDownloadTask];
@@ -98,53 +98,53 @@
     //Use the image from the image cache if it exists
     UIImage *cachedImage = [imageCache imageforRequest:urlRequest withAdditionalIdentifier:nil];
     if (cachedImage) {
-	if (success) {
-	    success(urlRequest, nil, cachedImage);
-	} else {
-	    self.image = cachedImage;
-	}
-	[self clearActiveDownloadInformation];
+        if (success) {
+            success(urlRequest, nil, cachedImage);
+        } else {
+            self.image = cachedImage;
+        }
+        [self clearActiveDownloadInformation];
     } else {
-	if (placeholderImage) {
-	    self.image = placeholderImage;
-	}
+        if (placeholderImage) {
+            self.image = placeholderImage;
+        }
 
-	__weak __typeof(self)weakSelf = self;
-	NSUUID *downloadID = [NSUUID UUID];
-	AFImageDownloadReceipt *receipt;
-	receipt = [downloader
-		   downloadImageForURLRequest:urlRequest
-		   withReceiptID:downloadID
-		   success:^(NSURLRequest * _Nonnull request, NSHTTPURLResponse * _Nullable response, UIImage * _Nonnull responseObject) {
-		       __strong __typeof(weakSelf)strongSelf = weakSelf;
-		       if ([strongSelf.af_activeImageDownloadReceipt.receiptID isEqual:downloadID]) {
-			   if (success) {
-			       success(request, response, responseObject);
-			   } else if(responseObject) {
-			       strongSelf.image = responseObject;
-			   }
-			   [strongSelf clearActiveDownloadInformation];
-		       }
+        __weak __typeof(self)weakSelf = self;
+        NSUUID *downloadID = [NSUUID UUID];
+        AFImageDownloadReceipt *receipt;
+        receipt = [downloader
+                   downloadImageForURLRequest:urlRequest
+                   withReceiptID:downloadID
+                   success:^(NSURLRequest * _Nonnull request, NSHTTPURLResponse * _Nullable response, UIImage * _Nonnull responseObject) {
+                       __strong __typeof(weakSelf)strongSelf = weakSelf;
+                       if ([strongSelf.af_activeImageDownloadReceipt.receiptID isEqual:downloadID]) {
+                           if (success) {
+                               success(request, response, responseObject);
+                           } else if(responseObject) {
+                               strongSelf.image = responseObject;
+                           }
+                           [strongSelf clearActiveDownloadInformation];
+                       }
 
-		   }
-		   failure:^(NSURLRequest * _Nonnull request, NSHTTPURLResponse * _Nullable response, NSError * _Nonnull error) {
-		       __strong __typeof(weakSelf)strongSelf = weakSelf;
-			if ([strongSelf.af_activeImageDownloadReceipt.receiptID isEqual:downloadID]) {
-			    if (failure) {
-				failure(request, response, error);
-			    }
-			    [strongSelf clearActiveDownloadInformation];
-			}
-		   }];
+                   }
+                   failure:^(NSURLRequest * _Nonnull request, NSHTTPURLResponse * _Nullable response, NSError * _Nonnull error) {
+                       __strong __typeof(weakSelf)strongSelf = weakSelf;
+                        if ([strongSelf.af_activeImageDownloadReceipt.receiptID isEqual:downloadID]) {
+                            if (failure) {
+                                failure(request, response, error);
+                            }
+                            [strongSelf clearActiveDownloadInformation];
+                        }
+                   }];
 
-	self.af_activeImageDownloadReceipt = receipt;
+        self.af_activeImageDownloadReceipt = receipt;
     }
 }
 
 - (void)cancelImageDownloadTask {
     if (self.af_activeImageDownloadReceipt != nil) {
-	[[self.class sharedImageDownloader] cancelTaskForImageDownloadReceipt:self.af_activeImageDownloadReceipt];
-	[self clearActiveDownloadInformation];
+        [[self.class sharedImageDownloader] cancelTaskForImageDownloadReceipt:self.af_activeImageDownloadReceipt];
+        [self clearActiveDownloadInformation];
      }
 }
 

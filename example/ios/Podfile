@@ -23,13 +23,13 @@ def available_pods
   # yoga is required for RN40 and above versions. If you don't include yoga then you will get
   # Error =>  Unable to satisfy the following requirements:
   #          'Yoga (= 0.42.0.React)' required by 'React/Core(0.42)'
-  pod "Yoga", :path => "../node_modules/react-native/ReactCommon/yoga"
+  #pod "Yoga", :path => "../node_modules/react-native/ReactCommon/yoga"
 end
 
-target 'RNLinkedinLoginExample' do
+target 'example' do
   available_pods
 end
 
-target 'RNLinkedinLoginExampleTests' do
+target 'exampleTests' do
    available_pods
 end

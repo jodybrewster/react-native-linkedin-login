@@ -83,6 +83,13 @@ public class RNLinkedinLoginModule extends ReactContextBaseJavaModule implements
         return "LinkedinLogin";
     }
 
+    @Override
+    public void onActivityResult(final int requestCode, final int resultCode, final Intent intent) {
+     
+
+    }
+
+
     /**
      * Initializes the Linkedin Api
      * @param accessToken Access Token for existing sessions
@@ -193,7 +200,7 @@ public class RNLinkedinLoginModule extends ReactContextBaseJavaModule implements
     @ReactMethod
     public void login(final String clientId, final String redirectUrl, final String clientSecret, final String state, final ReadableArray scopes) {
 
-        Log.d(TAG, "login: " + clientId);
+        Log.d(TAG, "login: " + clientId + " redirectUrl: " + redirectUrl + " clientSecret: " + clientSecret);
         final Activity _activity = this.getCurrentActivity();
 
         _activity.runOnUiThread(new Runnable() {
@@ -227,7 +234,7 @@ public class RNLinkedinLoginModule extends ReactContextBaseJavaModule implements
                     public void onAuthError(LIAuthError error) {
                         // Handle authentication errors
 
-                        Log.e(TAG, error.toString());
+                        Log.e(TAG, "onAuthError: " + error.toString());
 
                         WritableMap params = Arguments.createMap();
                         params.putString("description", error.toString());
@@ -276,16 +283,6 @@ public class RNLinkedinLoginModule extends ReactContextBaseJavaModule implements
 
     }
 
-    public static void onActivityResult(Intent data) {
-
-
-        Log.e(TAG, "onActivityResult");
-
-    }
-
-    @Override
-    public void onActivityResult(Activity activity, int requestCode, int resultCode, Intent data) {
-
-    }
+   
 
 }

@@ -43,9 +43,9 @@ typedef void(^LIAAuthorizationCodeFailureCallback)(NSError *errorReason);
  * @param failure A failure block.
  * @returns An initialized instance
  **/
-- (id)initWithApplication:(LIALinkedInApplication *)application
-		      success:(LIAAuthorizationCodeSuccessCallback)success
-				   cancel:(LIAAuthorizationCodeCancelCallback)cancel
+- (id)initWithApplication:(LIALinkedInApplication *)application 
+	              success:(LIAAuthorizationCodeSuccessCallback)success 
+				   cancel:(LIAAuthorizationCodeCancelCallback)cancel 
 				  failure:(LIAAuthorizationCodeFailureCallback)failure;
 
 @end

@@ -29,11 +29,11 @@
 - (id)initWithRedirectURL:(NSString *)redirectURL clientId:(NSString *)clientId clientSecret:(NSString *)clientSecret state:(NSString *)state grantedAccess:(NSArray *)grantedAccess {
     self = [super init];
     if (self) {
-	self.redirectURL = redirectURL;
-	self.clientId = clientId;
-	self.clientSecret = clientSecret;
-	self.state = state;
-	self.grantedAccess = grantedAccess;
+        self.redirectURL = redirectURL;
+        self.clientId = clientId;
+        self.clientSecret = clientSecret;
+        self.state = state;
+        self.grantedAccess = grantedAccess;
     }
 
     return self;

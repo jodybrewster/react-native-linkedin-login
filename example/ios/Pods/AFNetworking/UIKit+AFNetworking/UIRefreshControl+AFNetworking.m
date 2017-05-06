@@ -40,8 +40,8 @@
 - (AFRefreshControlNotificationObserver *)af_notificationObserver {
     AFRefreshControlNotificationObserver *notificationObserver = objc_getAssociatedObject(self, @selector(af_notificationObserver));
     if (notificationObserver == nil) {
-	notificationObserver = [[AFRefreshControlNotificationObserver alloc] initWithActivityRefreshControl:self];
-	objc_setAssociatedObject(self, @selector(af_notificationObserver), notificationObserver, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+        notificationObserver = [[AFRefreshControlNotificationObserver alloc] initWithActivityRefreshControl:self];
+        objc_setAssociatedObject(self, @selector(af_notificationObserver), notificationObserver, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     }
     return notificationObserver;
 }
@@ -58,7 +58,7 @@
 {
     self = [super init];
     if (self) {
-	_refreshControl = refreshControl;
+        _refreshControl = refreshControl;
     }
     return self;
 }
@@ -74,15 +74,15 @@
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wreceiver-is-weak"
 #pragma clang diagnostic ignored "-Warc-repeated-use-of-weak"
-	if (task.state == NSURLSessionTaskStateRunning) {
-	    [self.refreshControl beginRefreshing];
+        if (task.state == NSURLSessionTaskStateRunning) {
+            [self.refreshControl beginRefreshing];
 
-	    [notificationCenter addObserver:self selector:@selector(af_beginRefreshing) name:AFNetworkingTaskDidResumeNotification object:task];
-	    [notificationCenter addObserver:self selector:@selector(af_endRefreshing) name:AFNetworkingTaskDidCompleteNotification object:task];
-	    [notificationCenter addObserver:self selector:@selector(af_endRefreshing) name:AFNetworkingTaskDidSuspendNotification object:task];
-	} else {
-	    [self.refreshControl endRefreshing];
-	}
+            [notificationCenter addObserver:self selector:@selector(af_beginRefreshing) name:AFNetworkingTaskDidResumeNotification object:task];
+            [notificationCenter addObserver:self selector:@selector(af_endRefreshing) name:AFNetworkingTaskDidCompleteNotification object:task];
+            [notificationCenter addObserver:self selector:@selector(af_endRefreshing) name:AFNetworkingTaskDidSuspendNotification object:task];
+        } else {
+            [self.refreshControl endRefreshing];
+        }
 #pragma clang diagnostic pop
     }
 }
@@ -93,7 +93,7 @@
     dispatch_async(dispatch_get_main_queue(), ^{
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wreceiver-is-weak"
-	[self.refreshControl beginRefreshing];
+        [self.refreshControl beginRefreshing];
 #pragma clang diagnostic pop
     });
 }
@@ -102,7 +102,7 @@
     dispatch_async(dispatch_get_main_queue(), ^{
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wreceiver-is-weak"
-	[self.refreshControl endRefreshing];
+        [self.refreshControl endRefreshing];
 #pragma clang diagnostic pop
     });
 }
@@ -111,7 +111,7 @@
 
 - (void)dealloc {
     NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
-
+    
     [notificationCenter removeObserver:self name:AFNetworkingTaskDidCompleteNotification object:nil];
     [notificationCenter removeObserver:self name:AFNetworkingTaskDidResumeNotification object:nil];
     [notificationCenter removeObserver:self name:AFNetworkingTaskDidSuspendNotification object:nil];

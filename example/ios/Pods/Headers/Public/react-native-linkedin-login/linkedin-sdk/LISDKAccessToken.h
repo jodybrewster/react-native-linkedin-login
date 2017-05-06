@@ -1,1 +1,1 @@
-../../../../../../../linkedin-sdk.framework/Headers/LISDKAccessToken.h
+../../../../../../node_modules/react-native-linkedin-login/linkedin-sdk.framework/Headers/LISDKAccessToken.h

@@ -46,19 +46,19 @@ BOOL handlingRedirectURL;
 - (id)initWithApplication:(LIALinkedInApplication *)application success:(LIAAuthorizationCodeSuccessCallback)success cancel:(LIAAuthorizationCodeCancelCallback)cancel failure:(LIAAuthorizationCodeFailureCallback)failure {
     self = [super init];
     if (self) {
-	self.application = application;
-	self.successCallback = success;
-	self.cancelCallback = cancel;
-	self.failureCallback = failure;
+        self.application = application;
+        self.successCallback = success;
+        self.cancelCallback = cancel;
+        self.failureCallback = failure;
     }
     return self;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    
 	if(SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"7")) {
-
+		
 		self.edgesForExtendedLayout = UIRectEdgeNone;
 	}
 
@@ -102,30 +102,30 @@ BOOL handlingRedirectURL;
     handlingRedirectURL = [url hasPrefix:self.application.redirectURL];
 
     if (handlingRedirectURL) {
-	if ([url rangeOfString:@"error"].location != NSNotFound) {
-	    BOOL accessDenied = [url rangeOfString:kLinkedInDeniedByUser].location != NSNotFound;
-	    if (accessDenied) {
-		self.cancelCallback();
-	    } else {
-		NSString* errorDescription = [self extractGetParameter:@"error_description" fromURL:requestURL];
-		NSError *error = [[NSError alloc] initWithDomain:kLinkedInErrorDomain
-							    code:1
-							userInfo:@{
-								   NSLocalizedDescriptionKey: errorDescription}];
-		self.failureCallback(error);
-	    }
-	} else {
-	    NSString *receivedState = [self extractGetParameter:@"state" fromURL: requestURL];
-	    //assert that the state is as we expected it to be
-	    if ([receivedState containsString:self.application.state]) {
-		//extract the code from the url
-		NSString *authorizationCode = [self extractGetParameter:@"code" fromURL: requestURL];
-		self.successCallback(authorizationCode);
-	    } else {
-		NSError *error = [[NSError alloc] initWithDomain:kLinkedInErrorDomain code:2 userInfo:[[NSMutableDictionary alloc] init]];
-		self.failureCallback(error);
-	    }
-	}
+        if ([url rangeOfString:@"error"].location != NSNotFound) {
+            BOOL accessDenied = [url rangeOfString:kLinkedInDeniedByUser].location != NSNotFound;
+            if (accessDenied) {
+                self.cancelCallback();
+            } else {
+                NSString* errorDescription = [self extractGetParameter:@"error_description" fromURL:requestURL];
+                NSError *error = [[NSError alloc] initWithDomain:kLinkedInErrorDomain
+                                                            code:1
+                                                        userInfo:@{
+                                                                   NSLocalizedDescriptionKey: errorDescription}];
+                self.failureCallback(error);
+            }
+        } else {
+            NSString *receivedState = [self extractGetParameter:@"state" fromURL: requestURL];
+            //assert that the state is as we expected it to be
+            if ([receivedState containsString:self.application.state]) {
+                //extract the code from the url
+                NSString *authorizationCode = [self extractGetParameter:@"code" fromURL: requestURL];
+                self.successCallback(authorizationCode);
+            } else {
+                NSError *error = [[NSError alloc] initWithDomain:kLinkedInErrorDomain code:2 userInfo:[[NSMutableDictionary alloc] init]];
+                self.failureCallback(error);
+            }
+        }
     }
     return !handlingRedirectURL;
 }
@@ -134,10 +134,10 @@ BOOL handlingRedirectURL;
     NSMutableDictionary *mdQueryStrings = [[NSMutableDictionary alloc] init];
     NSString *urlString = url.query;
     for (NSString *qs in [urlString componentsSeparatedByString:@"&"]) {
-	[mdQueryStrings setValue:[[[[qs componentsSeparatedByString:@"="] objectAtIndex:1]
-		stringByReplacingOccurrencesOfString:@"+" withString:@" "]
-		stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding]
-			  forKey:[[qs componentsSeparatedByString:@"="] objectAtIndex:0]];
+        [mdQueryStrings setValue:[[[[qs componentsSeparatedByString:@"="] objectAtIndex:1]
+                stringByReplacingOccurrencesOfString:@"+" withString:@" "]
+                stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding]
+                          forKey:[[qs componentsSeparatedByString:@"="] objectAtIndex:0]];
     }
     return [mdQueryStrings objectForKey:parameterName];
 }
@@ -148,7 +148,7 @@ BOOL handlingRedirectURL;
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
 
     if (!handlingRedirectURL)
-	self.failureCallback(error);
+        self.failureCallback(error);
 }
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
@@ -167,7 +167,7 @@ BOOL handlingRedirectURL;
 		@"meta.setAttribute( 'name', 'viewport' ); "
 		@"meta.setAttribute( 'content', 'width = 540px, initial-scale = 1.0, user-scalable = yes' ); "
 		@"document.getElementsByTagName('head')[0].appendChild(meta)";
-
+		
 		[webView stringByEvaluatingJavaScriptFromString: js];
 	}
 }

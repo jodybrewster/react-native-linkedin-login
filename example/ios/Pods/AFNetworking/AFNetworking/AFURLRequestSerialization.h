@@ -39,9 +39,9 @@ NS_ASSUME_NONNULL_BEGIN
  In RFC 3986 - Section 3.4, it states that the "?" and "/" characters should not be escaped to allow
  query strings to include a URL. Therefore, all "reserved" characters with the exception of "?" and "/"
  should be percent-escaped in the query string.
-
+ 
  @param string The string to be percent-escaped.
-
+ 
  @return The percent-escaped string.
  */
 FOUNDATION_EXPORT NSString * AFPercentEscapedStringFromString(NSString *string);
@@ -72,8 +72,8 @@ FOUNDATION_EXPORT NSString * AFQueryStringFromParameters(NSDictionary *parameter
  @return A serialized request.
  */
 - (nullable NSURLRequest *)requestBySerializingRequest:(NSURLRequest *)request
-			       withParameters:(nullable id)parameters
-					error:(NSError * _Nullable __autoreleasing *)error NS_SWIFT_NOTHROW;
+                               withParameters:(nullable id)parameters
+                                        error:(NSError * _Nullable __autoreleasing *)error NS_SWIFT_NOTHROW;
 
 @end
 
@@ -186,7 +186,7 @@ forHTTPHeaderField:(NSString *)field;
  @param password The HTTP basic auth password
  */
 - (void)setAuthorizationHeaderFieldWithUsername:(NSString *)username
-				       password:(NSString *)password;
+                                       password:(NSString *)password;
 
 /**
  Clears any existing value for the "Authorization" HTTP header.
@@ -235,9 +235,9 @@ forHTTPHeaderField:(NSString *)field;
  @return An `NSMutableURLRequest` object.
  */
 - (NSMutableURLRequest *)requestWithMethod:(NSString *)method
-				 URLString:(NSString *)URLString
-				parameters:(nullable id)parameters
-				     error:(NSError * _Nullable __autoreleasing *)error;
+                                 URLString:(NSString *)URLString
+                                parameters:(nullable id)parameters
+                                     error:(NSError * _Nullable __autoreleasing *)error;
 
 /**
  Creates an `NSMutableURLRequest` object with the specified HTTP method and URLString, and constructs a `multipart/form-data` HTTP body, using the specified parameters and multipart form data block. See http://www.w3.org/TR/html4/interact/forms.html#h-17.13.4.2
@@ -253,10 +253,10 @@ forHTTPHeaderField:(NSString *)field;
  @return An `NSMutableURLRequest` object
  */
 - (NSMutableURLRequest *)multipartFormRequestWithMethod:(NSString *)method
-					      URLString:(NSString *)URLString
-					     parameters:(nullable NSDictionary <NSString *, id> *)parameters
-			      constructingBodyWithBlock:(nullable void (^)(id <AFMultipartFormData> formData))block
-						  error:(NSError * _Nullable __autoreleasing *)error;
+                                              URLString:(NSString *)URLString
+                                             parameters:(nullable NSDictionary <NSString *, id> *)parameters
+                              constructingBodyWithBlock:(nullable void (^)(id <AFMultipartFormData> formData))block
+                                                  error:(NSError * _Nullable __autoreleasing *)error;
 
 /**
  Creates an `NSMutableURLRequest` by removing the `HTTPBodyStream` from a request, and asynchronously writing its contents into the specified file, invoking the completion handler when finished.
@@ -270,8 +270,8 @@ forHTTPHeaderField:(NSString *)field;
  @see https://github.com/AFNetworking/AFNetworking/issues/1398
  */
 - (NSMutableURLRequest *)requestWithMultipartFormRequest:(NSURLRequest *)request
-			     writingStreamContentsToFile:(NSURL *)fileURL
-				       completionHandler:(nullable void (^)(NSError * _Nullable error))handler;
+                             writingStreamContentsToFile:(NSURL *)fileURL
+                                       completionHandler:(nullable void (^)(NSError * _Nullable error))handler;
 
 @end
 
@@ -294,8 +294,8 @@ forHTTPHeaderField:(NSString *)field;
  @return `YES` if the file data was successfully appended, otherwise `NO`.
  */
 - (BOOL)appendPartWithFileURL:(NSURL *)fileURL
-			 name:(NSString *)name
-			error:(NSError * _Nullable __autoreleasing *)error;
+                         name:(NSString *)name
+                        error:(NSError * _Nullable __autoreleasing *)error;
 
 /**
  Appends the HTTP header `Content-Disposition: file; filename=#{filename}; name=#{name}"` and `Content-Type: #{mimeType}`, followed by the encoded file data and the multipart form boundary.
@@ -309,10 +309,10 @@ forHTTPHeaderField:(NSString *)field;
  @return `YES` if the file data was successfully appended otherwise `NO`.
  */
 - (BOOL)appendPartWithFileURL:(NSURL *)fileURL
-			 name:(NSString *)name
-		     fileName:(NSString *)fileName
-		     mimeType:(NSString *)mimeType
-			error:(NSError * _Nullable __autoreleasing *)error;
+                         name:(NSString *)name
+                     fileName:(NSString *)fileName
+                     mimeType:(NSString *)mimeType
+                        error:(NSError * _Nullable __autoreleasing *)error;
 
 /**
  Appends the HTTP header `Content-Disposition: file; filename=#{filename}; name=#{name}"` and `Content-Type: #{mimeType}`, followed by the data from the input stream and the multipart form boundary.
@@ -324,10 +324,10 @@ forHTTPHeaderField:(NSString *)field;
  @param mimeType The MIME type of the specified data. (For example, the MIME type for a JPEG image is image/jpeg.) For a list of valid MIME types, see http://www.iana.org/assignments/media-types/. This parameter must not be `nil`.
  */
 - (void)appendPartWithInputStream:(nullable NSInputStream *)inputStream
-			     name:(NSString *)name
-			 fileName:(NSString *)fileName
-			   length:(int64_t)length
-			 mimeType:(NSString *)mimeType;
+                             name:(NSString *)name
+                         fileName:(NSString *)fileName
+                           length:(int64_t)length
+                         mimeType:(NSString *)mimeType;
 
 /**
  Appends the HTTP header `Content-Disposition: file; filename=#{filename}; name=#{name}"` and `Content-Type: #{mimeType}`, followed by the encoded file data and the multipart form boundary.
@@ -338,9 +338,9 @@ forHTTPHeaderField:(NSString *)field;
  @param mimeType The MIME type of the specified data. (For example, the MIME type for a JPEG image is image/jpeg.) For a list of valid MIME types, see http://www.iana.org/assignments/media-types/. This parameter must not be `nil`.
  */
 - (void)appendPartWithFileData:(NSData *)data
-			  name:(NSString *)name
-		      fileName:(NSString *)fileName
-		      mimeType:(NSString *)mimeType;
+                          name:(NSString *)name
+                      fileName:(NSString *)fileName
+                      mimeType:(NSString *)mimeType;
 
 /**
  Appends the HTTP headers `Content-Disposition: form-data; name=#{name}"`, followed by the encoded data and the multipart form boundary.
@@ -350,7 +350,7 @@ forHTTPHeaderField:(NSString *)field;
  */
 
 - (void)appendPartWithFormData:(NSData *)data
-			  name:(NSString *)name;
+                          name:(NSString *)name;
 
 
 /**
@@ -360,7 +360,7 @@ forHTTPHeaderField:(NSString *)field;
  @param body The data to be encoded and appended to the form data. This parameter must not be `nil`.
  */
 - (void)appendPartWithHeaders:(nullable NSDictionary <NSString *, NSString *> *)headers
-			 body:(NSData *)body;
+                         body:(NSData *)body;
 
 /**
  Throttles request bandwidth by limiting the packet size and adding a delay for each chunk read from the upload stream.
@@ -371,7 +371,7 @@ forHTTPHeaderField:(NSString *)field;
  @param delay Duration of delay each time a packet is read. By default, no delay is set.
  */
 - (void)throttleBandwidthWithPacketSize:(NSUInteger)numberOfBytes
-				  delay:(NSTimeInterval)delay;
+                                  delay:(NSTimeInterval)delay;
 
 @end
 
@@ -422,7 +422,7 @@ forHTTPHeaderField:(NSString *)field;
  @warning The `writeOptions` property is currently unused.
  */
 + (instancetype)serializerWithFormat:(NSPropertyListFormat)format
-			writeOptions:(NSPropertyListWriteOptions)writeOptions;
+                        writeOptions:(NSPropertyListWriteOptions)writeOptions;
 
 @end
 

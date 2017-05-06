@@ -58,7 +58,7 @@ NS_EXTENSION_UNAVAILABLE_IOS("Use view controller based solutions where appropri
 
 /**
  A time interval indicating the minimum duration of networking activity that should occur before the activity indicator is displayed. The default value 1 second. If the network activity indicator should be displayed immediately when network activity occurs, this value should be set to 0 seconds.
-
+ 
  Apple's HIG describes the following:
 
  > Display the network activity indicator to provide feedback when your app accesses the network for more than a couple of seconds. If the operation finishes sooner than that, you don’t have to show the network activity indicator, because the indicator is likely to disappear before users notice its presence.

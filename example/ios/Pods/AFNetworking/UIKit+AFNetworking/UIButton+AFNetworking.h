@@ -67,7 +67,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param url The URL used for the image request.
  */
 - (void)setImageForState:(UIControlState)state
-		 withURL:(NSURL *)url;
+                 withURL:(NSURL *)url;
 
 /**
  Asynchronously downloads an image from the specified URL, and sets it as the image for the specified state once the request is finished. Any previous image request for the receiver will be cancelled.
@@ -79,8 +79,8 @@ NS_ASSUME_NONNULL_BEGIN
  @param placeholderImage The image to be set initially, until the image request finishes. If `nil`, the button will not change its image until the image request finishes.
  */
 - (void)setImageForState:(UIControlState)state
-		 withURL:(NSURL *)url
-	placeholderImage:(nullable UIImage *)placeholderImage;
+                 withURL:(NSURL *)url
+        placeholderImage:(nullable UIImage *)placeholderImage;
 
 /**
  Asynchronously downloads an image from the specified URL request, and sets it as the image for the specified state once the request is finished. Any previous image request for the receiver will be cancelled.
@@ -96,10 +96,10 @@ NS_ASSUME_NONNULL_BEGIN
  @param failure A block object to be executed when the image data task finishes unsuccessfully, or that finishes successfully. This block has no return value and takes three arguments: the request sent from the client, the response received from the server, and the error object describing the network or parsing error that occurred.
  */
 - (void)setImageForState:(UIControlState)state
-	  withURLRequest:(NSURLRequest *)urlRequest
-	placeholderImage:(nullable UIImage *)placeholderImage
-		 success:(nullable void (^)(NSURLRequest *request, NSHTTPURLResponse * _Nullable response, UIImage *image))success
-		 failure:(nullable void (^)(NSURLRequest *request, NSHTTPURLResponse * _Nullable response, NSError *error))failure;
+          withURLRequest:(NSURLRequest *)urlRequest
+        placeholderImage:(nullable UIImage *)placeholderImage
+                 success:(nullable void (^)(NSURLRequest *request, NSHTTPURLResponse * _Nullable response, UIImage *image))success
+                 failure:(nullable void (^)(NSURLRequest *request, NSHTTPURLResponse * _Nullable response, NSError *error))failure;
 
 
 ///-------------------------------
@@ -115,7 +115,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param url The URL used for the background image request.
  */
 - (void)setBackgroundImageForState:(UIControlState)state
-			   withURL:(NSURL *)url;
+                           withURL:(NSURL *)url;
 
 /**
  Asynchronously downloads an image from the specified URL, and sets it as the background image for the specified state once the request is finished. Any previous image request for the receiver will be cancelled.
@@ -127,8 +127,8 @@ NS_ASSUME_NONNULL_BEGIN
  @param placeholderImage The background image to be set initially, until the background image request finishes. If `nil`, the button will not change its background image until the background image request finishes.
  */
 - (void)setBackgroundImageForState:(UIControlState)state
-			   withURL:(NSURL *)url
-		  placeholderImage:(nullable UIImage *)placeholderImage;
+                           withURL:(NSURL *)url
+                  placeholderImage:(nullable UIImage *)placeholderImage;
 
 /**
  Asynchronously downloads an image from the specified URL request, and sets it as the image for the specified state once the request is finished. Any previous image request for the receiver will be cancelled.
@@ -144,10 +144,10 @@ NS_ASSUME_NONNULL_BEGIN
  @param failure A block object to be executed when the image data task finishes unsuccessfully, or that finishes successfully. This block has no return value and takes three arguments: the request sent from the client, the response received from the server, and the error object describing the network or parsing error that occurred.
  */
 - (void)setBackgroundImageForState:(UIControlState)state
-		    withURLRequest:(NSURLRequest *)urlRequest
-		  placeholderImage:(nullable UIImage *)placeholderImage
-			   success:(nullable void (^)(NSURLRequest *request, NSHTTPURLResponse * _Nullable response, UIImage *image))success
-			   failure:(nullable void (^)(NSURLRequest *request, NSHTTPURLResponse * _Nullable response, NSError *error))failure;
+                    withURLRequest:(NSURLRequest *)urlRequest
+                  placeholderImage:(nullable UIImage *)placeholderImage
+                           success:(nullable void (^)(NSURLRequest *request, NSHTTPURLResponse * _Nullable response, UIImage *image))success
+                           failure:(nullable void (^)(NSURLRequest *request, NSHTTPURLResponse * _Nullable response, NSError *error))failure;
 
 
 ///------------------------------

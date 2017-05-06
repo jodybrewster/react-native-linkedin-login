@@ -41,7 +41,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  Binds the refreshing state to the state of the specified task.
-
+ 
  @param task The task. If `nil`, automatic updating from any previously specified operation will be disabled.
  */
 - (void)setRefreshingWithStateOfTask:(NSURLSessionTask *)task;

@@ -53,9 +53,9 @@
     static AFHTTPSessionManager *_af_defaultHTTPSessionManager = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-	_af_defaultHTTPSessionManager = [[AFHTTPSessionManager alloc] initWithSessionConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
-	_af_defaultHTTPSessionManager.requestSerializer = [AFHTTPRequestSerializer serializer];
-	_af_defaultHTTPSessionManager.responseSerializer = [AFHTTPResponseSerializer serializer];
+        _af_defaultHTTPSessionManager = [[AFHTTPSessionManager alloc] initWithSessionConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
+        _af_defaultHTTPSessionManager.requestSerializer = [AFHTTPRequestSerializer serializer];
+        _af_defaultHTTPSessionManager.responseSerializer = [AFHTTPResponseSerializer serializer];
     });
 
 #pragma clang diagnostic push
@@ -72,7 +72,7 @@
     static AFHTTPResponseSerializer <AFURLResponseSerialization> *_af_defaultResponseSerializer = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-	_af_defaultResponseSerializer = [AFHTTPResponseSerializer serializer];
+        _af_defaultResponseSerializer = [AFHTTPResponseSerializer serializer];
     });
 
 #pragma clang diagnostic push
@@ -88,72 +88,72 @@
 #pragma mark -
 
 - (void)loadRequest:(NSURLRequest *)request
-	   progress:(NSProgress * _Nullable __autoreleasing * _Nullable)progress
-	    success:(NSString * (^)(NSHTTPURLResponse *response, NSString *HTML))success
-	    failure:(void (^)(NSError *error))failure
+           progress:(NSProgress * _Nullable __autoreleasing * _Nullable)progress
+            success:(NSString * (^)(NSHTTPURLResponse *response, NSString *HTML))success
+            failure:(void (^)(NSError *error))failure
 {
     [self loadRequest:request MIMEType:nil textEncodingName:nil progress:progress success:^NSData *(NSHTTPURLResponse *response, NSData *data) {
-	NSStringEncoding stringEncoding = NSUTF8StringEncoding;
-	if (response.textEncodingName) {
-	    CFStringEncoding encoding = CFStringConvertIANACharSetNameToEncoding((CFStringRef)response.textEncodingName);
-	    if (encoding != kCFStringEncodingInvalidId) {
-		stringEncoding = CFStringConvertEncodingToNSStringEncoding(encoding);
-	    }
-	}
+        NSStringEncoding stringEncoding = NSUTF8StringEncoding;
+        if (response.textEncodingName) {
+            CFStringEncoding encoding = CFStringConvertIANACharSetNameToEncoding((CFStringRef)response.textEncodingName);
+            if (encoding != kCFStringEncodingInvalidId) {
+                stringEncoding = CFStringConvertEncodingToNSStringEncoding(encoding);
+            }
+        }
 
-	NSString *string = [[NSString alloc] initWithData:data encoding:stringEncoding];
-	if (success) {
-	    string = success(response, string);
-	}
+        NSString *string = [[NSString alloc] initWithData:data encoding:stringEncoding];
+        if (success) {
+            string = success(response, string);
+        }
 
-	return [string dataUsingEncoding:stringEncoding];
+        return [string dataUsingEncoding:stringEncoding];
     } failure:failure];
 }
 
 - (void)loadRequest:(NSURLRequest *)request
-	   MIMEType:(NSString *)MIMEType
+           MIMEType:(NSString *)MIMEType
    textEncodingName:(NSString *)textEncodingName
-	   progress:(NSProgress * _Nullable __autoreleasing * _Nullable)progress
-	    success:(NSData * (^)(NSHTTPURLResponse *response, NSData *data))success
-	    failure:(void (^)(NSError *error))failure
+           progress:(NSProgress * _Nullable __autoreleasing * _Nullable)progress
+            success:(NSData * (^)(NSHTTPURLResponse *response, NSData *data))success
+            failure:(void (^)(NSError *error))failure
 {
     NSParameterAssert(request);
 
     if (self.af_URLSessionTask.state == NSURLSessionTaskStateRunning || self.af_URLSessionTask.state == NSURLSessionTaskStateSuspended) {
-	[self.af_URLSessionTask cancel];
+        [self.af_URLSessionTask cancel];
     }
     self.af_URLSessionTask = nil;
 
     __weak __typeof(self)weakSelf = self;
     NSURLSessionDataTask *dataTask;
     dataTask = [self.sessionManager
-	    GET:request.URL.absoluteString
-	    parameters:nil
-	    progress:nil
-	    success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
-		__strong __typeof(weakSelf) strongSelf = weakSelf;
-		if (success) {
-		    success((NSHTTPURLResponse *)task.response, responseObject);
-		}
-		[strongSelf loadData:responseObject MIMEType:MIMEType textEncodingName:textEncodingName baseURL:[task.currentRequest URL]];
+            GET:request.URL.absoluteString
+            parameters:nil
+            progress:nil
+            success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
+                __strong __typeof(weakSelf) strongSelf = weakSelf;
+                if (success) {
+                    success((NSHTTPURLResponse *)task.response, responseObject);
+                }
+                [strongSelf loadData:responseObject MIMEType:MIMEType textEncodingName:textEncodingName baseURL:[task.currentRequest URL]];
 
-		if ([strongSelf.delegate respondsToSelector:@selector(webViewDidStartLoad:)]) {
-		    [strongSelf.delegate webViewDidFinishLoad:strongSelf];
-		}
-	    }
-	    failure:^(NSURLSessionDataTask * _Nonnull task, NSError * _Nonnull error) {
-		if (failure) {
-		    failure(error);
-		}
-	    }];
+                if ([strongSelf.delegate respondsToSelector:@selector(webViewDidStartLoad:)]) {
+                    [strongSelf.delegate webViewDidFinishLoad:strongSelf];
+                }
+            }
+            failure:^(NSURLSessionDataTask * _Nonnull task, NSError * _Nonnull error) {
+                if (failure) {
+                    failure(error);
+                }
+            }];
     self.af_URLSessionTask = dataTask;
     if (progress != nil) {
-	*progress = [self.sessionManager downloadProgressForTask:dataTask];
+        *progress = [self.sessionManager downloadProgressForTask:dataTask];
     }
     [self.af_URLSessionTask resume];
 
     if ([self.delegate respondsToSelector:@selector(webViewDidStartLoad:)]) {
-	[self.delegate webViewDidStartLoad:self];
+        [self.delegate webViewDidStartLoad:self];
     }
 }
 

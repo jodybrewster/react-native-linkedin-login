@@ -42,15 +42,15 @@ static char AFImageDownloadReceiptDisabled;
 
 static const char * af_imageDownloadReceiptKeyForState(UIControlState state) {
     switch (state) {
-	case UIControlStateHighlighted:
-	    return &AFImageDownloadReceiptHighlighted;
-	case UIControlStateSelected:
-	    return &AFImageDownloadReceiptSelected;
-	case UIControlStateDisabled:
-	    return &AFImageDownloadReceiptDisabled;
-	case UIControlStateNormal:
-	default:
-	    return &AFImageDownloadReceiptNormal;
+        case UIControlStateHighlighted:
+            return &AFImageDownloadReceiptHighlighted;
+        case UIControlStateSelected:
+            return &AFImageDownloadReceiptSelected;
+        case UIControlStateDisabled:
+            return &AFImageDownloadReceiptDisabled;
+        case UIControlStateNormal:
+        default:
+            return &AFImageDownloadReceiptNormal;
     }
 }
 
@@ -59,7 +59,7 @@ static const char * af_imageDownloadReceiptKeyForState(UIControlState state) {
 }
 
 - (void)af_setImageDownloadReceipt:(AFImageDownloadReceipt *)imageDownloadReceipt
-			   forState:(UIControlState)state
+                           forState:(UIControlState)state
 {
     objc_setAssociatedObject(self, af_imageDownloadReceiptKeyForState(state), imageDownloadReceipt, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
@@ -73,15 +73,15 @@ static char AFBackgroundImageDownloadReceiptDisabled;
 
 static const char * af_backgroundImageDownloadReceiptKeyForState(UIControlState state) {
     switch (state) {
-	case UIControlStateHighlighted:
-	    return &AFBackgroundImageDownloadReceiptHighlighted;
-	case UIControlStateSelected:
-	    return &AFBackgroundImageDownloadReceiptSelected;
-	case UIControlStateDisabled:
-	    return &AFBackgroundImageDownloadReceiptDisabled;
-	case UIControlStateNormal:
-	default:
-	    return &AFBackgroundImageDownloadReceiptNormal;
+        case UIControlStateHighlighted:
+            return &AFBackgroundImageDownloadReceiptHighlighted;
+        case UIControlStateSelected:
+            return &AFBackgroundImageDownloadReceiptSelected;
+        case UIControlStateDisabled:
+            return &AFBackgroundImageDownloadReceiptDisabled;
+        case UIControlStateNormal:
+        default:
+            return &AFBackgroundImageDownloadReceiptNormal;
     }
 }
 
@@ -90,7 +90,7 @@ static const char * af_backgroundImageDownloadReceiptKeyForState(UIControlState 
 }
 
 - (void)af_setBackgroundImageDownloadReceipt:(AFImageDownloadReceipt *)imageDownloadReceipt
-				     forState:(UIControlState)state
+                                     forState:(UIControlState)state
 {
     objc_setAssociatedObject(self, af_backgroundImageDownloadReceiptKeyForState(state), imageDownloadReceipt, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
@@ -116,14 +116,14 @@ static const char * af_backgroundImageDownloadReceiptKeyForState(UIControlState 
 #pragma mark -
 
 - (void)setImageForState:(UIControlState)state
-		 withURL:(NSURL *)url
+                 withURL:(NSURL *)url
 {
     [self setImageForState:state withURL:url placeholderImage:nil];
 }
 
 - (void)setImageForState:(UIControlState)state
-		 withURL:(NSURL *)url
-	placeholderImage:(UIImage *)placeholderImage
+                 withURL:(NSURL *)url
+        placeholderImage:(UIImage *)placeholderImage
 {
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
     [request addValue:@"image/*" forHTTPHeaderField:@"Accept"];
@@ -132,13 +132,13 @@ static const char * af_backgroundImageDownloadReceiptKeyForState(UIControlState 
 }
 
 - (void)setImageForState:(UIControlState)state
-	  withURLRequest:(NSURLRequest *)urlRequest
-	placeholderImage:(nullable UIImage *)placeholderImage
-		 success:(nullable void (^)(NSURLRequest *request, NSHTTPURLResponse * _Nullable response, UIImage *image))success
-		 failure:(nullable void (^)(NSURLRequest *request, NSHTTPURLResponse * _Nullable response, NSError *error))failure
+          withURLRequest:(NSURLRequest *)urlRequest
+        placeholderImage:(nullable UIImage *)placeholderImage
+                 success:(nullable void (^)(NSURLRequest *request, NSHTTPURLResponse * _Nullable response, UIImage *image))success
+                 failure:(nullable void (^)(NSURLRequest *request, NSHTTPURLResponse * _Nullable response, NSError *error))failure
 {
     if ([self isActiveTaskURLEqualToURLRequest:urlRequest forState:state]) {
-	return;
+        return;
     }
 
     [self cancelImageDownloadTaskForState:state];
@@ -149,60 +149,60 @@ static const char * af_backgroundImageDownloadReceiptKeyForState(UIControlState 
     //Use the image from the image cache if it exists
     UIImage *cachedImage = [imageCache imageforRequest:urlRequest withAdditionalIdentifier:nil];
     if (cachedImage) {
-	if (success) {
-	    success(urlRequest, nil, cachedImage);
-	} else {
-	    [self setImage:cachedImage forState:state];
-	}
-	[self af_setImageDownloadReceipt:nil forState:state];
+        if (success) {
+            success(urlRequest, nil, cachedImage);
+        } else {
+            [self setImage:cachedImage forState:state];
+        }
+        [self af_setImageDownloadReceipt:nil forState:state];
     } else {
-	if (placeholderImage) {
-	    [self setImage:placeholderImage forState:state];
-	}
+        if (placeholderImage) {
+            [self setImage:placeholderImage forState:state];
+        }
 
-	__weak __typeof(self)weakSelf = self;
-	NSUUID *downloadID = [NSUUID UUID];
-	AFImageDownloadReceipt *receipt;
-	receipt = [downloader
-		   downloadImageForURLRequest:urlRequest
-		   withReceiptID:downloadID
-		   success:^(NSURLRequest * _Nonnull request, NSHTTPURLResponse * _Nullable response, UIImage * _Nonnull responseObject) {
-		       __strong __typeof(weakSelf)strongSelf = weakSelf;
-		       if ([[strongSelf af_imageDownloadReceiptForState:state].receiptID isEqual:downloadID]) {
-			   if (success) {
-			       success(request, response, responseObject);
-			   } else if(responseObject) {
-			       [strongSelf setImage:responseObject forState:state];
-			   }
-			   [strongSelf af_setImageDownloadReceipt:nil forState:state];
-		       }
+        __weak __typeof(self)weakSelf = self;
+        NSUUID *downloadID = [NSUUID UUID];
+        AFImageDownloadReceipt *receipt;
+        receipt = [downloader
+                   downloadImageForURLRequest:urlRequest
+                   withReceiptID:downloadID
+                   success:^(NSURLRequest * _Nonnull request, NSHTTPURLResponse * _Nullable response, UIImage * _Nonnull responseObject) {
+                       __strong __typeof(weakSelf)strongSelf = weakSelf;
+                       if ([[strongSelf af_imageDownloadReceiptForState:state].receiptID isEqual:downloadID]) {
+                           if (success) {
+                               success(request, response, responseObject);
+                           } else if(responseObject) {
+                               [strongSelf setImage:responseObject forState:state];
+                           }
+                           [strongSelf af_setImageDownloadReceipt:nil forState:state];
+                       }
 
-		   }
-		   failure:^(NSURLRequest * _Nonnull request, NSHTTPURLResponse * _Nullable response, NSError * _Nonnull error) {
-		       __strong __typeof(weakSelf)strongSelf = weakSelf;
-		       if ([[strongSelf af_imageDownloadReceiptForState:state].receiptID isEqual:downloadID]) {
-			   if (failure) {
-			       failure(request, response, error);
-			   }
-			   [strongSelf  af_setImageDownloadReceipt:nil forState:state];
-		       }
-		   }];
+                   }
+                   failure:^(NSURLRequest * _Nonnull request, NSHTTPURLResponse * _Nullable response, NSError * _Nonnull error) {
+                       __strong __typeof(weakSelf)strongSelf = weakSelf;
+                       if ([[strongSelf af_imageDownloadReceiptForState:state].receiptID isEqual:downloadID]) {
+                           if (failure) {
+                               failure(request, response, error);
+                           }
+                           [strongSelf  af_setImageDownloadReceipt:nil forState:state];
+                       }
+                   }];
 
-	[self af_setImageDownloadReceipt:receipt forState:state];
+        [self af_setImageDownloadReceipt:receipt forState:state];
     }
 }
 
 #pragma mark -
 
 - (void)setBackgroundImageForState:(UIControlState)state
-			   withURL:(NSURL *)url
+                           withURL:(NSURL *)url
 {
     [self setBackgroundImageForState:state withURL:url placeholderImage:nil];
 }
 
 - (void)setBackgroundImageForState:(UIControlState)state
-			   withURL:(NSURL *)url
-		  placeholderImage:(nullable UIImage *)placeholderImage
+                           withURL:(NSURL *)url
+                  placeholderImage:(nullable UIImage *)placeholderImage
 {
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
     [request addValue:@"image/*" forHTTPHeaderField:@"Accept"];
@@ -211,13 +211,13 @@ static const char * af_backgroundImageDownloadReceiptKeyForState(UIControlState 
 }
 
 - (void)setBackgroundImageForState:(UIControlState)state
-		    withURLRequest:(NSURLRequest *)urlRequest
-		  placeholderImage:(nullable UIImage *)placeholderImage
-			   success:(nullable void (^)(NSURLRequest *request, NSHTTPURLResponse * _Nullable response, UIImage *image))success
-			   failure:(nullable void (^)(NSURLRequest *request, NSHTTPURLResponse * _Nullable response, NSError *error))failure
+                    withURLRequest:(NSURLRequest *)urlRequest
+                  placeholderImage:(nullable UIImage *)placeholderImage
+                           success:(nullable void (^)(NSURLRequest *request, NSHTTPURLResponse * _Nullable response, UIImage *image))success
+                           failure:(nullable void (^)(NSURLRequest *request, NSHTTPURLResponse * _Nullable response, NSError *error))failure
 {
     if ([self isActiveBackgroundTaskURLEqualToURLRequest:urlRequest forState:state]) {
-	return;
+        return;
     }
 
     [self cancelBackgroundImageDownloadTaskForState:state];
@@ -228,46 +228,46 @@ static const char * af_backgroundImageDownloadReceiptKeyForState(UIControlState 
     //Use the image from the image cache if it exists
     UIImage *cachedImage = [imageCache imageforRequest:urlRequest withAdditionalIdentifier:nil];
     if (cachedImage) {
-	if (success) {
-	    success(urlRequest, nil, cachedImage);
-	} else {
-	    [self setBackgroundImage:cachedImage forState:state];
-	}
-	[self af_setBackgroundImageDownloadReceipt:nil forState:state];
+        if (success) {
+            success(urlRequest, nil, cachedImage);
+        } else {
+            [self setBackgroundImage:cachedImage forState:state];
+        }
+        [self af_setBackgroundImageDownloadReceipt:nil forState:state];
     } else {
-	if (placeholderImage) {
-	    [self setBackgroundImage:placeholderImage forState:state];
-	}
+        if (placeholderImage) {
+            [self setBackgroundImage:placeholderImage forState:state];
+        }
 
-	__weak __typeof(self)weakSelf = self;
-	NSUUID *downloadID = [NSUUID UUID];
-	AFImageDownloadReceipt *receipt;
-	receipt = [downloader
-		   downloadImageForURLRequest:urlRequest
-		   withReceiptID:downloadID
-		   success:^(NSURLRequest * _Nonnull request, NSHTTPURLResponse * _Nullable response, UIImage * _Nonnull responseObject) {
-		       __strong __typeof(weakSelf)strongSelf = weakSelf;
-		       if ([[strongSelf af_backgroundImageDownloadReceiptForState:state].receiptID isEqual:downloadID]) {
-			   if (success) {
-			       success(request, response, responseObject);
-			   } else if(responseObject) {
-			       [strongSelf setBackgroundImage:responseObject forState:state];
-			   }
-			   [strongSelf af_setBackgroundImageDownloadReceipt:nil forState:state];
-		       }
+        __weak __typeof(self)weakSelf = self;
+        NSUUID *downloadID = [NSUUID UUID];
+        AFImageDownloadReceipt *receipt;
+        receipt = [downloader
+                   downloadImageForURLRequest:urlRequest
+                   withReceiptID:downloadID
+                   success:^(NSURLRequest * _Nonnull request, NSHTTPURLResponse * _Nullable response, UIImage * _Nonnull responseObject) {
+                       __strong __typeof(weakSelf)strongSelf = weakSelf;
+                       if ([[strongSelf af_backgroundImageDownloadReceiptForState:state].receiptID isEqual:downloadID]) {
+                           if (success) {
+                               success(request, response, responseObject);
+                           } else if(responseObject) {
+                               [strongSelf setBackgroundImage:responseObject forState:state];
+                           }
+                           [strongSelf af_setBackgroundImageDownloadReceipt:nil forState:state];
+                       }
 
-		   }
-		   failure:^(NSURLRequest * _Nonnull request, NSHTTPURLResponse * _Nullable response, NSError * _Nonnull error) {
-		       __strong __typeof(weakSelf)strongSelf = weakSelf;
-		       if ([[strongSelf af_backgroundImageDownloadReceiptForState:state].receiptID isEqual:downloadID]) {
-			   if (failure) {
-			       failure(request, response, error);
-			   }
-			   [strongSelf  af_setBackgroundImageDownloadReceipt:nil forState:state];
-		       }
-		   }];
+                   }
+                   failure:^(NSURLRequest * _Nonnull request, NSHTTPURLResponse * _Nullable response, NSError * _Nonnull error) {
+                       __strong __typeof(weakSelf)strongSelf = weakSelf;
+                       if ([[strongSelf af_backgroundImageDownloadReceiptForState:state].receiptID isEqual:downloadID]) {
+                           if (failure) {
+                               failure(request, response, error);
+                           }
+                           [strongSelf  af_setBackgroundImageDownloadReceipt:nil forState:state];
+                       }
+                   }];
 
-	[self af_setBackgroundImageDownloadReceipt:receipt forState:state];
+        [self af_setBackgroundImageDownloadReceipt:receipt forState:state];
     }
 }
 
@@ -276,16 +276,16 @@ static const char * af_backgroundImageDownloadReceiptKeyForState(UIControlState 
 - (void)cancelImageDownloadTaskForState:(UIControlState)state {
     AFImageDownloadReceipt *receipt = [self af_imageDownloadReceiptForState:state];
     if (receipt != nil) {
-	[[self.class sharedImageDownloader] cancelTaskForImageDownloadReceipt:receipt];
-	[self af_setImageDownloadReceipt:nil forState:state];
+        [[self.class sharedImageDownloader] cancelTaskForImageDownloadReceipt:receipt];
+        [self af_setImageDownloadReceipt:nil forState:state];
     }
 }
 
 - (void)cancelBackgroundImageDownloadTaskForState:(UIControlState)state {
     AFImageDownloadReceipt *receipt = [self af_backgroundImageDownloadReceiptForState:state];
     if (receipt != nil) {
-	[[self.class sharedImageDownloader] cancelTaskForImageDownloadReceipt:receipt];
-	[self af_setBackgroundImageDownloadReceipt:nil forState:state];
+        [[self.class sharedImageDownloader] cancelTaskForImageDownloadReceipt:receipt];
+        [self af_setBackgroundImageDownloadReceipt:nil forState:state];
     }
 }
 

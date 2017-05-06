@@ -1,19 +1,24 @@
 'use strict';
 
-const React = require('react-native');
-const {
+
+import React, { Component } from 'react';
+import {
   StyleSheet,
   View,
   Text,
   Image,
   TouchableOpacity
-} = React;
+} from 'react-native';
 
-const LinkedinLogin = require('react-native-linkedin-login');
-const Icon = require('react-native-vector-icons/FontAwesome');
-const Store = require('react-native-simple-store');
 
-const example = class Example extends React.Component {
+
+import LinkedinLogin from 'react-native-linkedin-login';
+import Icon from 'react-native-vector-icons/FontAwesome';
+import Store from 'react-native-simple-store';
+
+
+class example extends Component {
+
 
   constructor(props) {
     super(props);
@@ -28,6 +33,7 @@ const example = class Example extends React.Component {
   }
   componentWillMount() {
     // initialize LinkedinApi
+    console.log('init');
     LinkedinLogin.init(
       'https://www.linkedintest.org',
       '2krikav6u8j6',
@@ -65,7 +71,7 @@ const example = class Example extends React.Component {
         this._getUserProfile();
       });
     }).catch((e) => {
-      console.log(e);
+      console.log('Error', e);
     });
 
     return true;

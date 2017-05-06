@@ -33,11 +33,13 @@ class LinkedinLogin {
    * @return {object} promise         [description]
    */
   init(redirectUrl, clientId, clientSecret, state, scopes) {
+    console.log('LinkedinLogin.init', redirectUrl, clientId, clientSecret, state, scopes)
     this._redirectUrl = redirectUrl;
     this._clientId = clientId;
     this._clientSecret = clientSecret;
     this._state = state;
     this._scopes = scopes;
+    return this;
   }
 
   /**
@@ -154,6 +156,8 @@ class LinkedinLogin {
 
         resolve(data);
       });
+
+            console.log(this);
 
       RNLinkedinLogin.login(
         this._clientId,

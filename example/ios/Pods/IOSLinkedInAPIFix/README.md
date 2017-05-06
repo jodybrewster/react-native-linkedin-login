@@ -35,10 +35,10 @@ A LinkedIn client is created using a LIALinkedInApplication.
 A LIALinkedInApplication defines the application which is granted access to the users linkedin data.
 ``` objective-c
 LIALinkedInApplication *application = [LIALinkedInApplication applicationWithRedirectURL:@"http://www.ancientprogramming.com/liaexample"
-										  clientId:@"clientId"
-									      clientSecret:@"clientSecret"
-										     state:@"DCEEFWF45453sdffef424"
-									     grantedAccess:@[@"r_fullprofile", @"r_network"]];
+                                                                                  clientId:@"clientId"
+                                                                              clientSecret:@"clientSecret"
+                                                                                     state:@"DCEEFWF45453sdffef424"
+                                                                             grantedAccess:@[@"r_fullprofile", @"r_network"]];
 return [LIALinkedInHttpClient clientForApplication:application presentingViewController:nil];
 ```
 * redirectURL: has to be a http or https url (required by LinkedIn), but other than that, the endpoint doesn't have to respond anything. The library only uses the endpoint to know when to intercept calls in the UIWebView.

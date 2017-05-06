@@ -21,7 +21,7 @@
 
 #import <TargetConditionals.h>
 
-#if TARGET_OS_IOS || TARGET_OS_TV
+#if TARGET_OS_IOS || TARGET_OS_TV 
 
 #import <Foundation/Foundation.h>
 #import "AFAutoPurgingImageCache.h"
@@ -99,9 +99,9 @@ typedef NS_ENUM(NSInteger, AFImageDownloadPrioritization) {
  @return The new `AFImageDownloader` instance.
  */
 - (instancetype)initWithSessionManager:(AFHTTPSessionManager *)sessionManager
-		downloadPrioritization:(AFImageDownloadPrioritization)downloadPrioritization
-		maximumActiveDownloads:(NSInteger)maximumActiveDownloads
-			    imageCache:(nullable id <AFImageRequestCache>)imageCache;
+                downloadPrioritization:(AFImageDownloadPrioritization)downloadPrioritization
+                maximumActiveDownloads:(NSInteger)maximumActiveDownloads
+                            imageCache:(nullable id <AFImageRequestCache>)imageCache;
 
 /**
  Creates a data task using the `sessionManager` instance for the specified URL request.
@@ -118,8 +118,8 @@ typedef NS_ENUM(NSInteger, AFImageDownloadPrioritization) {
  cache and the URL request cache policy allows the cache to be used.
  */
 - (nullable AFImageDownloadReceipt *)downloadImageForURLRequest:(NSURLRequest *)request
-							success:(nullable void (^)(NSURLRequest *request, NSHTTPURLResponse  * _Nullable response, UIImage *responseObject))success
-							failure:(nullable void (^)(NSURLRequest *request, NSHTTPURLResponse * _Nullable response, NSError *error))failure;
+                                                        success:(nullable void (^)(NSURLRequest *request, NSHTTPURLResponse  * _Nullable response, UIImage *responseObject))success
+                                                        failure:(nullable void (^)(NSURLRequest *request, NSHTTPURLResponse * _Nullable response, NSError *error))failure;
 
 /**
  Creates a data task using the `sessionManager` instance for the specified URL request.
@@ -137,9 +137,9 @@ typedef NS_ENUM(NSInteger, AFImageDownloadPrioritization) {
  cache and the URL request cache policy allows the cache to be used.
  */
 - (nullable AFImageDownloadReceipt *)downloadImageForURLRequest:(NSURLRequest *)request
-						 withReceiptID:(NSUUID *)receiptID
-							success:(nullable void (^)(NSURLRequest *request, NSHTTPURLResponse  * _Nullable response, UIImage *responseObject))success
-							failure:(nullable void (^)(NSURLRequest *request, NSHTTPURLResponse * _Nullable response, NSError *error))failure;
+                                                 withReceiptID:(NSUUID *)receiptID
+                                                        success:(nullable void (^)(NSURLRequest *request, NSHTTPURLResponse  * _Nullable response, UIImage *responseObject))success
+                                                        failure:(nullable void (^)(NSURLRequest *request, NSHTTPURLResponse * _Nullable response, NSError *error))failure;
 
 /**
  Cancels the data task in the receipt by removing the corresponding success and failure blocks and cancelling the data task if necessary.

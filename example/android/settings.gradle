@@ -1,4 +1,4 @@
-rootProject.name = 'RNLinkedinLoginExample'
+rootProject.name = 'example'
 
 include ':app'
 

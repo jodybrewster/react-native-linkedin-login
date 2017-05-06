@@ -41,8 +41,8 @@ NS_ASSUME_NONNULL_BEGIN
  @return The object decoded from the specified response data.
  */
 - (nullable id)responseObjectForResponse:(nullable NSURLResponse *)response
-			   data:(nullable NSData *)data
-			  error:(NSError * _Nullable __autoreleasing *)error NS_SWIFT_NOTHROW;
+                           data:(nullable NSData *)data
+                          error:(NSError * _Nullable __autoreleasing *)error NS_SWIFT_NOTHROW;
 
 @end
 
@@ -95,8 +95,8 @@ NS_ASSUME_NONNULL_BEGIN
  @return `YES` if the response is valid, otherwise `NO`.
  */
 - (BOOL)validateResponse:(nullable NSHTTPURLResponse *)response
-		    data:(nullable NSData *)data
-		   error:(NSError * _Nullable __autoreleasing *)error;
+                    data:(nullable NSData *)data
+                   error:(NSError * _Nullable __autoreleasing *)error;
 
 @end
 
@@ -211,7 +211,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param readOptions The property list reading options.
  */
 + (instancetype)serializerWithFormat:(NSPropertyListFormat)format
-			 readOptions:(NSPropertyListReadOptions)readOptions;
+                         readOptions:(NSPropertyListReadOptions)readOptions;
 
 @end
 

@@ -39,8 +39,8 @@
 - (AFActivityIndicatorViewNotificationObserver *)af_notificationObserver {
     AFActivityIndicatorViewNotificationObserver *notificationObserver = objc_getAssociatedObject(self, @selector(af_notificationObserver));
     if (notificationObserver == nil) {
-	notificationObserver = [[AFActivityIndicatorViewNotificationObserver alloc] initWithActivityIndicatorView:self];
-	objc_setAssociatedObject(self, @selector(af_notificationObserver), notificationObserver, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+        notificationObserver = [[AFActivityIndicatorViewNotificationObserver alloc] initWithActivityIndicatorView:self];
+        objc_setAssociatedObject(self, @selector(af_notificationObserver), notificationObserver, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     }
     return notificationObserver;
 }
@@ -57,7 +57,7 @@
 {
     self = [super init];
     if (self) {
-	_activityIndicatorView = activityIndicatorView;
+        _activityIndicatorView = activityIndicatorView;
     }
     return self;
 }
@@ -68,24 +68,24 @@
     [notificationCenter removeObserver:self name:AFNetworkingTaskDidResumeNotification object:nil];
     [notificationCenter removeObserver:self name:AFNetworkingTaskDidSuspendNotification object:nil];
     [notificationCenter removeObserver:self name:AFNetworkingTaskDidCompleteNotification object:nil];
-
+    
     if (task) {
-	if (task.state != NSURLSessionTaskStateCompleted) {
-
+        if (task.state != NSURLSessionTaskStateCompleted) {
+            
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wreceiver-is-weak"
 #pragma clang diagnostic ignored "-Warc-repeated-use-of-weak"
-	    if (task.state == NSURLSessionTaskStateRunning) {
-		[self.activityIndicatorView startAnimating];
-	    } else {
-		[self.activityIndicatorView stopAnimating];
-	    }
+            if (task.state == NSURLSessionTaskStateRunning) {
+                [self.activityIndicatorView startAnimating];
+            } else {
+                [self.activityIndicatorView stopAnimating];
+            }
 #pragma clang diagnostic pop
 
-	    [notificationCenter addObserver:self selector:@selector(af_startAnimating) name:AFNetworkingTaskDidResumeNotification object:task];
-	    [notificationCenter addObserver:self selector:@selector(af_stopAnimating) name:AFNetworkingTaskDidCompleteNotification object:task];
-	    [notificationCenter addObserver:self selector:@selector(af_stopAnimating) name:AFNetworkingTaskDidSuspendNotification object:task];
-	}
+            [notificationCenter addObserver:self selector:@selector(af_startAnimating) name:AFNetworkingTaskDidResumeNotification object:task];
+            [notificationCenter addObserver:self selector:@selector(af_stopAnimating) name:AFNetworkingTaskDidCompleteNotification object:task];
+            [notificationCenter addObserver:self selector:@selector(af_stopAnimating) name:AFNetworkingTaskDidSuspendNotification object:task];
+        }
     }
 }
 
@@ -95,7 +95,7 @@
     dispatch_async(dispatch_get_main_queue(), ^{
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wreceiver-is-weak"
-	[self.activityIndicatorView startAnimating];
+        [self.activityIndicatorView startAnimating];
 #pragma clang diagnostic pop
     });
 }
@@ -104,7 +104,7 @@
     dispatch_async(dispatch_get_main_queue(), ^{
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wreceiver-is-weak"
-	[self.activityIndicatorView stopAnimating];
+        [self.activityIndicatorView stopAnimating];
 #pragma clang diagnostic pop
     });
 }
@@ -113,7 +113,7 @@
 
 - (void)dealloc {
     NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
-
+    
     [notificationCenter removeObserver:self name:AFNetworkingTaskDidCompleteNotification object:nil];
     [notificationCenter removeObserver:self name:AFNetworkingTaskDidResumeNotification object:nil];
     [notificationCenter removeObserver:self name:AFNetworkingTaskDidSuspendNotification object:nil];

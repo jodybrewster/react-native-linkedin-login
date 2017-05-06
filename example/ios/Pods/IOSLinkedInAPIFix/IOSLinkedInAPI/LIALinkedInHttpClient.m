@@ -75,21 +75,21 @@
 
 #ifdef isSessionManager // check if should use AFHTTPSessionManager or AFHTTPRequestOperationManager
     [self POST:url parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-
-	[self storeCredentials:responseObject];
-	success(responseObject);
-
+        
+        [self storeCredentials:responseObject];
+        success(responseObject);
+        
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-	failure(error);
+        failure(error);
     }];
 #else
       [self POST:url parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
-
-	  [self storeCredentials:responseObject];
-	  success(responseObject);
-
+          
+          [self storeCredentials:responseObject];
+          success(responseObject);
+          
       }  failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-	failure(error);
+        failure(error);
       }];
 #endif
 
@@ -98,10 +98,10 @@
 - (void)storeCredentials:(id _Nullable)responseObject {
     NSString *accessToken = [responseObject objectForKey:@"access_token"];
     NSTimeInterval expiration = [[responseObject objectForKey:@"expires_in"] doubleValue];
-
+    
     // store credentials
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-
+    
     [userDefaults setObject:accessToken forKey:LINKEDIN_TOKEN_KEY];
     [userDefaults setDouble:expiration forKey:LINKEDIN_EXPIRATION_KEY];
     [userDefaults setDouble:[[NSDate date] timeIntervalSince1970] forKey:LINKEDIN_CREATION_KEY];
@@ -111,23 +111,23 @@
 - (void)getAuthorizationCode:(void (^)(NSString *))success cancel:(void (^)(void))cancel failure:(void (^)(NSError *))failure {
   LIALinkedInAuthorizationViewController *authorizationViewController = [[LIALinkedInAuthorizationViewController alloc]
       initWithApplication:
-	  self.application
-		  success:^(NSString *code) {
-		    [self hideAuthenticateView];
-		    if (success) {
-		      success(code);
-		    }
-		  }
-		   cancel:^{
-		     [self hideAuthenticateView];
-		     if (cancel) {
-		       cancel();
-		     }
-		   } failure:^(NSError *error) {
-	[self hideAuthenticateView];
-	if (failure) {
-	  failure(error);
-	}
+          self.application
+                  success:^(NSString *code) {
+                    [self hideAuthenticateView];
+                    if (success) {
+                      success(code);
+                    }
+                  }
+                   cancel:^{
+                     [self hideAuthenticateView];
+                     if (cancel) {
+                       cancel();
+                     }
+                   } failure:^(NSError *error) {
+        [self hideAuthenticateView];
+        if (failure) {
+          failure(error);
+        }
       }];
   [self showAuthorizationView:authorizationViewController];
 }

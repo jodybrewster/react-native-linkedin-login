@@ -86,7 +86,7 @@ NS_ASSUME_NONNULL_BEGIN
 
  @param request The unique URL request identifing the image asset.
  @param identifier The additional identifier to apply to the URL request to identify the image.
-
+ 
  @return A BOOL indicating whether or not all images were removed from the cache.
  */
 - (BOOL)removeImageforRequest:(NSURLRequest *)request withAdditionalIdentifier:(nullable NSString *)identifier;
@@ -146,3 +146,4 @@ NS_ASSUME_NONNULL_BEGIN
 NS_ASSUME_NONNULL_END
 
 #endif
+

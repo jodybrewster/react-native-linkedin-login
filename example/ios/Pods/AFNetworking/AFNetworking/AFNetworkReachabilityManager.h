@@ -75,7 +75,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  Creates and returns a network reachability manager with the default socket address.
-
+ 
  @return An initialized network reachability manager, actively monitoring the default socket address.
  */
 + (instancetype)manager;
