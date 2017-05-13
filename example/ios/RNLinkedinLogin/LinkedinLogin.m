@@ -30,9 +30,6 @@ RCT_EXPORT_MODULE();
 
 @synthesize bridge = _bridge;
 
-@synthesize clientId = _clientId;
-@synthesize redirectUrl = _redirectUrl;
-@synthesize state = _state;
 @synthesize scopes = _scopes;
 
 

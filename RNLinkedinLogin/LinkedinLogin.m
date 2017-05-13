@@ -21,10 +21,8 @@
 // SOFTWARE.
 
 #import "LinkedinLogin.h"
-#import <React/RCTEventDispatcher.h>
-
-#import "LIALinkedInApplication.h"
-#import "LIALinkedInHttpClient.h"
+#import "RCTEventDispatcher.h"
+#import <linkedin-sdk/LISDK.h>
 
 @implementation LinkedinLogin
 
@@ -32,59 +30,81 @@ RCT_EXPORT_MODULE();
 
 @synthesize bridge = _bridge;
 
-@synthesize clientId = _clientId;
-@synthesize redirectUrl = _redirectUrl;
-@synthesize clientSecret = _clientSecret;
-@synthesize state = _state;
 @synthesize scopes = _scopes;
 
 
 
-
-RCT_EXPORT_METHOD(login:(NSString *)clientId redirectUrl:(NSString *)redirectUrl clientSecret:(NSString *)clientSecret state:(NSString *)state scopes:(NSArray *)scopes)
+RCT_EXPORT_METHOD(getRequest:(NSString *)url)
 {
+  
+  [[LISDKAPIHelper sharedInstance] getRequest:url
+                                    success:^(LISDKAPIResponse *response)
+  {
+    
+    
+    NSData* data = [response.data dataUsingEncoding:NSUTF8StringEncoding];
 
-  self.clientId = clientId;
-  self.redirectUrl = redirectUrl;
-  self.clientSecret = clientSecret;
-  self.state = state;
-  self.scopes = scopes;
+    NSDictionary *jsonDict = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+    
+    return [self.bridge.eventDispatcher sendAppEventWithName:@"linkedinGetRequest" body:@{
+                                                                                       @"data": jsonDict
+                                                                                       }];
 
+  } error:^(LISDKAPIError *apiError)
+  {
+    NSLog(@"Error : %@", apiError);
+    
+    return [self.bridge.eventDispatcher sendAppEventWithName:@"linkedinGetRequestError" body:@{
+                                                                                        @"message": apiError
+                                                                                        }];
 
-  [self.client getAuthorizationCode:^(NSString *code) {
-    [self.client getAccessToken:code success:^(NSDictionary *accessTokenData) {
-      NSString *accessToken = [accessTokenData objectForKey:@"access_token"];
-      NSString *expiresOn = [accessTokenData objectForKey:@"expires_in"];
-      NSDictionary *body = @{@"accessToken": accessToken, @"expiresOn": expiresOn};
-      return [self.bridge.eventDispatcher sendDeviceEventWithName:@"linkedinLogin"
-                                                          body:body];
-
-
-    }                   failure:^(NSError *error) {
-      NSLog(@"Quering accessToken failed %@", error);
-      return [self.bridge.eventDispatcher sendDeviceEventWithName:@"linkedinLoginError"
-                                                          body:@{@"error": error.description}];
-    }];
-  }                      cancel:^{
-    NSLog(@"Authorization was cancelled by user");
-    return [self.bridge.eventDispatcher sendDeviceEventWithName:@"linkedinLoginError"
-                                                        body:@{@"error": @"User canceled"}];
-  }                     failure:^(NSError *error) {
-    NSLog(@"Authorization failed %@", error);
-    return [self.bridge.eventDispatcher sendDeviceEventWithName:@"linkedinLoginError"
-                                                        body:@{@"error": error.description}];
   }];
 
 }
 
+RCT_EXPORT_METHOD(login:(NSArray *)scopes)
+{
 
-- (LIALinkedInHttpClient *)client {
-  LIALinkedInApplication *application = [LIALinkedInApplication applicationWithRedirectURL:self.redirectUrl
-                                                                                  clientId:self.clientId
-                                                                              clientSecret:self.clientSecret
-                                                                                     state:self.state
-                                                                             grantedAccess:self.scopes];
-  return [LIALinkedInHttpClient clientForApplication:application presentingViewController:nil];
+  
+  self.scopes = scopes;
+//self.state = state;
+
+NSArray *permissions = [NSArray arrayWithObjects:LISDK_BASIC_PROFILE_PERMISSION, LISDK_EMAILADDRESS_PERMISSION, nil];
+  
+  [LISDKSessionManager
+       createSessionWithAuth:permissions
+                       state:nil
+      showGoToAppStoreDialog:YES
+                successBlock:^(NSString *returnState) {
+                  NSLog(@"%s","success called!");
+                  LISDKSession *session = [[LISDKSessionManager sharedInstance] session];
+                  LISDKAccessToken *token = [session accessToken];
+                  NSString *accessToken = token.accessTokenValue;
+                  NSDate *expiresOn = token.expiration;
+                  
+                  [NSDateFormatter setDefaultFormatterBehavior:NSDateFormatterBehavior10_4];
+                  NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+                  [dateFormatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ssz"];
+                  [dateFormatter setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:0]];
+                  [dateFormatter setCalendar:[[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar]];
+                  
+                  
+                  NSString *expiresStr = [dateFormatter stringFromDate:expiresOn];
+                  
+                
+                  NSDictionary *body = @{@"accessToken": accessToken, @"expiresOn": expiresStr};
+                  return [self.bridge.eventDispatcher sendDeviceEventWithName:@"linkedinLogin"
+                                                                         body:body];
+                }
+                errorBlock:^(NSError *error) {
+                  return [self.bridge.eventDispatcher
+                          sendDeviceEventWithName:@"linkedinLoginError"
+                                  body:@{@"error": error.description}];
+
+                }
+  ];
+  
+
 }
 
 

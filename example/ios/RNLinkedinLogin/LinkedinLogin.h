@@ -29,9 +29,7 @@
 
 @interface LinkedinLogin : NSObject<RCTBridgeModule>
 
-@property(nonatomic, strong) NSString *clientId;
-@property(nonatomic, strong) NSString *redirectUrl;
-@property(nonatomic, strong) NSString *state;
+
 @property(nonatomic, strong) NSArray *scopes;
 
 

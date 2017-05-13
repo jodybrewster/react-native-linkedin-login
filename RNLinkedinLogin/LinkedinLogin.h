@@ -24,15 +24,11 @@
 #ifndef LinkedinLogin_h
 #define LinkedinLogin_h
 
-#import <React/RCTBridgeModule.h>
+#import "RCTBridgeModule.h"
 
 
 @interface LinkedinLogin : NSObject<RCTBridgeModule>
 
-@property(nonatomic, strong) NSString *clientId;
-@property(nonatomic, strong) NSString *redirectUrl;
-@property(nonatomic, strong) NSString *clientSecret;
-@property(nonatomic, strong) NSString *state;
 @property(nonatomic, strong) NSArray *scopes;
 
 
