@@ -36,8 +36,8 @@ class example extends Component {
     console.log('init');
     LinkedinLogin.init(
       'https://www.linkedintest.org',
-      '2krikav6u8j6',
-      'SR1UCLdjBOj1udlB',
+      '782p0ki4p07yct',
+      'DELETEME',
       'DCEEFWF45453sdffef424',
       [
         'r_emailaddress',
@@ -60,7 +60,6 @@ class example extends Component {
     });
   }
   _login() {
-    console.log('_login');
     LinkedinLogin.login().then((user) => {
       console.log('User logged in: ', user);
 
@@ -71,6 +70,8 @@ class example extends Component {
         this._getUserProfile();
       });
     }).catch((e) => {
+      var err = JSON.parse(e.description);
+      alert("ERROR: " + err.errorMessage);
       console.log('Error', e);
     });
 
@@ -125,7 +126,6 @@ class example extends Component {
       );
     }
 
-
     if (this.state.user) {
       const lastNameComp = (this.state.user.lastName) ? (
           <Text style={ { fontSize: 18, fontWeight: 'bold', marginBottom: 20 } }>
@@ -141,7 +141,7 @@ class example extends Component {
           style={ { width: 100, height: 100 } } />
       ) : <View/>;
       const expiresOnComp = (this.state.user.expiresOn) ? (
-        <Text>Your token expires in: { this.state.user.expiresOn.toFixed() }</Text>
+        <Text>Your token expires in: { this.state.user.expiresOn }</Text>
       ) : <View/>;
 
       return (

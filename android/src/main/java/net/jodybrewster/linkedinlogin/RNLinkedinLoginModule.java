@@ -85,7 +85,10 @@ public class RNLinkedinLoginModule extends ReactContextBaseJavaModule implements
 
     @Override
     public void onActivityResult(final int requestCode, final int resultCode, final Intent intent) {
-     
+
+        Activity _activity = this.getCurrentActivity();
+
+        LISessionManager.getInstance(_context).onActivityResult(_activity, requestCode, resultCode, intent);
 
     }
 
@@ -191,23 +194,17 @@ public class RNLinkedinLoginModule extends ReactContextBaseJavaModule implements
      *
      * logs in the user
      *
-     * @param clientId clientId from linkedin developer portal
-     * @param redirectUrl redirectUrl can be anything I guess? lol
-     * @param clientSecret clientSecret from linkedin developer portal
-     * @param state any random string no one else has
      * @param scopes array of available permissions
      */
     @ReactMethod
-    public void login(final String clientId, final String redirectUrl, final String clientSecret, final String state, final ReadableArray scopes) {
+    public void login(final ReadableArray scopes) {
 
-        Log.d(TAG, "login: " + clientId + " redirectUrl: " + redirectUrl + " clientSecret: " + clientSecret);
         final Activity _activity = this.getCurrentActivity();
 
         _activity.runOnUiThread(new Runnable() {
             @Override
             public void run() {
-
-
+                
                 Log.d(TAG, "signIn");
                 LISessionManager.getInstance(_context).init(_activity, Scope.build(Scope.R_BASICPROFILE, Scope.R_EMAILADDRESS), new AuthListener() {
                     @Override

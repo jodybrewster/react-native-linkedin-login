@@ -157,13 +157,7 @@ class LinkedinLogin {
         resolve(data);
       });
 
-            console.log(this);
-
       RNLinkedinLogin.login(
-        this._clientId,
-        this._redirectUrl,
-        this._clientSecret,
-        this._state,
         this._scopes
       );
     });
