@@ -6,7 +6,7 @@
   <link rel="stylesheet" media="all" href="doc-style.css" />
   <script src="doc-filelist.js"></script>
   <script>
-    var relativeDir = "", thisFile = "Users/jody/Documents/Projects/react-native-linkedin-login/src/LinkedinLogin.js", defaultSidebar = true;
+    var relativeDir = "", thisFile = "Users/jodybrewster/Projects/react-native-linkedin-login/src/LinkedinLogin.js", defaultSidebar = true;
   </script>
   <script src="doc-script.js"></script>
 </head>
@@ -109,11 +109,13 @@
         </td>
         <td class="code highlight"><div class="highlight"><pre>
   <span class="nx">init</span><span class="p">(</span><span class="nx">redirectUrl</span><span class="p">,</span> <span class="nx">clientId</span><span class="p">,</span> <span class="nx">clientSecret</span><span class="p">,</span> <span class="nx">state</span><span class="p">,</span> <span class="nx">scopes</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;LinkedinLogin.init&#39;</span><span class="p">,</span> <span class="nx">redirectUrl</span><span class="p">,</span> <span class="nx">clientId</span><span class="p">,</span> <span class="nx">clientSecret</span><span class="p">,</span> <span class="nx">state</span><span class="p">,</span> <span class="nx">scopes</span><span class="p">)</span>
     <span class="k">this</span><span class="p">.</span><span class="nx">_redirectUrl</span> <span class="o">=</span> <span class="nx">redirectUrl</span><span class="p">;</span>
     <span class="k">this</span><span class="p">.</span><span class="nx">_clientId</span> <span class="o">=</span> <span class="nx">clientId</span><span class="p">;</span>
     <span class="k">this</span><span class="p">.</span><span class="nx">_clientSecret</span> <span class="o">=</span> <span class="nx">clientSecret</span><span class="p">;</span>
     <span class="k">this</span><span class="p">.</span><span class="nx">_state</span> <span class="o">=</span> <span class="nx">state</span><span class="p">;</span>
     <span class="k">this</span><span class="p">.</span><span class="nx">_scopes</span> <span class="o">=</span> <span class="nx">scopes</span><span class="p">;</span>
+    <span class="k">return</span> <span class="k">this</span><span class="p">;</span>
   <span class="p">}</span>
 
 
@@ -334,10 +336,6 @@
       <span class="p">});</span>
 
       <span class="nx">RNLinkedinLogin</span><span class="p">.</span><span class="nx">login</span><span class="p">(</span>
-        <span class="k">this</span><span class="p">.</span><span class="nx">_clientId</span><span class="p">,</span>
-        <span class="k">this</span><span class="p">.</span><span class="nx">_redirectUrl</span><span class="p">,</span>
-        <span class="k">this</span><span class="p">.</span><span class="nx">_clientSecret</span><span class="p">,</span>
-        <span class="k">this</span><span class="p">.</span><span class="nx">_state</span><span class="p">,</span>
         <span class="k">this</span><span class="p">.</span><span class="nx">_scopes</span>
       <span class="p">);</span>
     <span class="p">});</span>
