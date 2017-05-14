@@ -1,11 +1,12 @@
 # Android Guide
-Includes Linkedin Android SDK v1.1.4
 
-## Linkedin Getting Started Guide
-- [https://developer.linkedin.com/docs/android-sdk](https://developer.linkedin.com/docs/android-sdk)
+## Installation
+
+```
+npm install react-native-linkedin-login --save
+```
 
 
-## Setup
 - In `android/setting.gradle`
 
 ```gradle
@@ -31,7 +32,7 @@ dependencies {
 }
 ```
 
-- Register Module (in MainActivity.java)
+- Register Module (in MainApplication.java)
 
 ```java
 
@@ -51,7 +52,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import net.jodybrewster.linkedinlogin.RNLinkedinLoginPackage;  // <------ add here
-import com.oblador.vectoricons.VectorIconsPackage;
+//import com.oblador.vectoricons.VectorIconsPackage;
 
 public class MainApplication extends Application implements ReactApplication {
 
@@ -65,8 +66,8 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
-          new RNLinkedinLoginPackage(), // <------ add this line to yout MainActivity class
-          new VectorIconsPackage()
+          new RNLinkedinLoginPackage() // <------ add this line to yout MainActivity class
+          //new VectorIconsPackage()
       );
     }
   };
@@ -85,6 +86,13 @@ public class MainApplication extends Application implements ReactApplication {
 
 
 ```
+
+
+### Linkedin Getting Started Guide
+
+Check out the following Android guide for reference
+
+-	[https://developer.linkedin.com/docs/android-sdk](https://developer.linkedin.com/docs/android-sdk)
 
 ### Vector Icons
 
