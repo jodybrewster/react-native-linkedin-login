@@ -29,7 +29,6 @@
 
 @interface LinkedinLogin : NSObject<RCTBridgeModule>
 
-
 @property(nonatomic, strong) NSArray *scopes;
 
 

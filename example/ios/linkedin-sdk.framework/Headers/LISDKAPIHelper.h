@@ -20,18 +20,18 @@ typedef void (^APIErrorBlock)(LISDKAPIResponse *, NSError *);
  This class is used to make API Requests to retrieve LinkedIn data.
  Calls should only be made once a valid session has been established.
  A typical use might be:
- 
+
  if ([LISDKSessionManager hasValidSession]) {
  [[LISDKAPIHelper sharedInstance] getRequest:[NSString stringWithFormat:@"%@/people/~",LINKEDIN_API_URL]
-                                success:^(LISDKAPIResponse *response) {
-                                   // do something with response
-                                }
-                                error:^(LISDKAPIError *apiError) {
-                                   // do something with error
-                                }];
+				success:^(LISDKAPIResponse *response) {
+				   // do something with response
+				}
+				error:^(LISDKAPIError *apiError) {
+				   // do something with error
+				}];
 ]
  }
- 
+
  */
 @interface LISDKAPIHelper : NSObject
 /**
@@ -41,39 +41,39 @@ typedef void (^APIErrorBlock)(LISDKAPIResponse *, NSError *);
 
 
 - (void)getRequest:(NSString *)url
-           success:(void(^)(LISDKAPIResponse *))success
-             error:(void(^)(LISDKAPIError *))error;
+	   success:(void(^)(LISDKAPIResponse *))success
+	     error:(void(^)(LISDKAPIError *))error;
 
 - (void)deleteRequest:(NSString *)url
-              success:(void(^)(LISDKAPIResponse *))successCompletion
-                error:(void(^)(LISDKAPIError *))errorCompletion;
+	      success:(void(^)(LISDKAPIResponse *))successCompletion
+		error:(void(^)(LISDKAPIError *))errorCompletion;
 
 - (void)putRequest:(NSString *)url
-              body:(NSData *)body
-           success:(void(^)(LISDKAPIResponse *))successCompletion
-             error:(void(^)(LISDKAPIError *))errorCompletion;
+	      body:(NSData *)body
+	   success:(void(^)(LISDKAPIResponse *))successCompletion
+	     error:(void(^)(LISDKAPIError *))errorCompletion;
 
 - (void)putRequest:(NSString *)url
-        stringBody:(NSString *)stringBody
-           success:(void(^)(LISDKAPIResponse *))successCompletion
-             error:(void(^)(LISDKAPIError *))errorCompletion;
+	stringBody:(NSString *)stringBody
+	   success:(void(^)(LISDKAPIResponse *))successCompletion
+	     error:(void(^)(LISDKAPIError *))errorCompletion;
 
 - (void)postRequest:(NSString *)url
-               body:(NSData *)body
-            success:(void(^)(LISDKAPIResponse *))successCompletion
-              error:(void(^)(LISDKAPIError *))errorCompletion;
+	       body:(NSData *)body
+	    success:(void(^)(LISDKAPIResponse *))successCompletion
+	      error:(void(^)(LISDKAPIError *))errorCompletion;
 
 - (void)postRequest:(NSString *)url
-         stringBody:(NSString *)stringBody
-            success:(void(^)(LISDKAPIResponse *))successCompletion
-              error:(void(^)(LISDKAPIError *))errorCompletion;
+	 stringBody:(NSString *)stringBody
+	    success:(void(^)(LISDKAPIResponse *))successCompletion
+	      error:(void(^)(LISDKAPIError *))errorCompletion;
 
 // do we want to expose this one?
 - (void)apiRequest:(NSString *)url
-            method:(NSString *)method
-              body:(NSData *)body
-           success:(void(^)(LISDKAPIResponse *))successCompletion
-             error:(void(^)(LISDKAPIError *))errorCompletion;
+	    method:(NSString *)method
+	      body:(NSData *)body
+	   success:(void(^)(LISDKAPIResponse *))successCompletion
+	     error:(void(^)(LISDKAPIError *))errorCompletion;
 
 /**
  cancel any in process api calls

@@ -14,30 +14,19 @@ class LinkedinLogin {
   _accessToken = null;
   _expiresOn = null;
 
-  _redirectUrl = null;
-  _clientId = null;
-  _clientSecret = null;
-  _state = null;
   _scopes = null;
 
   constructor() {
   }
 
   /**
-   * Initializes the LinkedinLogin API
-   * @param  {string} redirectUrl     [description]
-   * @param  {string} clientId        [description]
-   * @param  {string} clientSecret    [description]
-   * @param  {string} state           [description]
-   * @param  {array} scopes           [description]
-   * @return {object} promise         [description]
+   * Initializes the Linkedin Login module
+   * 
+   * @param {any} scopes 
+   * @returns {LinkedinLogin} 
    */
-  init(redirectUrl, clientId, clientSecret, state, scopes) {
-    console.log('LinkedinLogin.init', redirectUrl, clientId, clientSecret, state, scopes)
-    this._redirectUrl = redirectUrl;
-    this._clientId = clientId;
-    this._clientSecret = clientSecret;
-    this._state = state;
+  init(scopes) {
+
     this._scopes = scopes;
     return this;
   }
@@ -65,25 +54,9 @@ class LinkedinLogin {
       });
 
       const picstr = 'https://api.linkedin.com/v1/people/~/picture-urls::(original)';
-      const picstrWithAuth = `${picstr}?oauth2_access_token=${atoken}&format=json`;
 
-      if (Platform.OS === 'android') {
-        RNLinkedinLogin.getRequest(picstr);
-      } else {
-        // if ios
-        console.log('picstrWithAuth', picstrWithAuth);
-
-        fetch(picstrWithAuth).then(function(response) {
-        	return response.json();
-        }).then((data) => {
-
-          if (data.values && data.values.length > 0) {
-            resolve(data.values);
-          } else {
-            reject('Profile has no images');
-          }
-        });
-      }
+      RNLinkedinLogin.getRequest(picstr);
+    
     });
   }
 
@@ -97,7 +70,7 @@ class LinkedinLogin {
     return new Promise((resolve, reject) => {
       DeviceEventEmitter.addListener('linkedinGetRequest', (d) => {
         const data = JSON.parse(d.data);
-
+        
         if (data) {
           resolve(data);
         }
@@ -109,23 +82,8 @@ class LinkedinLogin {
 
       const options = 'id,first-name,last-name,industry,email-address';
       const profilestr = `https://api.linkedin.com/v1/people/~:(${options})`;
-      const profilestrWithAuth = `${profilestr}?oauth2_access_token=${atoken}&format=json`;
 
-      console.log(profilestrWithAuth);
-      if (Platform.OS === 'android') {
-        RNLinkedinLogin.getRequest(profilestr);
-      } else {
-        fetch(profilestrWithAuth).then(function(response) {
-        	return response.json();
-        }).then((data) => {
-
-          if (data) {
-            resolve(data);
-          } else {
-            reject('No profile found');
-          }
-        });
-      }
+      RNLinkedinLogin.getRequest(profilestr);
     });
   }
 

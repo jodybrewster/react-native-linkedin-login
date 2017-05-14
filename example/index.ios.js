@@ -1,7 +1,14 @@
+/**
+ * Sample React Native App
+ * https://github.com/facebook/react-native
+ * @flow
+ */
+
 'use strict';
 
-const React = require('react-native');
-const { AppRegistry } = React;
-const Example = require('./Example');
+import React, { Component } from 'react';
+import { AppRegistry } from 'react-native';
+import Example from './Example';
 
-AppRegistry.registerComponent('RNLinkedinLoginExample', () => Example);
+
+AppRegistry.registerComponent('RNLinkinLoginExample', () => Example);

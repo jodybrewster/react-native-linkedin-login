@@ -35,10 +35,6 @@ class example extends Component {
     // initialize LinkedinApi
     console.log('init');
     LinkedinLogin.init(
-      'https://www.linkedintest.org',
-      '782p0ki4p07yct',
-      'DELETEME',
-      'DCEEFWF45453sdffef424',
       [
         'r_emailaddress',
         'r_basicprofile'

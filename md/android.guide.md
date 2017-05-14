@@ -2,7 +2,7 @@
 Includes Linkedin Android SDK v1.1.4
 
 ## Linkedin Getting Started Guide
-- [https://developer.linkedin.com/docs/ios-sdk](https://developer.linkedin.com/docs/ios-sdk)
+- [https://developer.linkedin.com/docs/android-sdk](https://developer.linkedin.com/docs/android-sdk)
 
 
 ## Setup
@@ -25,59 +25,65 @@ project(':react-native-vector-icons').projectDir = new File(rootProject.projectD
 dependencies {
     compile fileTree(dir: "libs", include: ["*.jar"])
     compile "com.android.support:appcompat-v7:23.0.1"
-    compile "com.facebook.react:react-native:0.20.+"
-    compile project(":react-native-linkedin-login") // <--- add this
+    compile "com.facebook.react:react-native:+"  // From node_modules
+    compile project(":react-native-linkedin-login") // <-- add here
+    compile project(':react-native-vector-icons')
 }
 ```
 
 - Register Module (in MainActivity.java)
 
 ```java
-import net.jodybrewster.linkedinlogin.RNLinkedinLoginModule;        // <------ add here
-import net.jodybrewster.linkedinlogin.RNLinkedinLoginPackage;       // <------ add here
 
-import com.oblador.vectoricons.VectorIconsPackage;  // <------ add here
-import com.linkedin.platform.LISessionManager;  // <------ add here
+package com.rnlinkinloginexample;
 
-public class MainActivity extends ReactActivity {
+import android.app.Application;
+import android.util.Log;
 
-    /**
-     * Returns the name of the main component registered from JavaScript.
-     * This is used to schedule rendering of the component.
-     */
-    @Override
-    protected String getMainComponentName() {
-        return "RNLinkedinLoginExample";
-    }
+import com.facebook.react.ReactApplication;
+import com.facebook.react.ReactInstanceManager;
+import com.facebook.react.ReactNativeHost;
+import com.facebook.react.ReactPackage;
+import com.facebook.react.shell.MainReactPackage;
+import com.facebook.soloader.SoLoader;
 
-    /**
-     * Returns whether dev mode should be enabled.
-     * This enables e.g. the dev menu.
-     */
+import java.util.Arrays;
+import java.util.List;
+
+import net.jodybrewster.linkedinlogin.RNLinkedinLoginPackage;  // <------ add here
+import com.oblador.vectoricons.VectorIconsPackage;
+
+public class MainApplication extends Application implements ReactApplication {
+
+  private final ReactNativeHost mReactNativeHost = new ReactNativeHost(this) {
     @Override
     protected boolean getUseDeveloperSupport() {
-        return BuildConfig.DEBUG;
+      return BuildConfig.DEBUG;
     }
 
-   /**
-   * A list of packages used by the app. If the app uses additional views
-   * or modules besides the default ones, add more packages here.
-   */
     @Override
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
-        new MainReactPackage(),
-        new VectorIconsPackage(), // <------ add this line to yout MainActivity class
-        new RNLinkedinLoginPackage(this)); // <------ add this line to yout MainActivity class
+          new MainReactPackage(),
+          new RNLinkedinLoginPackage(), // <------ add this line to yout MainActivity class
+          new VectorIconsPackage()
+      );
     }
+  };
 
-    // add this method inside your activity class
-    @Override
-    public void onActivityResult(int requestCode, int resultCode, android.content.Intent data) {
-      LISessionManager.getInstance(getApplicationContext()).onActivityResult(this, requestCode, resultCode, data); // <------ add here
+  @Override
+  public ReactNativeHost getReactNativeHost() {
+    return mReactNativeHost;
+  }
 
-      super.onActivityResult(requestCode, resultCode, data);
-    }
+  @Override
+  public void onCreate() {
+    super.onCreate();
+    SoLoader.init(this, /* native exopackage */ false);
+  }
+}
+
+
 ```
 
 ### Vector Icons
@@ -96,10 +102,6 @@ Please change the init with your parameters
 
 
 this.init(
-    'https://www.yourdomain.org',
-    'your_client_id',
-    'your_client_secret',
-    'your_state',
     [
         'r_emailaddress',
         'r_basicprofile'

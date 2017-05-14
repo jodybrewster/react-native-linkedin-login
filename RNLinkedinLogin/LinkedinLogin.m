@@ -42,13 +42,7 @@ RCT_EXPORT_METHOD(getRequest:(NSString *)url)
   {
     
     
-    NSData* data = [response.data dataUsingEncoding:NSUTF8StringEncoding];
-
-    NSDictionary *jsonDict = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
-    
-    return [self.bridge.eventDispatcher sendAppEventWithName:@"linkedinGetRequest" body:@{
-                                                                                       @"data": jsonDict
-                                                                                       }];
+    return [self.bridge.eventDispatcher sendAppEventWithName:@"linkedinGetRequest" body:@{ @"data": [NSString stringWithFormat:@"%@", response.data] }];
 
   } error:^(LISDKAPIError *apiError)
   {

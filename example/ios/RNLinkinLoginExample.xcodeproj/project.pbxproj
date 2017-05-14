@@ -12,7 +12,7 @@
 		00C302E81ABCBA2D00DB3ED1 /* libRCTImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302C01ABCB91800DB3ED1 /* libRCTImage.a */; };
 		00C302E91ABCBA2D00DB3ED1 /* libRCTNetwork.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302DC1ABCB9D200DB3ED1 /* libRCTNetwork.a */; };
 		00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302E41ABCB9EE00DB3ED1 /* libRCTVibration.a */; };
-		00E356F31AD99517003FC87E /* RNLinkedinLoginExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* RNLinkedinLoginExampleTests.m */; };
+		00E356F31AD99517003FC87E /* RNLinkinLoginExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* RNLinkinLoginExampleTests.m */; };
 		133E29F31AD74F7200F7D852 /* libRCTLinking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C398B91ACF4ADC00677621 /* libRCTLinking.a */; };
 		139105C61AF99C1200B5F7CC /* libRCTSettings.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 139105C11AF99BAD00B5F7CC /* libRCTSettings.a */; };
 		139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 139FDEF41B06529B00C62182 /* libRCTWebSocket.a */; };
@@ -22,17 +22,18 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		140ED2AC1D01E1AD002B40FF /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
+		5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
-		A3D1CBA01EC0C248004CB269 /* linkedin-sdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3D1CB9F1EC0C248004CB269 /* linkedin-sdk.framework */; };
-		A3D368B01EC0C3D8004F8CEE /* LinkedinLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D368AF1EC0C3D8004F8CEE /* LinkedinLogin.m */; };
-		A3D368BA1EC0D664004F8CEE /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A3D368B21EC0D664004F8CEE /* Entypo.ttf */; };
-		A3D368BB1EC0D664004F8CEE /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A3D368B31EC0D664004F8CEE /* EvilIcons.ttf */; };
-		A3D368BC1EC0D664004F8CEE /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A3D368B41EC0D664004F8CEE /* FontAwesome.ttf */; };
-		A3D368BD1EC0D664004F8CEE /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A3D368B51EC0D664004F8CEE /* Foundation.ttf */; };
-		A3D368BE1EC0D664004F8CEE /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A3D368B61EC0D664004F8CEE /* Ionicons.ttf */; };
-		A3D368BF1EC0D664004F8CEE /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A3D368B71EC0D664004F8CEE /* MaterialIcons.ttf */; };
-		A3D368C01EC0D664004F8CEE /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A3D368B81EC0D664004F8CEE /* Octicons.ttf */; };
-		A3D368C11EC0D664004F8CEE /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A3D368B91EC0D664004F8CEE /* Zocial.ttf */; };
+		A3579EF31EC75E470059A2D4 /* linkedin-sdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3579EF21EC75E470059A2D4 /* linkedin-sdk.framework */; };
+		A3579F181EC75E500059A2D4 /* LinkedinLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = A3579F171EC75E500059A2D4 /* LinkedinLogin.m */; };
+		A3579F221EC75E710059A2D4 /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A3579F1A1EC75E710059A2D4 /* Entypo.ttf */; };
+		A3579F231EC75E710059A2D4 /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A3579F1B1EC75E710059A2D4 /* EvilIcons.ttf */; };
+		A3579F241EC75E710059A2D4 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A3579F1C1EC75E710059A2D4 /* FontAwesome.ttf */; };
+		A3579F251EC75E710059A2D4 /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A3579F1D1EC75E710059A2D4 /* Foundation.ttf */; };
+		A3579F261EC75E710059A2D4 /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A3579F1E1EC75E710059A2D4 /* Ionicons.ttf */; };
+		A3579F271EC75E710059A2D4 /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A3579F1F1EC75E710059A2D4 /* MaterialIcons.ttf */; };
+		A3579F281EC75E710059A2D4 /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A3579F201EC75E710059A2D4 /* Octicons.ttf */; };
+		A3579F291EC75E710059A2D4 /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A3579F211EC75E710059A2D4 /* Zocial.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,7 +77,7 @@
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
-			remoteInfo = RNLinkedinLoginExample;
+			remoteInfo = RNLinkinLoginExample;
 		};
 		139105C01AF99BAD00B5F7CC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -99,6 +100,20 @@
 			remoteGlobalIDString = 83CBBA2E1A601D0E00E9B192;
 			remoteInfo = React;
 		};
+		5E9157321DD0AC6500FF2AA8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 134814201AA4EA6300B7C361;
+			remoteInfo = RCTAnimation;
+		};
+		5E9157341DD0AC6500FF2AA8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2D2A28201D9B03D100D4039D;
+			remoteInfo = "RCTAnimation-tvOS";
+		};
 		78C398B81ACF4ADC00677621 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */;
@@ -113,6 +128,55 @@
 			remoteGlobalIDString = 58B5119B1A9E6C1200147676;
 			remoteInfo = RCTText;
 		};
+		A3579EFA1EC75E470059A2D4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 00C302BB1ABCB91800DB3ED1 /* RCTImage.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2D2A283A1D9B042B00D4039D;
+			remoteInfo = "RCTImage-tvOS";
+		};
+		A3579EFE1EC75E470059A2D4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2D2A28471D9B043800D4039D;
+			remoteInfo = "RCTLinking-tvOS";
+		};
+		A3579F021EC75E470059A2D4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 00C302D31ABCB9D200DB3ED1 /* RCTNetwork.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2D2A28541D9B044C00D4039D;
+			remoteInfo = "RCTNetwork-tvOS";
+		};
+		A3579F061EC75E470059A2D4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 139105B61AF99BAD00B5F7CC /* RCTSettings.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2D2A28611D9B046600D4039D;
+			remoteInfo = "RCTSettings-tvOS";
+		};
+		A3579F0A1EC75E470059A2D4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2D2A287B1D9B048500D4039D;
+			remoteInfo = "RCTText-tvOS";
+		};
+		A3579F0F1EC75E470059A2D4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2D2A28881D9B049200D4039D;
+			remoteInfo = "RCTWebSocket-tvOS";
+		};
+		A3579F131EC75E470059A2D4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 146833FF1AC3E56700842450 /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2D2A28131D9B038B00D4039D;
+			remoteInfo = "React-tvOS";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -122,32 +186,33 @@
 		00C302BB1ABCB91800DB3ED1 /* RCTImage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTImage.xcodeproj; path = "../node_modules/react-native/Libraries/Image/RCTImage.xcodeproj"; sourceTree = "<group>"; };
 		00C302D31ABCB9D200DB3ED1 /* RCTNetwork.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTNetwork.xcodeproj; path = "../node_modules/react-native/Libraries/Network/RCTNetwork.xcodeproj"; sourceTree = "<group>"; };
 		00C302DF1ABCB9EE00DB3ED1 /* RCTVibration.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTVibration.xcodeproj; path = "../node_modules/react-native/Libraries/Vibration/RCTVibration.xcodeproj"; sourceTree = "<group>"; };
-		00E356EE1AD99517003FC87E /* RNLinkedinLoginExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RNLinkedinLoginExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E356EE1AD99517003FC87E /* RNLinkinLoginExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RNLinkinLoginExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		00E356F21AD99517003FC87E /* RNLinkedinLoginExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNLinkedinLoginExampleTests.m; sourceTree = "<group>"; };
+		00E356F21AD99517003FC87E /* RNLinkinLoginExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNLinkinLoginExampleTests.m; sourceTree = "<group>"; };
 		139105B61AF99BAD00B5F7CC /* RCTSettings.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTSettings.xcodeproj; path = "../node_modules/react-native/Libraries/Settings/RCTSettings.xcodeproj"; sourceTree = "<group>"; };
 		139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTWebSocket.xcodeproj; path = "../node_modules/react-native/Libraries/WebSocket/RCTWebSocket.xcodeproj"; sourceTree = "<group>"; };
-		13B07F961A680F5B00A75B9A /* RNLinkedinLoginExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RNLinkedinLoginExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = RNLinkedinLoginExample/AppDelegate.h; sourceTree = "<group>"; };
-		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = RNLinkedinLoginExample/AppDelegate.m; sourceTree = "<group>"; };
+		13B07F961A680F5B00A75B9A /* RNLinkinLoginExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RNLinkinLoginExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = RNLinkinLoginExample/AppDelegate.h; sourceTree = "<group>"; };
+		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = RNLinkinLoginExample/AppDelegate.m; sourceTree = "<group>"; };
 		13B07FB21A68108700A75B9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = RNLinkedinLoginExample/Images.xcassets; sourceTree = "<group>"; };
-		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = RNLinkedinLoginExample/Info.plist; sourceTree = "<group>"; };
-		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = RNLinkedinLoginExample/main.m; sourceTree = "<group>"; };
+		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = RNLinkinLoginExample/Images.xcassets; sourceTree = "<group>"; };
+		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = RNLinkinLoginExample/Info.plist; sourceTree = "<group>"; };
+		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = RNLinkinLoginExample/main.m; sourceTree = "<group>"; };
 		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
+		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
-		A3D1CB9F1EC0C248004CB269 /* linkedin-sdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = "linkedin-sdk.framework"; sourceTree = "<group>"; };
-		A3D368AE1EC0C3D8004F8CEE /* LinkedinLogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LinkedinLogin.h; path = RNLinkedinLogin/LinkedinLogin.h; sourceTree = "<group>"; };
-		A3D368AF1EC0C3D8004F8CEE /* LinkedinLogin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LinkedinLogin.m; path = RNLinkedinLogin/LinkedinLogin.m; sourceTree = "<group>"; };
-		A3D368B21EC0D664004F8CEE /* Entypo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Entypo.ttf; sourceTree = "<group>"; };
-		A3D368B31EC0D664004F8CEE /* EvilIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = EvilIcons.ttf; sourceTree = "<group>"; };
-		A3D368B41EC0D664004F8CEE /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.ttf; sourceTree = "<group>"; };
-		A3D368B51EC0D664004F8CEE /* Foundation.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Foundation.ttf; sourceTree = "<group>"; };
-		A3D368B61EC0D664004F8CEE /* Ionicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Ionicons.ttf; sourceTree = "<group>"; };
-		A3D368B71EC0D664004F8CEE /* MaterialIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MaterialIcons.ttf; sourceTree = "<group>"; };
-		A3D368B81EC0D664004F8CEE /* Octicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Octicons.ttf; sourceTree = "<group>"; };
-		A3D368B91EC0D664004F8CEE /* Zocial.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Zocial.ttf; sourceTree = "<group>"; };
+		A3579EF21EC75E470059A2D4 /* linkedin-sdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = "linkedin-sdk.framework"; sourceTree = "<group>"; };
+		A3579F161EC75E500059A2D4 /* LinkedinLogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinkedinLogin.h; sourceTree = "<group>"; };
+		A3579F171EC75E500059A2D4 /* LinkedinLogin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinkedinLogin.m; sourceTree = "<group>"; };
+		A3579F1A1EC75E710059A2D4 /* Entypo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Entypo.ttf; sourceTree = "<group>"; };
+		A3579F1B1EC75E710059A2D4 /* EvilIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = EvilIcons.ttf; sourceTree = "<group>"; };
+		A3579F1C1EC75E710059A2D4 /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.ttf; sourceTree = "<group>"; };
+		A3579F1D1EC75E710059A2D4 /* Foundation.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Foundation.ttf; sourceTree = "<group>"; };
+		A3579F1E1EC75E710059A2D4 /* Ionicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Ionicons.ttf; sourceTree = "<group>"; };
+		A3579F1F1EC75E710059A2D4 /* MaterialIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MaterialIcons.ttf; sourceTree = "<group>"; };
+		A3579F201EC75E710059A2D4 /* Octicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Octicons.ttf; sourceTree = "<group>"; };
+		A3579F211EC75E710059A2D4 /* Zocial.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Zocial.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,15 +228,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */,
 				146834051AC3E58100842450 /* libReact.a in Frameworks */,
 				00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */,
+				A3579EF31EC75E470059A2D4 /* linkedin-sdk.framework in Frameworks */,
 				00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */,
 				00C302E81ABCBA2D00DB3ED1 /* libRCTImage.a in Frameworks */,
 				133E29F31AD74F7200F7D852 /* libRCTLinking.a in Frameworks */,
 				00C302E91ABCBA2D00DB3ED1 /* libRCTNetwork.a in Frameworks */,
 				139105C61AF99C1200B5F7CC /* libRCTSettings.a in Frameworks */,
 				832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */,
-				A3D1CBA01EC0C248004CB269 /* linkedin-sdk.framework in Frameworks */,
 				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
 			);
@@ -200,6 +266,7 @@
 			isa = PBXGroup;
 			children = (
 				00C302C01ABCB91800DB3ED1 /* libRCTImage.a */,
+				A3579EFB1EC75E470059A2D4 /* libRCTImage-tvOS.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -208,6 +275,7 @@
 			isa = PBXGroup;
 			children = (
 				00C302DC1ABCB9D200DB3ED1 /* libRCTNetwork.a */,
+				A3579F031EC75E470059A2D4 /* libRCTNetwork-tvOS.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -220,13 +288,13 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		00E356EF1AD99517003FC87E /* RNLinkedinLoginExampleTests */ = {
+		00E356EF1AD99517003FC87E /* RNLinkinLoginExampleTests */ = {
 			isa = PBXGroup;
 			children = (
-				00E356F21AD99517003FC87E /* RNLinkedinLoginExampleTests.m */,
+				00E356F21AD99517003FC87E /* RNLinkinLoginExampleTests.m */,
 				00E356F01AD99517003FC87E /* Supporting Files */,
 			);
-			path = RNLinkedinLoginExampleTests;
+			path = RNLinkinLoginExampleTests;
 			sourceTree = "<group>";
 		};
 		00E356F01AD99517003FC87E /* Supporting Files */ = {
@@ -241,6 +309,7 @@
 			isa = PBXGroup;
 			children = (
 				139105C11AF99BAD00B5F7CC /* libRCTSettings.a */,
+				A3579F071EC75E470059A2D4 /* libRCTSettings-tvOS.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -249,16 +318,17 @@
 			isa = PBXGroup;
 			children = (
 				139FDEF41B06529B00C62182 /* libRCTWebSocket.a */,
+				A3579F101EC75E470059A2D4 /* libRCTWebSocket-tvOS.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		13B07FAE1A68108700A75B9A /* RNLinkedinLoginExample */ = {
+		13B07FAE1A68108700A75B9A /* RNLinkinLoginExample */ = {
 			isa = PBXGroup;
 			children = (
-				A3D368AE1EC0C3D8004F8CEE /* LinkedinLogin.h */,
-				A3D368AF1EC0C3D8004F8CEE /* LinkedinLogin.m */,
-				A3D1CB9F1EC0C248004CB269 /* linkedin-sdk.framework */,
+				A3579F191EC75E710059A2D4 /* Fonts */,
+				A3579F151EC75E500059A2D4 /* RNLinkedinLogin */,
+				A3579EF21EC75E470059A2D4 /* linkedin-sdk.framework */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -267,13 +337,23 @@
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
 			);
-			name = RNLinkedinLoginExample;
+			name = RNLinkinLoginExample;
 			sourceTree = "<group>";
 		};
 		146834001AC3E56700842450 /* Products */ = {
 			isa = PBXGroup;
 			children = (
 				146834041AC3E56700842450 /* libReact.a */,
+				A3579F141EC75E470059A2D4 /* libReact-tvOS.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5E91572E1DD0AC6500FF2AA8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */,
+				5E9157351DD0AC6500FF2AA8 /* libRCTAnimation-tvOS.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -282,6 +362,7 @@
 			isa = PBXGroup;
 			children = (
 				78C398B91ACF4ADC00677621 /* libRCTLinking.a */,
+				A3579EFF1EC75E470059A2D4 /* libRCTLinking-tvOS.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -289,6 +370,7 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */,
 				146833FF1AC3E56700842450 /* React.xcodeproj */,
 				00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */,
 				00C302B51ABCB90400DB3ED1 /* RCTGeolocation.xcodeproj */,
@@ -307,6 +389,7 @@
 			isa = PBXGroup;
 			children = (
 				832341B51AAA6A8300B99B32 /* libRCTText.a */,
+				A3579F0B1EC75E470059A2D4 /* libRCTText-tvOS.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -314,10 +397,9 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				A3D368B11EC0D664004F8CEE /* Fonts */,
-				13B07FAE1A68108700A75B9A /* RNLinkedinLoginExample */,
+				13B07FAE1A68108700A75B9A /* RNLinkinLoginExample */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
-				00E356EF1AD99517003FC87E /* RNLinkedinLoginExampleTests */,
+				00E356EF1AD99517003FC87E /* RNLinkinLoginExampleTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 			);
 			indentWidth = 2;
@@ -327,23 +409,32 @@
 		83CBBA001A601CBA00E9B192 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				13B07F961A680F5B00A75B9A /* RNLinkedinLoginExample.app */,
-				00E356EE1AD99517003FC87E /* RNLinkedinLoginExampleTests.xctest */,
+				13B07F961A680F5B00A75B9A /* RNLinkinLoginExample.app */,
+				00E356EE1AD99517003FC87E /* RNLinkinLoginExampleTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		A3D368B11EC0D664004F8CEE /* Fonts */ = {
+		A3579F151EC75E500059A2D4 /* RNLinkedinLogin */ = {
 			isa = PBXGroup;
 			children = (
-				A3D368B21EC0D664004F8CEE /* Entypo.ttf */,
-				A3D368B31EC0D664004F8CEE /* EvilIcons.ttf */,
-				A3D368B41EC0D664004F8CEE /* FontAwesome.ttf */,
-				A3D368B51EC0D664004F8CEE /* Foundation.ttf */,
-				A3D368B61EC0D664004F8CEE /* Ionicons.ttf */,
-				A3D368B71EC0D664004F8CEE /* MaterialIcons.ttf */,
-				A3D368B81EC0D664004F8CEE /* Octicons.ttf */,
-				A3D368B91EC0D664004F8CEE /* Zocial.ttf */,
+				A3579F161EC75E500059A2D4 /* LinkedinLogin.h */,
+				A3579F171EC75E500059A2D4 /* LinkedinLogin.m */,
+			);
+			path = RNLinkedinLogin;
+			sourceTree = "<group>";
+		};
+		A3579F191EC75E710059A2D4 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				A3579F1A1EC75E710059A2D4 /* Entypo.ttf */,
+				A3579F1B1EC75E710059A2D4 /* EvilIcons.ttf */,
+				A3579F1C1EC75E710059A2D4 /* FontAwesome.ttf */,
+				A3579F1D1EC75E710059A2D4 /* Foundation.ttf */,
+				A3579F1E1EC75E710059A2D4 /* Ionicons.ttf */,
+				A3579F1F1EC75E710059A2D4 /* MaterialIcons.ttf */,
+				A3579F201EC75E710059A2D4 /* Octicons.ttf */,
+				A3579F211EC75E710059A2D4 /* Zocial.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -351,9 +442,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		00E356ED1AD99517003FC87E /* RNLinkedinLoginExampleTests */ = {
+		00E356ED1AD99517003FC87E /* RNLinkinLoginExampleTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "RNLinkedinLoginExampleTests" */;
+			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "RNLinkinLoginExampleTests" */;
 			buildPhases = (
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
@@ -364,14 +455,14 @@
 			dependencies = (
 				00E356F51AD99517003FC87E /* PBXTargetDependency */,
 			);
-			name = RNLinkedinLoginExampleTests;
-			productName = RNLinkedinLoginExampleTests;
-			productReference = 00E356EE1AD99517003FC87E /* RNLinkedinLoginExampleTests.xctest */;
+			name = RNLinkinLoginExampleTests;
+			productName = RNLinkinLoginExampleTests;
+			productReference = 00E356EE1AD99517003FC87E /* RNLinkinLoginExampleTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		13B07F861A680F5B00A75B9A /* RNLinkedinLoginExample */ = {
+		13B07F861A680F5B00A75B9A /* RNLinkinLoginExample */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "RNLinkedinLoginExample" */;
+			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "RNLinkinLoginExample" */;
 			buildPhases = (
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
@@ -382,9 +473,9 @@
 			);
 			dependencies = (
 			);
-			name = RNLinkedinLoginExample;
+			name = RNLinkinLoginExample;
 			productName = "Hello World";
-			productReference = 13B07F961A680F5B00A75B9A /* RNLinkedinLoginExample.app */;
+			productReference = 13B07F961A680F5B00A75B9A /* RNLinkinLoginExample.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -406,7 +497,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "RNLinkedinLoginExample" */;
+			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "RNLinkinLoginExample" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -421,6 +512,10 @@
 				{
 					ProductGroup = 00C302A81ABCB8CE00DB3ED1 /* Products */;
 					ProjectRef = 00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */;
+				},
+				{
+					ProductGroup = 5E91572E1DD0AC6500FF2AA8 /* Products */;
+					ProjectRef = 5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */;
 				},
 				{
 					ProductGroup = 00C302B61ABCB90400DB3ED1 /* Products */;
@@ -461,8 +556,8 @@
 			);
 			projectRoot = "";
 			targets = (
-				13B07F861A680F5B00A75B9A /* RNLinkedinLoginExample */,
-				00E356ED1AD99517003FC87E /* RNLinkedinLoginExampleTests */,
+				13B07F861A680F5B00A75B9A /* RNLinkinLoginExample */,
+				00E356ED1AD99517003FC87E /* RNLinkinLoginExampleTests */,
 			);
 		};
 /* End PBXProject section */
@@ -524,6 +619,20 @@
 			remoteRef = 146834031AC3E56700842450 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRCTAnimation.a;
+			remoteRef = 5E9157321DD0AC6500FF2AA8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5E9157351DD0AC6500FF2AA8 /* libRCTAnimation-tvOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libRCTAnimation-tvOS.a";
+			remoteRef = 5E9157341DD0AC6500FF2AA8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		78C398B91ACF4ADC00677621 /* libRCTLinking.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -536,6 +645,55 @@
 			fileType = archive.ar;
 			path = libRCTText.a;
 			remoteRef = 832341B41AAA6A8300B99B32 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A3579EFB1EC75E470059A2D4 /* libRCTImage-tvOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libRCTImage-tvOS.a";
+			remoteRef = A3579EFA1EC75E470059A2D4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A3579EFF1EC75E470059A2D4 /* libRCTLinking-tvOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libRCTLinking-tvOS.a";
+			remoteRef = A3579EFE1EC75E470059A2D4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A3579F031EC75E470059A2D4 /* libRCTNetwork-tvOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libRCTNetwork-tvOS.a";
+			remoteRef = A3579F021EC75E470059A2D4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A3579F071EC75E470059A2D4 /* libRCTSettings-tvOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libRCTSettings-tvOS.a";
+			remoteRef = A3579F061EC75E470059A2D4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A3579F0B1EC75E470059A2D4 /* libRCTText-tvOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libRCTText-tvOS.a";
+			remoteRef = A3579F0A1EC75E470059A2D4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A3579F101EC75E470059A2D4 /* libRCTWebSocket-tvOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libRCTWebSocket-tvOS.a";
+			remoteRef = A3579F0F1EC75E470059A2D4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A3579F141EC75E470059A2D4 /* libReact-tvOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libReact-tvOS.a";
+			remoteRef = A3579F131EC75E470059A2D4 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -552,15 +710,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A3D368BF1EC0D664004F8CEE /* MaterialIcons.ttf in Resources */,
-				A3D368C01EC0D664004F8CEE /* Octicons.ttf in Resources */,
-				A3D368C11EC0D664004F8CEE /* Zocial.ttf in Resources */,
+				A3579F271EC75E710059A2D4 /* MaterialIcons.ttf in Resources */,
+				A3579F281EC75E710059A2D4 /* Octicons.ttf in Resources */,
+				A3579F291EC75E710059A2D4 /* Zocial.ttf in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
-				A3D368BC1EC0D664004F8CEE /* FontAwesome.ttf in Resources */,
-				A3D368BB1EC0D664004F8CEE /* EvilIcons.ttf in Resources */,
-				A3D368BE1EC0D664004F8CEE /* Ionicons.ttf in Resources */,
-				A3D368BD1EC0D664004F8CEE /* Foundation.ttf in Resources */,
-				A3D368BA1EC0D664004F8CEE /* Entypo.ttf in Resources */,
+				A3579F241EC75E710059A2D4 /* FontAwesome.ttf in Resources */,
+				A3579F231EC75E710059A2D4 /* EvilIcons.ttf in Resources */,
+				A3579F261EC75E710059A2D4 /* Ionicons.ttf in Resources */,
+				A3579F251EC75E710059A2D4 /* Foundation.ttf in Resources */,
+				A3579F221EC75E710059A2D4 /* Entypo.ttf in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -589,7 +747,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00E356F31AD99517003FC87E /* RNLinkedinLoginExampleTests.m in Sources */,
+				00E356F31AD99517003FC87E /* RNLinkinLoginExampleTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -597,7 +755,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A3D368B01EC0C3D8004F8CEE /* LinkedinLogin.m in Sources */,
+				A3579F181EC75E500059A2D4 /* LinkedinLogin.m in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
@@ -608,7 +766,7 @@
 /* Begin PBXTargetDependency section */
 		00E356F51AD99517003FC87E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 13B07F861A680F5B00A75B9A /* RNLinkedinLoginExample */;
+			target = 13B07F861A680F5B00A75B9A /* RNLinkinLoginExample */;
 			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -620,7 +778,7 @@
 				13B07FB21A68108700A75B9A /* Base */,
 			);
 			name = LaunchScreen.xib;
-			path = RNLinkedinLoginExample;
+			path = RNLinkinLoginExample;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -635,11 +793,11 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = RNLinkedinLoginExampleTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				INFOPLIST_FILE = RNLinkinLoginExampleTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RNLinkedinLoginExample.app/RNLinkedinLoginExample";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RNLinkinLoginExample.app/RNLinkinLoginExample";
 			};
 			name = Debug;
 		};
@@ -649,11 +807,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				DEVELOPMENT_TEAM = 4VYUV2N4KN;
-				INFOPLIST_FILE = RNLinkedinLoginExampleTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				INFOPLIST_FILE = RNLinkinLoginExampleTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RNLinkedinLoginExample.app/RNLinkedinLoginExample";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RNLinkinLoginExample.app/RNLinkinLoginExample";
 			};
 			name = Release;
 		};
@@ -661,26 +819,22 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_TEAM = 4VYUV2N4KN;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"$(SRCROOT)/../node_modules/react-native/React/**",
-				);
-				INFOPLIST_FILE = RNLinkedinLoginExample/Info.plist;
+				INFOPLIST_FILE = RNLinkinLoginExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = org.reactjs.native.example.RNLinkedinLoginExample;
-				PRODUCT_NAME = RNLinkedinLoginExample;
+				PRODUCT_NAME = RNLinkinLoginExample;
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
 		};
@@ -688,25 +842,21 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4VYUV2N4KN;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"$(SRCROOT)/../node_modules/react-native/React/**",
-				);
-				INFOPLIST_FILE = RNLinkedinLoginExample/Info.plist;
+				INFOPLIST_FILE = RNLinkinLoginExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = org.reactjs.native.example.RNLinkedinLoginExample;
-				PRODUCT_NAME = RNLinkedinLoginExample;
+				PRODUCT_NAME = RNLinkinLoginExample;
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
 		};
@@ -746,10 +896,10 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/../node_modules/react-native/React/**",
+					"$(SRCROOT)/../node_modules/react-native/ReactCommon/**",
 				);
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -786,10 +936,10 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/../node_modules/react-native/React/**",
+					"$(SRCROOT)/../node_modules/react-native/ReactCommon/**",
 				);
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -799,7 +949,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "RNLinkedinLoginExampleTests" */ = {
+		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "RNLinkinLoginExampleTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				00E356F61AD99517003FC87E /* Debug */,
@@ -808,7 +958,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "RNLinkedinLoginExample" */ = {
+		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "RNLinkinLoginExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				13B07F941A680F5B00A75B9A /* Debug */,
@@ -817,7 +967,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "RNLinkedinLoginExample" */ = {
+		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "RNLinkinLoginExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83CBBA201A601CBA00E9B192 /* Debug */,

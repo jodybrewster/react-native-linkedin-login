@@ -69,73 +69,21 @@ public class RNLinkedinLoginModule extends ReactContextBaseJavaModule implements
         _availablePermissions.add(Scope.W_SHARE);
     }
 
+   @Override
+    public void onActivityResult(Activity activity, int requestCode, int resultCode, Intent data) {
+        Activity _activity = this.getCurrentActivity();
+
+        LISessionManager.getInstance(_context).onActivityResult(_activity, requestCode, resultCode, data);
+    }
+
     @Override
     public void onNewIntent(Intent intent) {
 
     }
 
-    /**
-     *
-     * @return returns the name of the module
-     */
-    @Override
-    public String getName() {
-        return "LinkedinLogin";
-    }
-
-    @Override
-    public void onActivityResult(final int requestCode, final int resultCode, final Intent intent) {
-
-        Activity _activity = this.getCurrentActivity();
-
-        LISessionManager.getInstance(_context).onActivityResult(_activity, requestCode, resultCode, intent);
-
-    }
 
 
-    /**
-     * Initializes the Linkedin Api
-     * @param accessToken Access Token for existing sessions
-     * @param expiresOn Expires on long value
-     */
-    @ReactMethod
-    public void init(final String accessToken, final String expiresOn)
-    {
-
-        Log.d(TAG, "init");
-        Activity _activity = this.getCurrentActivity();
-        _activity.runOnUiThread(new Runnable() {
-            @Override
-            public void run() {
-
-                try {
-
-                    final JSONObject obj = new JSONObject();
-                    obj.put(AccessToken.ACCESS_TOKEN_VALUE, accessToken);
-                    obj.put(AccessToken.EXPIRES_ON, expiresOn);
-
-                    AccessToken accessToken = new AccessToken(obj);
-                    LISessionManager.getInstance(_context).init(accessToken);
-
-                    WritableMap params = Arguments.createMap();
-                    params.putBoolean("success",  true);
-
-                    _context.getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class)
-                            .emit("linkedinInit", params);
-
-                } catch (JSONException e) {
-                    e.printStackTrace();
-
-                    WritableMap params = Arguments.createMap();
-                    params.putString("error",  e.getMessage());
-
-                    _context.getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class)
-                            .emit("linkedinInitError", params);
-                }
-
-            }
-        });
-    }
+    
 
     /**
      * Makes an API request
@@ -280,6 +228,9 @@ public class RNLinkedinLoginModule extends ReactContextBaseJavaModule implements
 
     }
 
-   
 
+    @Override
+    public String getName() {
+        return "LinkedinLogin";
+    }
 }

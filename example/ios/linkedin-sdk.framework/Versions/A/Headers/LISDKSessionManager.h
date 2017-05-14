@@ -28,13 +28,13 @@ typedef void (^AuthErrorBlock)(NSError *);
 
 /**
  @brief create a session with user authorization if needed.
-        If the user previously authorized this application, the successBlock will be called and
-        a valid session created.
-        If needed, an authorization screen will be shown to the user.
-        This method will bring the user to the LinkedIn flagship app.  The application must
-        call application:openURL from their AppDelegate:application:openURL in order for the
-        successBlock and errorBlock completion handlers to be properly called.
-        By default, sessions are saved in the keychain.
+	If the user previously authorized this application, the successBlock will be called and
+	a valid session created.
+	If needed, an authorization screen will be shown to the user.
+	This method will bring the user to the LinkedIn flagship app.  The application must
+	call application:openURL from their AppDelegate:application:openURL in order for the
+	successBlock and errorBlock completion handlers to be properly called.
+	By default, sessions are saved in the keychain.
  @param permissions  NSArray of permissions strings.  For valid values see LISDKPermission.h
  @param showGoToAppStoreDialog YES if you want an alert to prompt the user to go to the App Store if the LinkedIn App is not installed. If NO, no alert will be shown and the user will be taken to the App Store directly.
  */
@@ -61,7 +61,7 @@ typedef void (^AuthErrorBlock)(NSError *);
 
 /**
  call this within AppDelegate:application:openURL to determine whether or not to call
- this methods application:openURL method 
+ this methods application:openURL method
  @return YES if the url is one that should be handled by the LinkedIn SDK
 */
 + (BOOL)shouldHandleUrl:(NSURL *)url;
