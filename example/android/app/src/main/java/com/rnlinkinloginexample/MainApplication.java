@@ -14,7 +14,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import net.jodybrewster.linkedinlogin.RNLinkedinLoginPackage;  // <------ add here
-//import com.oblador.vectoricons.VectorIconsPackage;
+import com.oblador.vectoricons.VectorIconsPackage;
 
 public class MainApplication extends Application implements ReactApplication {
 
@@ -28,8 +28,8 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
-          new RNLinkedinLoginPackage() // <------ add this line to yout MainActivity class
-          //new VectorIconsPackage()
+          new RNLinkedinLoginPackage(), // <------ add this line to yout MainActivity class
+          new VectorIconsPackage()
       );
     }
   };
