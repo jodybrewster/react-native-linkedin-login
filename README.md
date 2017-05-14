@@ -12,7 +12,7 @@ Let your users sign in with their Linkedin account.
 ## Requirements
 
 * node v4 to v7.
-* React Native 0.39.
+* React Native 0.30 - .39.
 
 ## Installation
 
