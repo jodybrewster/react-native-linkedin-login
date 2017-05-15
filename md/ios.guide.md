@@ -15,6 +15,18 @@ and the entire folder...
 
 node_modules/react-native-linkedin-login/RNLinkedinLogin/
 
+Add these lines to your AppDelegate.m
+
+```
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
+{
+  if ([LISDKCallbackHandler shouldHandleUrl:url])
+  {
+    return [LISDKCallbackHandler application:application openURL:url sourceApplication:sourceApplication annotation:annotation];
+  }
+  return YES;
+}
+```
 
 Add the following to your Info.plist, please refer to the Linkedin docs below...
 
