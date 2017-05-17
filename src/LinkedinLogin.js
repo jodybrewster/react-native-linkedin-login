@@ -1,32 +1,36 @@
-'use strict';
-
-const React = require('react-native');
-const {
+import React from 'react';
+import {
   Platform,
   DeviceEventEmitter,
-  NativeModules
-} = React;
+  NativeModules,
+} from 'react-native';
 const RNLinkedinLogin = NativeModules.LinkedinLogin;
 
 
-class LinkedinLogin {
+export default class LinkedinLogin {
 
   _accessToken = null;
   _expiresOn = null;
 
+  _redirectUrl = null;
+  _clientId = null;
+  _clientSecret = null;
+  _state = null;
   _scopes = null;
+
 
   constructor() {
   }
 
   /**
    * Initializes the Linkedin Login module
-   * 
-   * @param {any} scopes 
-   * @returns {LinkedinLogin} 
+   *
+   * @param {any} scopes
+   * @returns {LinkedinLogin}
    */
-  init(scopes) {
-
+  init(clientId, clientSecret, scopes) {
+    this._clientId = clientId;
+    this._clientSecret = clientSecret;
     this._scopes = scopes;
     return this;
   }
@@ -35,7 +39,7 @@ class LinkedinLogin {
    * Gets the Profile image
    * @return {object} Returns the promise with the image
    */
-  getProfileImages() {
+  getProfileImages = () => {
     const atoken = this._accessToken;
 
     return new Promise((resolve, reject) => {
@@ -56,7 +60,6 @@ class LinkedinLogin {
       const picstr = 'https://api.linkedin.com/v1/people/~/picture-urls::(original)';
 
       RNLinkedinLogin.getRequest(picstr);
-    
     });
   }
 
@@ -64,13 +67,13 @@ class LinkedinLogin {
    * Gets the user profile
    * @return {object} Returns a promise with the user object or error
    */
-  getProfile() {
+  getProfile = () => {
     const atoken = this._accessToken;
 
     return new Promise((resolve, reject) => {
       DeviceEventEmitter.addListener('linkedinGetRequest', (d) => {
         const data = JSON.parse(d.data);
-        
+
         if (data) {
           resolve(data);
         }
@@ -93,7 +96,7 @@ class LinkedinLogin {
   * @param  {Number} expiresOn   The access token's expiration number
   * @return {object} promise     Returns if access token is valid or not
   */
-  setSession(accessToken, expiresOn) {
+  setSession = (accessToken, expiresOn) => {
     this._accessToken = accessToken;
     this._expiresOn = expiresOn;
   }
@@ -102,30 +105,24 @@ class LinkedinLogin {
    * Logs the user in
    * @return {promise} returns whether or not the user logged in successfully
    */
-  login() {
-    return new Promise((resolve, reject) => {
-      DeviceEventEmitter.addListener('linkedinLoginError', (error) => {
-        reject(error);
-      });
-
-      DeviceEventEmitter.addListener('linkedinLogin', (data) => {
-        this._accessToken = data.accessToken;
-        this._expiresOn = data.expiresOn;
-
-        resolve(data);
-      });
-
-      RNLinkedinLogin.login(
-        this._scopes
-      );
+  login = () => new Promise((resolve, reject) => {
+    DeviceEventEmitter.addListener('linkedinLoginError', (error) => {
+      reject(error);
     });
-  }
 
-  logout() {
+    DeviceEventEmitter.addListener('linkedinLogin', (data) => {
+      this._accessToken = data.accessToken;
+      this._expiresOn = data.expiresOn;
+
+      resolve(data);
+    });
+
+    RNLinkedinLogin.login(
+        this._scopes,
+      );
+  })
+
+  logout = () => {
     this._accessToken = null;
   }
 }
-
-const linkedinLogin = new LinkedinLogin();
-
-module.exports = linkedinLogin;
