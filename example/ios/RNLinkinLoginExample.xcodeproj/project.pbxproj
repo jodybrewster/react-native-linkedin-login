@@ -26,14 +26,6 @@
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		A3579EF31EC75E470059A2D4 /* linkedin-sdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3579EF21EC75E470059A2D4 /* linkedin-sdk.framework */; };
 		A3579F181EC75E500059A2D4 /* LinkedinLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = A3579F171EC75E500059A2D4 /* LinkedinLogin.m */; };
-		A3579F221EC75E710059A2D4 /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A3579F1A1EC75E710059A2D4 /* Entypo.ttf */; };
-		A3579F231EC75E710059A2D4 /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A3579F1B1EC75E710059A2D4 /* EvilIcons.ttf */; };
-		A3579F241EC75E710059A2D4 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A3579F1C1EC75E710059A2D4 /* FontAwesome.ttf */; };
-		A3579F251EC75E710059A2D4 /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A3579F1D1EC75E710059A2D4 /* Foundation.ttf */; };
-		A3579F261EC75E710059A2D4 /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A3579F1E1EC75E710059A2D4 /* Ionicons.ttf */; };
-		A3579F271EC75E710059A2D4 /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A3579F1F1EC75E710059A2D4 /* MaterialIcons.ttf */; };
-		A3579F281EC75E710059A2D4 /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A3579F201EC75E710059A2D4 /* Octicons.ttf */; };
-		A3579F291EC75E710059A2D4 /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A3579F211EC75E710059A2D4 /* Zocial.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -177,6 +169,48 @@
 			remoteGlobalIDString = 2D2A28131D9B038B00D4039D;
 			remoteInfo = "React-tvOS";
 		};
+		A3B662BB1ECC85B000C22AD3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 146833FF1AC3E56700842450 /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3D3C059A1DE3340900C268FA;
+			remoteInfo = yoga;
+		};
+		A3B662BD1ECC85B000C22AD3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 146833FF1AC3E56700842450 /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3D3C06751DE3340C00C268FA;
+			remoteInfo = "yoga-tvOS";
+		};
+		A3B662BF1ECC85B000C22AD3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 146833FF1AC3E56700842450 /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3D3CD9251DE5FBEC00167DC4;
+			remoteInfo = cxxreact;
+		};
+		A3B662C11ECC85B000C22AD3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 146833FF1AC3E56700842450 /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3D3CD9321DE5FBEE00167DC4;
+			remoteInfo = "cxxreact-tvOS";
+		};
+		A3B662C31ECC85B000C22AD3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 146833FF1AC3E56700842450 /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3D3CD90B1DE5FBD600167DC4;
+			remoteInfo = jschelpers;
+		};
+		A3B662C51ECC85B000C22AD3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 146833FF1AC3E56700842450 /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3D3CD9181DE5FBD800167DC4;
+			remoteInfo = "jschelpers-tvOS";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -205,14 +239,6 @@
 		A3579EF21EC75E470059A2D4 /* linkedin-sdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = "linkedin-sdk.framework"; sourceTree = "<group>"; };
 		A3579F161EC75E500059A2D4 /* LinkedinLogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinkedinLogin.h; sourceTree = "<group>"; };
 		A3579F171EC75E500059A2D4 /* LinkedinLogin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinkedinLogin.m; sourceTree = "<group>"; };
-		A3579F1A1EC75E710059A2D4 /* Entypo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Entypo.ttf; sourceTree = "<group>"; };
-		A3579F1B1EC75E710059A2D4 /* EvilIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = EvilIcons.ttf; sourceTree = "<group>"; };
-		A3579F1C1EC75E710059A2D4 /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.ttf; sourceTree = "<group>"; };
-		A3579F1D1EC75E710059A2D4 /* Foundation.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Foundation.ttf; sourceTree = "<group>"; };
-		A3579F1E1EC75E710059A2D4 /* Ionicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Ionicons.ttf; sourceTree = "<group>"; };
-		A3579F1F1EC75E710059A2D4 /* MaterialIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MaterialIcons.ttf; sourceTree = "<group>"; };
-		A3579F201EC75E710059A2D4 /* Octicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Octicons.ttf; sourceTree = "<group>"; };
-		A3579F211EC75E710059A2D4 /* Zocial.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Zocial.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -326,7 +352,6 @@
 		13B07FAE1A68108700A75B9A /* RNLinkinLoginExample */ = {
 			isa = PBXGroup;
 			children = (
-				A3579F191EC75E710059A2D4 /* Fonts */,
 				A3579F151EC75E500059A2D4 /* RNLinkedinLogin */,
 				A3579EF21EC75E470059A2D4 /* linkedin-sdk.framework */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
@@ -345,6 +370,12 @@
 			children = (
 				146834041AC3E56700842450 /* libReact.a */,
 				A3579F141EC75E470059A2D4 /* libReact-tvOS.a */,
+				A3B662BC1ECC85B000C22AD3 /* libyoga.a */,
+				A3B662BE1ECC85B000C22AD3 /* libyoga.a */,
+				A3B662C01ECC85B000C22AD3 /* libcxxreact.a */,
+				A3B662C21ECC85B000C22AD3 /* libcxxreact.a */,
+				A3B662C41ECC85B000C22AD3 /* libjschelpers.a */,
+				A3B662C61ECC85B000C22AD3 /* libjschelpers.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -422,21 +453,6 @@
 				A3579F171EC75E500059A2D4 /* LinkedinLogin.m */,
 			);
 			path = RNLinkedinLogin;
-			sourceTree = "<group>";
-		};
-		A3579F191EC75E710059A2D4 /* Fonts */ = {
-			isa = PBXGroup;
-			children = (
-				A3579F1A1EC75E710059A2D4 /* Entypo.ttf */,
-				A3579F1B1EC75E710059A2D4 /* EvilIcons.ttf */,
-				A3579F1C1EC75E710059A2D4 /* FontAwesome.ttf */,
-				A3579F1D1EC75E710059A2D4 /* Foundation.ttf */,
-				A3579F1E1EC75E710059A2D4 /* Ionicons.ttf */,
-				A3579F1F1EC75E710059A2D4 /* MaterialIcons.ttf */,
-				A3579F201EC75E710059A2D4 /* Octicons.ttf */,
-				A3579F211EC75E710059A2D4 /* Zocial.ttf */,
-			);
-			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -692,8 +708,50 @@
 		A3579F141EC75E470059A2D4 /* libReact-tvOS.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
-			path = "libReact-tvOS.a";
+			path = libReact.a;
 			remoteRef = A3579F131EC75E470059A2D4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A3B662BC1ECC85B000C22AD3 /* libyoga.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libyoga.a;
+			remoteRef = A3B662BB1ECC85B000C22AD3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A3B662BE1ECC85B000C22AD3 /* libyoga.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libyoga.a;
+			remoteRef = A3B662BD1ECC85B000C22AD3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A3B662C01ECC85B000C22AD3 /* libcxxreact.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libcxxreact.a;
+			remoteRef = A3B662BF1ECC85B000C22AD3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A3B662C21ECC85B000C22AD3 /* libcxxreact.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libcxxreact.a;
+			remoteRef = A3B662C11ECC85B000C22AD3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A3B662C41ECC85B000C22AD3 /* libjschelpers.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libjschelpers.a;
+			remoteRef = A3B662C31ECC85B000C22AD3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A3B662C61ECC85B000C22AD3 /* libjschelpers.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libjschelpers.a;
+			remoteRef = A3B662C51ECC85B000C22AD3 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -710,15 +768,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A3579F271EC75E710059A2D4 /* MaterialIcons.ttf in Resources */,
-				A3579F281EC75E710059A2D4 /* Octicons.ttf in Resources */,
-				A3579F291EC75E710059A2D4 /* Zocial.ttf in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
-				A3579F241EC75E710059A2D4 /* FontAwesome.ttf in Resources */,
-				A3579F231EC75E710059A2D4 /* EvilIcons.ttf in Resources */,
-				A3579F261EC75E710059A2D4 /* Ionicons.ttf in Resources */,
-				A3579F251EC75E710059A2D4 /* Foundation.ttf in Resources */,
-				A3579F221EC75E710059A2D4 /* Entypo.ttf in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,14 +7,13 @@ import {
   View,
   Text,
   Image,
-  TouchableOpacity
+  Button,
+  TouchableOpacity,
+  AsyncStorage
 } from 'react-native';
 
 
-
 import LinkedinLogin from 'react-native-linkedin-login';
-import Icon from 'react-native-vector-icons/FontAwesome';
-import Store from 'react-native-simple-store';
 
 
 class example extends Component {
@@ -23,8 +22,8 @@ class example extends Component {
   constructor(props) {
     super(props);
 
-    this._login = this._login.bind(this);
-    this._logout = this._logout.bind(this);
+    this.login = this.login.bind(this);
+    this.logout = this.logout.bind(this);
 
 
     this.state = {
@@ -41,9 +40,18 @@ class example extends Component {
       ]
     );
 
+    this.getUserSession();
+    
+  }
+
+  getUserSession() {
     // get the user session from the store
-    Store.get('user').then((user) => {
-      if (user) {
+
+    
+    AsyncStorage.getItem('user',  (err, result)  => {
+      if (result) {
+        const user = JSON.parse(result);
+
         // set the api session if found
         LinkedinLogin.setSession(user.accessToken, user.expiresOn);
 
@@ -54,17 +62,21 @@ class example extends Component {
         console.log('user', user);
       }
     });
+
   }
-  _login() {
+
+  login() {
     LinkedinLogin.login().then((user) => {
       console.log('User logged in: ', user);
 
       // recieved auth token
       this.setState({ user });
-      Store.save('user', user).then(() => {
-        // get the profile
-        this._getUserProfile();
-      });
+    
+       AsyncStorage.setItem('user', JSON.stringify(user), () => {
+            this.getUserProfile();
+        });
+        
+
     }).catch((e) => {
       var err = JSON.parse(e.description);
       alert("ERROR: " + err.errorMessage);
@@ -73,13 +85,16 @@ class example extends Component {
 
     return true;
   }
-  _logout() {
+
+  logout() {
     LinkedinLogin.logout();
     console.log('user logged out');
-    Store.delete('user');
+    
+    AsyncStorage.removeItem('user');
     this.setState({ user: null });
   }
-  _getUserProfile() {
+ 
+  getUserProfile(user) {
     LinkedinLogin.getProfile().then((data) => {
       console.log('received profile', data);
       const userdata = Object.assign({}, this.state.user, data);
@@ -87,37 +102,39 @@ class example extends Component {
       console.log('user: ', userdata);
       this.setState({ user: userdata });
 
-      Store.save('user', userdata).then(() => {
-        this._getUserProfileImage();
-      });
+      AsyncStorage.setItem('user', JSON.stringify(userdata), () => {
+          this.getUserProfileImage();
+        });
+
     }).catch((e) => {
       console.log(e);
     });
   }
-  _getUserProfileImage() {
+
+  getUserProfileImage() {
     LinkedinLogin.getProfileImages().then((images) => {
       console.log('received profile image', images);
 
       const userdata = Object.assign({}, this.state.user, { images });
 
-      Store.save('user', userdata).then(() => {
-        console.log('user: ', userdata);
+      AsyncStorage.setItem('user', JSON.stringify(userdata), () => {
         this.setState({ user: userdata });
       });
+      
     }).catch((e) => {
       console.log(e);
     });
   }
+
+  
   render() {
     if (!this.state.user) {
       return (
         <View style={ styles.container }>
-          <Icon.Button
-            name="linkedin"
-            backgroundColor="#0059b3"
-            onPress={ this._login }>
-          Sign in with Linkedin
-          </Icon.Button>
+          <Button
+            title="Sign in with Linkedin"
+            color="#0059b3"
+            onPress={ this.login } />
         </View>
       );
     }
@@ -147,7 +164,7 @@ class example extends Component {
           { expiresOnComp }
           { imageComp }
 
-          <TouchableOpacity onPress={ this._logout }>
+          <TouchableOpacity onPress={ this.logout }>
             <View style={ { marginTop: 50 } }>
               <Text>Log out</Text>
             </View>

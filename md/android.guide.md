@@ -14,8 +14,6 @@ npm install react-native-linkedin-login --save
 include ':react-native-linkedin-login', ':app'
 project(':react-native-linkedin-login').projectDir = new File(rootProject.projectDir, '../../android')
 
-include ':react-native-vector-icons'
-project(':react-native-vector-icons').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-vector-icons/android')
 
 ```
 
@@ -28,7 +26,6 @@ dependencies {
     compile "com.android.support:appcompat-v7:23.0.1"
     compile "com.facebook.react:react-native:+"  // From node_modules
     compile project(":react-native-linkedin-login") // <-- add here
-    compile project(':react-native-vector-icons')
 }
 ```
 
@@ -52,7 +49,6 @@ import java.util.Arrays;
 import java.util.List;
 
 import net.jodybrewster.linkedinlogin.RNLinkedinLoginPackage;  // <------ add here
-//import com.oblador.vectoricons.VectorIconsPackage;
 
 public class MainApplication extends Application implements ReactApplication {
 
@@ -67,7 +63,6 @@ public class MainApplication extends Application implements ReactApplication {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
           new RNLinkedinLoginPackage() // <------ add this line to yout MainActivity class
-          //new VectorIconsPackage()
       );
     }
   };
@@ -94,12 +89,6 @@ Check out the following Android guide for reference
 
 -	[https://developer.linkedin.com/docs/android-sdk](https://developer.linkedin.com/docs/android-sdk)
 
-### Vector Icons
-
-The button uses a vector icon to render the linkedin logo. To install the icon font
-please install the FontAwesome font using the instructions on the vector-icon github page.
-
-[https://github.com/oblador/react-native-vector-icons](https://github.com/oblador/react-native-vector-icons)
 
 
 ## Usage

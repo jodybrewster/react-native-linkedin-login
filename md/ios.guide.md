@@ -71,10 +71,6 @@ Add the following to your Info.plist, please refer to the Linkedin docs below...
 	<string>linkedin-sdk2</string>
 	<string>linkedin-sdk</string>
 </array>
-<key>UIAppFonts</key>
-<array>
-	<string>FontAwesome.ttf</string>
-</array>
 ```
 
 
@@ -85,13 +81,6 @@ Check out the following iOS guide for reference
 -	[https://developer.linkedin.com/docs/ios-sdk](https://developer.linkedin.com/docs/ios-sdk)
 
 
-
-### Vector Icons
-
-The button uses a vector icon to render the linkedin logo. To install the icon font
-please install the FontAwesome font using the instructions on the vector-icon github page.
-
-[https://github.com/oblador/react-native-vector-icons](https://github.com/oblador/react-native-vector-icons)
 
 ## Usage
 
