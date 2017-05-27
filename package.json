@@ -1,6 +1,6 @@
 {
   "name": "react-native-linkedin-login",
-  "version": "1.39.2",
+  "version": "1.39.3",
   "description": "React Native wrapper for native Linkedin login button and manager",
   "main": "index",
   "scripts": {
@@ -45,5 +45,14 @@
   },
   "pre-commit": [
    
-  ]
+  ],
+  "rnpm": {
+    "android": {
+      "packageInstance": "new RNLinkedinLoginPackage()",
+      "packageImportPath": "import net.jodybrewster.linkedinlogin.RNLinkedinLoginPackage;"
+    },
+    "ios": {
+      "sourceDir": "./RNLinkedinLogin"
+    }
+  }
 }

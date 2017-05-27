@@ -1,0 +1,25 @@
+PATH  := node_modules/.bin:$(PATH)
+SHELL := /bin/bash
+
+example:
+	rninit init RNLinkedinLoginExample --source react-native@0.44.2;
+	mv RNLinkedinLoginExample example;
+
+install:
+	cd example && npm install file:../ --save && react-native link;
+	cp -rf example_src/Example.js example/Example.js;
+	cp -rf example_src/index.android.js example/index.android.js;
+	cp -rf example_src/index.ios.js example/index.ios.js;
+
+uninstall:
+	cd example && npm uninstall react-native-linkedin-login --save;
+
+run-android:
+	cd example && react-native run-android;
+
+run-ios:
+	cd example && react-native run-ios;
+
+clean:
+	rm -rf RNLinkedinLoginExample; 
+	rm -rf example;
