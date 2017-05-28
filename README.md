@@ -16,9 +16,225 @@ Let your users sign in with their Linkedin account.
 
 ## Installation
 
+### iOS Guide
+
+
+#### Automatic
+
+First install and save the library
+
 ```bash
+npm install react-native-linkedin-login --save;
+```
+
+Then link the library to your project
+
+```bash
+react-native link;
+```
+
+#### Manual
+
+First install and save the library
+
+```
 npm install react-native-linkedin-login --save
 ```
+
+Drag and drop the following into the xcode project...
+
+node_modules/react-native-linkedin-login/linkedin-sdk.framework
+
+and the entire folder...
+
+node_modules/react-native-linkedin-login/RNLinkedinLogin/
+
+Add these lines to your AppDelegate.m
+
+```
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
+{
+  if ([LISDKCallbackHandler shouldHandleUrl:url])
+  {
+    return [LISDKCallbackHandler application:application openURL:url sourceApplication:sourceApplication annotation:annotation];
+  }
+  return YES;
+}
+```
+
+Add the following to your Info.plist, please refer to the Linkedin docs below...
+
+```xml
+
+<key>NSAppTransportSecurity</key>
+<dict>
+	<key>NSExceptionDomains</key>
+	<dict>
+		<key>linkedin.com</key>  
+		<dict>
+			<key>NSExceptionAllowsInsecureHTTPLoads</key>
+			<true/>
+			<key>NSExceptionRequiresForwardSecrecy</key>
+			<false/>
+			<key>NSIncludesSubdomains</key>
+			<true/>
+		</dict>
+		<key>localhost</key>
+		<dict>
+			<key>NSExceptionAllowsInsecureHTTPLoads</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+<key>CFBundleURLTypes</key>
+<array>
+	<dict>
+		<key>CFBundleTypeRole</key>
+		<string>Editor</string>
+		<key>CFBundleURLSchemes</key>
+		<array>
+			<string>li{YOUR_APP_ID_GOES_HERE}</string>
+		</array>
+	</dict>
+</array>
+<key>LIAppId</key>
+<string>{YOUR_APP_ID_GOES_HERE}</string>
+<key>LSApplicationQueriesSchemes</key>
+<array>
+	<string>linkedin</string>
+	<string>linkedin-sdk2</string>
+	<string>linkedin-sdk</string>
+</array>
+```
+
+### Android Guide
+
+
+#### Automatic
+
+First install and save the library
+
+```bash
+npm install react-native-linkedin-login --save;
+```
+
+Then link the library to your project
+
+```bash
+react-native link;
+```
+
+#### Manual
+
+First install and save the library
+
+```
+npm install react-native-linkedin-login --save
+```
+
+Then modify the following fules
+
+- In `android/setting.gradle`
+
+```gradle
+...
+include ':react-native-linkedin-login', ':app'
+project(':react-native-linkedin-login').projectDir = new File(rootProject.projectDir, '../../android')
+
+
+```
+
+- In `android/app/build.gradle`
+
+```gradle
+...
+dependencies {
+    compile fileTree(dir: "libs", include: ["*.jar"])
+    compile "com.android.support:appcompat-v7:23.0.1"
+    compile "com.facebook.react:react-native:+"  // From node_modules
+    compile project(":react-native-linkedin-login") // <-- add here
+}
+```
+
+- Register Module (in MainApplication.java)
+
+```java
+
+package com.rnlinkinloginexample;
+
+import android.app.Application;
+import android.util.Log;
+
+import com.facebook.react.ReactApplication;
+import com.facebook.react.ReactInstanceManager;
+import com.facebook.react.ReactNativeHost;
+import com.facebook.react.ReactPackage;
+import com.facebook.react.shell.MainReactPackage;
+import com.facebook.soloader.SoLoader;
+
+import java.util.Arrays;
+import java.util.List;
+
+import net.jodybrewster.linkedinlogin.RNLinkedinLoginPackage;  // <------ add here
+
+public class MainApplication extends Application implements ReactApplication {
+
+  private final ReactNativeHost mReactNativeHost = new ReactNativeHost(this) {
+    @Override
+    protected boolean getUseDeveloperSupport() {
+      return BuildConfig.DEBUG;
+    }
+
+    @Override
+    protected List<ReactPackage> getPackages() {
+      return Arrays.<ReactPackage>asList(
+          new MainReactPackage(),
+          new RNLinkedinLoginPackage() // <------ add this line to yout MainActivity class
+      );
+    }
+  };
+
+  @Override
+  public ReactNativeHost getReactNativeHost() {
+    return mReactNativeHost;
+  }
+
+  @Override
+  public void onCreate() {
+    super.onCreate();
+    SoLoader.init(this, /* native exopackage */ false);
+  }
+}
+
+
+```
+
+
+### Linkedin Getting Started Guide
+
+Check out the following Android guide for reference
+
+-	[https://developer.linkedin.com/docs/android-sdk](https://developer.linkedin.com/docs/android-sdk)
+
+
+
+## Usage
+Please change the init with your parameters
+
+```js
+...
+
+
+this.init(
+    [
+        'r_emailaddress',
+        'r_basicprofile'
+    ]
+).then((e) => {
+    console.log('Linkedin initialized');
+});
+```
+
 
 ## Configuration and usage
 
