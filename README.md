@@ -11,7 +11,7 @@ Let your users sign in with their Linkedin account.
 
 ## Requirements
 
-* node v4+.
+* Node v4+.
 * React Native 0.30+
 
 ## Installation
@@ -33,6 +33,9 @@ Then link the library to your project
 react-native link;
 ```
 
+In the manual section below you will find updates you need to make to your Info.plist file.  Please also refer to the linkedin documentation at the bottom of this readme for more info.
+
+
 #### Manual
 
 First install and save the library
@@ -41,22 +44,24 @@ First install and save the library
 npm install react-native-linkedin-login --save
 ```
 
-Drag and drop the following into the xcode project...
+Drag and drop the following xcode project file into the xcode project...
 
-node_modules/react-native-linkedin-login/linkedin-sdk.framework
+node_modules/react-native-linkedin-login/ios/RCTLinkedinLogin.xcodeproj
 
-and the entire folder...
-
-node_modules/react-native-linkedin-login/RNLinkedinLogin/
 
 Add these lines to your AppDelegate.m
 
+```objc
+#import <RCTLinkedinLogin/RCTLinkedinLogin.h>
 ```
+
+```objc
+
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
 {
-  if ([LISDKCallbackHandler shouldHandleUrl:url])
+  if ([RCTLinkedinLogin shouldHandleUrl:url])
   {
-    return [LISDKCallbackHandler application:application openURL:url sourceApplication:sourceApplication annotation:annotation];
+    return [RCTLinkedinLogin application:application openURL:url sourceApplication:sourceApplication annotation:annotation];
   }
   return YES;
 }
@@ -64,7 +69,7 @@ Add these lines to your AppDelegate.m
 
 Add the following to your Info.plist, please refer to the Linkedin docs below...
 
-```xml
+```plist
 
 <key>NSAppTransportSecurity</key>
 <dict>
@@ -128,7 +133,7 @@ react-native link;
 
 First install and save the library
 
-```
+```bash
 npm install react-native-linkedin-login --save
 ```
 
