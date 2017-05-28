@@ -1,13 +1,12 @@
 {
   "name": "react-native-linkedin-login",
-  "version": "1.39.3",
+  "version": "1.44.0",
   "description": "React Native wrapper for native Linkedin login button and manager",
   "main": "index",
   "scripts": {
     "flow": "flow check",
     "lint": "eslint --ext .js,.jsx .",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "docs": "./node_modules/docker/docker -i ./src -o ./docs",
     "validate": "npm ls"
   },
   "repository": {
@@ -39,7 +38,6 @@
   },
   "devDependencies": {
     "babel-eslint": "^7.2.3",
-    "docker": "^1.0.0",
     "eslint-plugin-react": "^7.0.1",
     "pre-commit": "^1.1.2"
   },
@@ -52,7 +50,7 @@
       "packageImportPath": "import net.jodybrewster.linkedinlogin.RNLinkedinLoginPackage;"
     },
     "ios": {
-      "sourceDir": "./RNLinkedinLogin"
+      "project": "ios/RCTLinkedinLogin.xcodeproj"
     }
   }
 }

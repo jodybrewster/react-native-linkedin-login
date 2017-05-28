@@ -7,9 +7,9 @@ example:
 
 install:
 	cd example && npm install file:../ --save && react-native link;
-	cp -rf example_src/Example.js example/Example.js;
-	cp -rf example_src/index.android.js example/index.android.js;
-	cp -rf example_src/index.ios.js example/index.ios.js;
+	cp -rf src/for_example_only/Example.js example/Example.js;
+	cp -rf src/for_example_only/index.android.js example/index.android.js;
+	cp -rf src/for_example_only/index.ios.js example/index.ios.js;
 
 uninstall:
 	cd example && npm uninstall react-native-linkedin-login --save;
