@@ -7,7 +7,7 @@
 #ifndef LISDKPermission_h
 #define LISDKPermission_h
 
-/**
+/** 
  @file LISDKPermission.h
  list of valid permissions
  */

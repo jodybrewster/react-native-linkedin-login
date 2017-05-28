@@ -1,0 +1,322 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A3A6499C1EDAEFD1008D7445 /* linkedin-sdk in Frameworks */ = {isa = PBXBuildFile; fileRef = A3A6498E1EDAEFD1008D7445 /* linkedin-sdk */; };
+		A3A6499D1EDAEFD1008D7445 /* RCTLinkedinLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = A3A6499B1EDAEFD1008D7445 /* RCTLinkedinLogin.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6FB6F0D71D8CE22100D9AE37 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		6FB6F0D91D8CE22100D9AE37 /* libRCTLinkedinLogin.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRCTLinkedinLogin.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3A6498E1EDAEFD1008D7445 /* linkedin-sdk */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "linkedin-sdk"; path = "RCTLinkedinLogin/linkedin-sdk"; sourceTree = SOURCE_ROOT; };
+		A3A6498F1EDAEFD1008D7445 /* LISDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LISDK.h; path = RCTLinkedinLogin/LISDK.h; sourceTree = SOURCE_ROOT; };
+		A3A649901EDAEFD1008D7445 /* LISDKAccessToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LISDKAccessToken.h; path = RCTLinkedinLogin/LISDKAccessToken.h; sourceTree = SOURCE_ROOT; };
+		A3A649911EDAEFD1008D7445 /* LISDKAPIError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LISDKAPIError.h; path = RCTLinkedinLogin/LISDKAPIError.h; sourceTree = SOURCE_ROOT; };
+		A3A649921EDAEFD1008D7445 /* LISDKAPIHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LISDKAPIHelper.h; path = RCTLinkedinLogin/LISDKAPIHelper.h; sourceTree = SOURCE_ROOT; };
+		A3A649931EDAEFD1008D7445 /* LISDKAPIResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LISDKAPIResponse.h; path = RCTLinkedinLogin/LISDKAPIResponse.h; sourceTree = SOURCE_ROOT; };
+		A3A649941EDAEFD1008D7445 /* LISDKCallbackHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LISDKCallbackHandler.h; path = RCTLinkedinLogin/LISDKCallbackHandler.h; sourceTree = SOURCE_ROOT; };
+		A3A649951EDAEFD1008D7445 /* LISDKDeeplinkHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LISDKDeeplinkHelper.h; path = RCTLinkedinLogin/LISDKDeeplinkHelper.h; sourceTree = SOURCE_ROOT; };
+		A3A649961EDAEFD1008D7445 /* LISDKErrorCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LISDKErrorCode.h; path = RCTLinkedinLogin/LISDKErrorCode.h; sourceTree = SOURCE_ROOT; };
+		A3A649971EDAEFD1008D7445 /* LISDKPermission.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LISDKPermission.h; path = RCTLinkedinLogin/LISDKPermission.h; sourceTree = SOURCE_ROOT; };
+		A3A649981EDAEFD1008D7445 /* LISDKSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LISDKSession.h; path = RCTLinkedinLogin/LISDKSession.h; sourceTree = SOURCE_ROOT; };
+		A3A649991EDAEFD1008D7445 /* LISDKSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LISDKSessionManager.h; path = RCTLinkedinLogin/LISDKSessionManager.h; sourceTree = SOURCE_ROOT; };
+		A3A6499A1EDAEFD1008D7445 /* RCTLinkedinLogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RCTLinkedinLogin.h; path = RCTLinkedinLogin/RCTLinkedinLogin.h; sourceTree = SOURCE_ROOT; };
+		A3A6499B1EDAEFD1008D7445 /* RCTLinkedinLogin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RCTLinkedinLogin.m; path = RCTLinkedinLogin/RCTLinkedinLogin.m; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6FB6F0D61D8CE22100D9AE37 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3A6499C1EDAEFD1008D7445 /* linkedin-sdk in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6FB6F0D01D8CE22100D9AE37 = {
+			isa = PBXGroup;
+			children = (
+				6FB6F0DB1D8CE22100D9AE37 /* RCTLinkedinLogin */,
+				6FB6F0DA1D8CE22100D9AE37 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6FB6F0DA1D8CE22100D9AE37 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6FB6F0D91D8CE22100D9AE37 /* libRCTLinkedinLogin.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6FB6F0DB1D8CE22100D9AE37 /* RCTLinkedinLogin */ = {
+			isa = PBXGroup;
+			children = (
+				A3A6498E1EDAEFD1008D7445 /* linkedin-sdk */,
+				A3A6498F1EDAEFD1008D7445 /* LISDK.h */,
+				A3A649901EDAEFD1008D7445 /* LISDKAccessToken.h */,
+				A3A649911EDAEFD1008D7445 /* LISDKAPIError.h */,
+				A3A649921EDAEFD1008D7445 /* LISDKAPIHelper.h */,
+				A3A649931EDAEFD1008D7445 /* LISDKAPIResponse.h */,
+				A3A649941EDAEFD1008D7445 /* LISDKCallbackHandler.h */,
+				A3A649951EDAEFD1008D7445 /* LISDKDeeplinkHelper.h */,
+				A3A649961EDAEFD1008D7445 /* LISDKErrorCode.h */,
+				A3A649971EDAEFD1008D7445 /* LISDKPermission.h */,
+				A3A649981EDAEFD1008D7445 /* LISDKSession.h */,
+				A3A649991EDAEFD1008D7445 /* LISDKSessionManager.h */,
+				A3A6499A1EDAEFD1008D7445 /* RCTLinkedinLogin.h */,
+				A3A6499B1EDAEFD1008D7445 /* RCTLinkedinLogin.m */,
+			);
+			name = RCTLinkedinLogin;
+			path = RNIdle;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6FB6F0D81D8CE22100D9AE37 /* RCTLinkedinLogin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6FB6F0E21D8CE22100D9AE37 /* Build configuration list for PBXNativeTarget "RCTLinkedinLogin" */;
+			buildPhases = (
+				6FB6F0D51D8CE22100D9AE37 /* Sources */,
+				6FB6F0D61D8CE22100D9AE37 /* Frameworks */,
+				6FB6F0D71D8CE22100D9AE37 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RCTLinkedinLogin;
+			productName = RNIdle;
+			productReference = 6FB6F0D91D8CE22100D9AE37 /* libRCTLinkedinLogin.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6FB6F0D11D8CE22100D9AE37 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = lcj;
+				TargetAttributes = {
+					6FB6F0D81D8CE22100D9AE37 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+				};
+			};
+			buildConfigurationList = 6FB6F0D41D8CE22100D9AE37 /* Build configuration list for PBXProject "RCTLinkedinLogin" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 6FB6F0D01D8CE22100D9AE37;
+			productRefGroup = 6FB6F0DA1D8CE22100D9AE37 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6FB6F0D81D8CE22100D9AE37 /* RCTLinkedinLogin */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6FB6F0D51D8CE22100D9AE37 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3A6499D1EDAEFD1008D7445 /* RCTLinkedinLogin.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		6FB6F0E01D8CE22100D9AE37 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		6FB6F0E11D8CE22100D9AE37 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6FB6F0E31D8CE22100D9AE37 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_TESTABILITY = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-linkedin-login/**",
+					"$(PROJECT_DIR)/**",
+					"$(PROJECT_DIR)",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/../node_modules/react-native/React/**",
+					"$(SRCROOT)/../node_modules/react-native-linkedin-login/**",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/RCTLinkedinLogin",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = RCTLinkedinLogin;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		6FB6F0E41D8CE22100D9AE37 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_TESTABILITY = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-linkedin-login/**",
+					"$(PROJECT_DIR)/**",
+					"$(PROJECT_DIR)",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/../node_modules/react-native/React/**",
+					"$(SRCROOT)/../node_modules/react-native-linkedin-login/**",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/RCTLinkedinLogin",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = RCTLinkedinLogin;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6FB6F0D41D8CE22100D9AE37 /* Build configuration list for PBXProject "RCTLinkedinLogin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6FB6F0E01D8CE22100D9AE37 /* Debug */,
+				6FB6F0E11D8CE22100D9AE37 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6FB6F0E21D8CE22100D9AE37 /* Build configuration list for PBXNativeTarget "RCTLinkedinLogin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6FB6F0E31D8CE22100D9AE37 /* Debug */,
+				6FB6F0E41D8CE22100D9AE37 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6FB6F0D11D8CE22100D9AE37 /* Project object */;
+}
