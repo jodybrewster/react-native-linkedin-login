@@ -249,6 +249,14 @@ See [android-guide.md](https://github.com/jodybrewster/react-native-linkedin-log
 
 Please note that basic and email permissions are hardcoded. Pull requests are welcome! ლ(́◉◞౪◟◉‵ლ)
 
+
+## Alternatives
+* [react-native-linkedin](https://github.com/xcarpentier/react-native-linkedin)
+* [react-native-linkedin-sdk](https://www.npmjs.com/package/react-native-linkedin-sdk)
+* [react-native-linkedin-oauth](https://www.npmjs.com/package/react-native-linkedin-oauth)
+
+
+
 ## License
 
 The MIT License (MIT)
