@@ -7,38 +7,41 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A3A6499C1EDAEFD1008D7445 /* linkedin-sdk in Frameworks */ = {isa = PBXBuildFile; fileRef = A3A6498E1EDAEFD1008D7445 /* linkedin-sdk */; };
-		A3A6499D1EDAEFD1008D7445 /* RCTLinkedinLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = A3A6499B1EDAEFD1008D7445 /* RCTLinkedinLogin.m */; };
+		F2B5913D1F46F24B0079D599 /* linkedin-sdk in Frameworks */ = {isa = PBXBuildFile; fileRef = F2B591351F46F24B0079D599 /* linkedin-sdk */; };
+		F2B5913E1F46F24B0079D599 /* RCTLinkedinLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B591371F46F24B0079D599 /* RCTLinkedinLogin.m */; };
+		F2B5913F1F46F25D0079D599 /* RCTLinkedinLogin.h in Copy Files */ = {isa = PBXBuildFile; fileRef = F2B5912F1F46F24B0079D599 /* RCTLinkedinLogin.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		6FB6F0D71D8CE22100D9AE37 /* CopyFiles */ = {
+		6FB6F0D71D8CE22100D9AE37 /* Copy Files */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
+				F2B5913F1F46F25D0079D599 /* RCTLinkedinLogin.h in Copy Files */,
 			);
+			name = "Copy Files";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		6FB6F0D91D8CE22100D9AE37 /* libRCTLinkedinLogin.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRCTLinkedinLogin.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		A3A6498E1EDAEFD1008D7445 /* linkedin-sdk */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "linkedin-sdk"; path = "RCTLinkedinLogin/linkedin-sdk"; sourceTree = SOURCE_ROOT; };
-		A3A6498F1EDAEFD1008D7445 /* LISDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LISDK.h; path = RCTLinkedinLogin/LISDK.h; sourceTree = SOURCE_ROOT; };
-		A3A649901EDAEFD1008D7445 /* LISDKAccessToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LISDKAccessToken.h; path = RCTLinkedinLogin/LISDKAccessToken.h; sourceTree = SOURCE_ROOT; };
-		A3A649911EDAEFD1008D7445 /* LISDKAPIError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LISDKAPIError.h; path = RCTLinkedinLogin/LISDKAPIError.h; sourceTree = SOURCE_ROOT; };
-		A3A649921EDAEFD1008D7445 /* LISDKAPIHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LISDKAPIHelper.h; path = RCTLinkedinLogin/LISDKAPIHelper.h; sourceTree = SOURCE_ROOT; };
-		A3A649931EDAEFD1008D7445 /* LISDKAPIResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LISDKAPIResponse.h; path = RCTLinkedinLogin/LISDKAPIResponse.h; sourceTree = SOURCE_ROOT; };
-		A3A649941EDAEFD1008D7445 /* LISDKCallbackHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LISDKCallbackHandler.h; path = RCTLinkedinLogin/LISDKCallbackHandler.h; sourceTree = SOURCE_ROOT; };
-		A3A649951EDAEFD1008D7445 /* LISDKDeeplinkHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LISDKDeeplinkHelper.h; path = RCTLinkedinLogin/LISDKDeeplinkHelper.h; sourceTree = SOURCE_ROOT; };
-		A3A649961EDAEFD1008D7445 /* LISDKErrorCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LISDKErrorCode.h; path = RCTLinkedinLogin/LISDKErrorCode.h; sourceTree = SOURCE_ROOT; };
-		A3A649971EDAEFD1008D7445 /* LISDKPermission.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LISDKPermission.h; path = RCTLinkedinLogin/LISDKPermission.h; sourceTree = SOURCE_ROOT; };
-		A3A649981EDAEFD1008D7445 /* LISDKSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LISDKSession.h; path = RCTLinkedinLogin/LISDKSession.h; sourceTree = SOURCE_ROOT; };
-		A3A649991EDAEFD1008D7445 /* LISDKSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LISDKSessionManager.h; path = RCTLinkedinLogin/LISDKSessionManager.h; sourceTree = SOURCE_ROOT; };
-		A3A6499A1EDAEFD1008D7445 /* RCTLinkedinLogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RCTLinkedinLogin.h; path = RCTLinkedinLogin/RCTLinkedinLogin.h; sourceTree = SOURCE_ROOT; };
-		A3A6499B1EDAEFD1008D7445 /* RCTLinkedinLogin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RCTLinkedinLogin.m; path = RCTLinkedinLogin/RCTLinkedinLogin.m; sourceTree = SOURCE_ROOT; };
+		F2B5912F1F46F24B0079D599 /* RCTLinkedinLogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCTLinkedinLogin.h; sourceTree = "<group>"; };
+		F2B591301F46F24B0079D599 /* LISDKErrorCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LISDKErrorCode.h; sourceTree = "<group>"; };
+		F2B591311F46F24B0079D599 /* LISDKAPIError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LISDKAPIError.h; sourceTree = "<group>"; };
+		F2B591321F46F24B0079D599 /* LISDKSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LISDKSessionManager.h; sourceTree = "<group>"; };
+		F2B591331F46F24B0079D599 /* LISDKCallbackHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LISDKCallbackHandler.h; sourceTree = "<group>"; };
+		F2B591341F46F24B0079D599 /* LISDKAPIHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LISDKAPIHelper.h; sourceTree = "<group>"; };
+		F2B591351F46F24B0079D599 /* linkedin-sdk */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "linkedin-sdk"; sourceTree = "<group>"; };
+		F2B591361F46F24B0079D599 /* LISDKPermission.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LISDKPermission.h; sourceTree = "<group>"; };
+		F2B591371F46F24B0079D599 /* RCTLinkedinLogin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCTLinkedinLogin.m; sourceTree = "<group>"; };
+		F2B591381F46F24B0079D599 /* LISDKSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LISDKSession.h; sourceTree = "<group>"; };
+		F2B591391F46F24B0079D599 /* LISDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LISDK.h; sourceTree = "<group>"; };
+		F2B5913A1F46F24B0079D599 /* LISDKAPIResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LISDKAPIResponse.h; sourceTree = "<group>"; };
+		F2B5913B1F46F24B0079D599 /* LISDKAccessToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LISDKAccessToken.h; sourceTree = "<group>"; };
+		F2B5913C1F46F24B0079D599 /* LISDKDeeplinkHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LISDKDeeplinkHelper.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,7 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A3A6499C1EDAEFD1008D7445 /* linkedin-sdk in Frameworks */,
+				F2B5913D1F46F24B0079D599 /* linkedin-sdk in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,7 +59,7 @@
 		6FB6F0D01D8CE22100D9AE37 = {
 			isa = PBXGroup;
 			children = (
-				6FB6F0DB1D8CE22100D9AE37 /* RCTLinkedinLogin */,
+				F2B5912E1F46F24B0079D599 /* RCTLinkedinLogin */,
 				6FB6F0DA1D8CE22100D9AE37 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -69,26 +72,25 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		6FB6F0DB1D8CE22100D9AE37 /* RCTLinkedinLogin */ = {
+		F2B5912E1F46F24B0079D599 /* RCTLinkedinLogin */ = {
 			isa = PBXGroup;
 			children = (
-				A3A6498E1EDAEFD1008D7445 /* linkedin-sdk */,
-				A3A6498F1EDAEFD1008D7445 /* LISDK.h */,
-				A3A649901EDAEFD1008D7445 /* LISDKAccessToken.h */,
-				A3A649911EDAEFD1008D7445 /* LISDKAPIError.h */,
-				A3A649921EDAEFD1008D7445 /* LISDKAPIHelper.h */,
-				A3A649931EDAEFD1008D7445 /* LISDKAPIResponse.h */,
-				A3A649941EDAEFD1008D7445 /* LISDKCallbackHandler.h */,
-				A3A649951EDAEFD1008D7445 /* LISDKDeeplinkHelper.h */,
-				A3A649961EDAEFD1008D7445 /* LISDKErrorCode.h */,
-				A3A649971EDAEFD1008D7445 /* LISDKPermission.h */,
-				A3A649981EDAEFD1008D7445 /* LISDKSession.h */,
-				A3A649991EDAEFD1008D7445 /* LISDKSessionManager.h */,
-				A3A6499A1EDAEFD1008D7445 /* RCTLinkedinLogin.h */,
-				A3A6499B1EDAEFD1008D7445 /* RCTLinkedinLogin.m */,
+				F2B5912F1F46F24B0079D599 /* RCTLinkedinLogin.h */,
+				F2B591301F46F24B0079D599 /* LISDKErrorCode.h */,
+				F2B591311F46F24B0079D599 /* LISDKAPIError.h */,
+				F2B591321F46F24B0079D599 /* LISDKSessionManager.h */,
+				F2B591331F46F24B0079D599 /* LISDKCallbackHandler.h */,
+				F2B591341F46F24B0079D599 /* LISDKAPIHelper.h */,
+				F2B591351F46F24B0079D599 /* linkedin-sdk */,
+				F2B591361F46F24B0079D599 /* LISDKPermission.h */,
+				F2B591371F46F24B0079D599 /* RCTLinkedinLogin.m */,
+				F2B591381F46F24B0079D599 /* LISDKSession.h */,
+				F2B591391F46F24B0079D599 /* LISDK.h */,
+				F2B5913A1F46F24B0079D599 /* LISDKAPIResponse.h */,
+				F2B5913B1F46F24B0079D599 /* LISDKAccessToken.h */,
+				F2B5913C1F46F24B0079D599 /* LISDKDeeplinkHelper.h */,
 			);
-			name = RCTLinkedinLogin;
-			path = RNIdle;
+			path = RCTLinkedinLogin;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -100,7 +102,7 @@
 			buildPhases = (
 				6FB6F0D51D8CE22100D9AE37 /* Sources */,
 				6FB6F0D61D8CE22100D9AE37 /* Frameworks */,
-				6FB6F0D71D8CE22100D9AE37 /* CopyFiles */,
+				6FB6F0D71D8CE22100D9AE37 /* Copy Files */,
 			);
 			buildRules = (
 			);
@@ -147,7 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A3A6499D1EDAEFD1008D7445 /* RCTLinkedinLogin.m in Sources */,
+				F2B5913E1F46F24B0079D599 /* RCTLinkedinLogin.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
