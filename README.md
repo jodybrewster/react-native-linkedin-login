@@ -240,11 +240,6 @@ this.init(
 });
 ```
 
-
-## Configuration and usage
-
-See [android-guide.md](https://github.com/jodybrewster/react-native-linkedin-login/blob/master/md/android.guide.md) and [ios-guide.md](https://github.com/jodybrewster/react-native-linkedin-login/blob/master/md/ios.guide.md)
-
 ## Additional scopes
 
 Please note that basic and email permissions are hardcoded. Pull requests are welcome! ლ(́◉◞౪◟◉‵ლ)
