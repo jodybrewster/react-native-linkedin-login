@@ -62,9 +62,10 @@ class LinkedinLogin {
 
   /**
    * Gets the user profile
+   * @param {string} options Linkedin options for profile object 
    * @return {object} Returns a promise with the user object or error
    */
-  getProfile() {
+  getProfile(options) {
     const atoken = this._accessToken;
 
     return new Promise((resolve, reject) => {
@@ -80,8 +81,8 @@ class LinkedinLogin {
         reject(error);
       });
 
-      const options = 'id,first-name,last-name,industry,email-address';
-      const profilestr = `https://api.linkedin.com/v1/people/~:(${options})`;
+      const opt = options;
+      const profilestr = `https://api.linkedin.com/v1/people/~:(${opt})`;
 
       RNLinkedinLogin.getRequest(profilestr);
     });
