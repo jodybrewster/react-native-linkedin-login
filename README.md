@@ -221,12 +221,15 @@ Check out the following Android guide for reference
 
 -	[https://developer.linkedin.com/docs/android-sdk](https://developer.linkedin.com/docs/android-sdk)
 
-```
+
+
+```js
+...
+
 //pass options as string parameters in getProfile()
 var options = 'id,first-name,last-name,industry,email-address,industry,location'
 
 LinkedinLogin.getProfile(options)
-
 ```
 
 
