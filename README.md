@@ -222,7 +222,6 @@ Check out the following Android guide for reference
 -	[https://developer.linkedin.com/docs/android-sdk](https://developer.linkedin.com/docs/android-sdk)
 
 
-
 ## Usage
 Please change the init with your parameters
 
@@ -238,6 +237,20 @@ this.init(
 ).then((e) => {
     console.log('Linkedin initialized');
 });
+```
+## Options For Linkedin Profile Fields
+
+Check out following Linkedin developer guied for profile fields
+-	[https://developer.linkedin.com/docs/fields/basic-profile](https://developer.linkedin.com/docs/fields/basic-profile)
+
+
+```js
+...
+
+//pass options as string parameters in getProfile()
+var options = 'id,first-name,last-name,industry,email-address,industry,location'
+
+LinkedinLogin.getProfile(options)
 ```
 
 ## Additional scopes
