@@ -30,7 +30,7 @@ npm install react-native-linkedin-login --save;
 Then link the library to your project
 
 ```bash
-react-native link;
+react-native link react-native-linkedin-login;
 ```
 
 In the manual section below you will find updates you need to make to your Info.plist file.  Please also refer to the linkedin documentation at the bottom of this readme for more info.
